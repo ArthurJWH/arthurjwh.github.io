@@ -3,21 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arthur Hwang</title>
+    <meta name="author" content="Arthur Hwang">
     <link rel="stylesheet" href="style.css">
+    <title>Arthur Hwang</title>
 </head>
 <body>
-    <div id="container">
-        <div id="navbar">
-            <a href="/"><h1>ARTHUR HWANG</h1></a>
-            <a href="/#home">Home</a>
-            <a>Projects</a>
-            <a>Contact</a>
-        </div>
 
-        <div id="home">
-            <img id="profile" src="img/profile.jpg" alt="Profile Picture">
-            <p>I’m a Mechanical Engineering + PEY student at University of Toronto, expecting to graduate in 2029.
+    <!-- <header>
+        <h1>ARTHUR HWANG</h1>
+    </header> -->
+
+
+    <nav class="navbar">
+        <a id="logo" href="/"><b>Arthur Hwang</b></a>
+        <div class="hamburger" onclick=openHamburger(this)>
+            <div class="line" id="l1"></div>
+            <div class="line" id="l2"></div>
+            <div class="line" id="l3"></div>
+        </div>
+        <ul>
+            <li class="contactref">
+                <button>Contact</button>
+
+                <div class="contactlinks">
+                    <a href="tel:+16479647178" target="_blank">Phone</a>
+                    <a href="mailto:arthurjwhwang@gmail.com" target="_blank">Email</a>
+                    <a href="https://www.linkedin.com/in/arthur-hwang-2b4b98210b/" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/ArthurJWH" target="_blank">GitHub</a>
+                </div>
+            </li>
+            <li><a id="projectsref" href="/#projects">Projects</a></li>
+            <li><a id="mediaref" href="/#media">Media</a></li>
+            <li><a id="aboutmeref" href="/#aboutme">About Me</a></li>
+            <li><a id="homeref" href="/#home">Home</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="aboutme">
+            <h2>About Me</h2>
+
+            <div id="profile"><img id="pfp" src="img/profile.jpg" alt="Profile Picture"></div>
+            <p>
+                I’m a Mechanical Engineering + PEY student at University of Toronto, expecting to graduate in 2029.
                 <br>
                 I am primarily interested in robotics and mechatronics systems, where mechanical and electrical components are integrated to expand human capabilities.
                 <br>
@@ -25,15 +53,60 @@
                 <br>
                 I have been developing both technical and soft skills through involvement in various groups, design teams and engineering projects.
             </p>
-        </div>
+        </section>
+
+        <section class="media">
+            <h2>Media</h2>
+
+            <div id="media displayer">
+
+                <div class="media-item">
+                    <img class="media-img" src="img/media1.jpg" alt="Media 1">
+                    <h3>Media Title 1</h3>
+                    <p>Brief description of Media 1.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="projects">
+            <h2>Projects</h2>
+
+            <div id="project-displayer">
+
+                <div class="project">
+                    <a href="https://github.com/ArthurJWH/GLOW" target="_blank">
+                        <img class="project-img" src="https://raw.githubusercontent.com/ArthurJWH/GLOW/main/assets/img/icon.png" alt="GLOW">
+                    </a>
+                    <h2 class="title">GLOW</h2>
+                    <p>
+                        GLOW is part of my 2025 Summer project.
+                        It is a G-Code generator application for Direct Energy Deposition additive manufacturing.
+                    </p>
+                </div>
+
+                <div class="project">
+                    <a href="https://docs.rocketpy.org/en/latest/index.html" target="_blank">
+                        <img class="project-img" src="https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png" alt="RocketPy">
+                    </a>
+                    <h2 class="title">RocketPy</h2>
+                    <p>
+                        RocketPy is the next-generation trajectory simulation solution for High-Power Rocketry.
+                        The code is written as a Python library and allows for a complete 6 degrees of freedom simulation of a rocket’s flight trajectory.
+                    </p>
+                </div>
+
+            </div>
+        </section>
 
 
+    </main>
 
 
-        <div id="footer">
-        </div>
-    </div>
+    <footer>
 
+    </footer>
     
+    <script src="script.js"></script>
 </body>
 </html>
