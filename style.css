@@ -147,30 +147,30 @@ section{
     padding: 20px;
 }
 
-.aboutme{
+#aboutme{
     display: flex;
     flex-direction: row;
     align-items: stretch;
     flex-wrap: wrap;
     width: 100%;
 }
-.aboutme h2{
+#aboutme h2{
     width: 100%;
     margin-bottom: 10px;
 }
-.aboutme #profile{
+#aboutme #profile{
     display: flex;
     flex: 1 0 200px;
     align-items: center;
     justify-content: center;
 }
-.aboutme #pfp{
+#aboutme #pfp{
     width: 200px;
     height: 200px;
     object-fit: cover;
     border-radius: 50%;
 }
-.aboutme p{
+#aboutme p{
     flex: 2 0 450px;
     padding: 10px;
     font-size: 18px;
@@ -180,7 +180,7 @@ section{
 
 
 
-.media{
+#media{
     display: flex;
     width: 100%;
     flex-direction: row;
@@ -191,6 +191,15 @@ section{
 
 
 
+#project-displayer{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    border: hsl(240, 60%, 10%) 4px solid;
+    border-radius: 20px;
+    padding: 10px;
+    gap: 10px;
+}
 .project{
     display: flex;
     width: 100%;
@@ -201,15 +210,6 @@ section{
 }
 .project:hover, .project:hover p{
     background-color: hsl(0, 0%, 90%);
-}
-#project-displayer{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    border: hsl(240, 60%, 10%) 4px solid;
-    border-radius: 20px;
-    padding: 10px;
-    gap: 10px;
 }
 .project-img{
     width: 240px;
