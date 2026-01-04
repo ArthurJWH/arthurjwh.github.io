@@ -7,30 +7,30 @@
 }
 :root{
     --main-color: hsl(240, 60%, 30%);
-    --alt-color: hsl(60, 60%, 80%);
-    --text-color: hsl(60, 60%, 90%);
+    --alt-color: hsl(60, 0%, 90%);  /* 60% */
+    --text-color: hsl(60, 0%, 90%);
     --alt-text-color: hsl(240, 60%, 10%);
     --highlight: hsl(240, 60%, 42%);
-    --alt-highlight: hsl(60, 0%, 100%);
+    --alt-highlight: hsl(60, 0%, 95%);
     --dimmer: hsl(240, 60%, 22%);
-    --alt-dimmer: hsl(60, 60%, 70%);
+    --alt-dimmer: hsl(60, 0%, 70%);
     --glass: hsla(240, 60%, 20%, 0.50);
-    --alt-glass: hsl(60, 60%, 70%, 0.50);
+    --alt-glass: hsl(60, 0%, 70%, 0.50);
     scroll-padding-top: 50px;
     interpolate-size: allow-keywords;
 }
 @media (prefers-color-scheme: dark){
     :root{
         --main-color: hsl(50, 80%, 50%);
-        --alt-color: hsl(240, 50%, 5%);
-        --text-color: hsl(240, 50%, 5%);
+        --alt-color: hsl(240, 0%, 5%); /* 50% */
+        --text-color: hsl(240, 0%, 5%);
         --alt-text-color: hsl(50, 80%, 80%);
         --highlight: hsl(50, 80%, 60%);
-        --alt-highlight: hsl(240, 50%, 12%);
+        --alt-highlight: hsl(240, 0%, 12%);
         --dimmer: hsl(50, 80%, 40%);
-        --alt-dimmer: hsl(240, 50%, 0%);
+        --alt-dimmer: hsl(240, 0%, 0%);
         --glass: hsl(50, 80%, 40%, 0.50);
-        --alt-glass: hsl(240, 50%, 5%, 0.50);
+        --alt-glass: hsl(240, 0%, 5%, 0.50);
     }
 }
 html{
@@ -327,7 +327,7 @@ section{
     box-shadow: 0 0 8px var(--glass);
 }
 .project:hover{
-    background-color: var(--alt-dimmer);
+    background-color: var(--alt-highlight);
 }
 .project::before{
     content: attr(project-name);
