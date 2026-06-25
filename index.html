@@ -1,126 +1,410 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Arthur Hwang">
-    <link rel="stylesheet" href="style.css">
-    <title>Arthur Hwang</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Arthur Hwang</title>
+		<link rel="icon" type="image/png" href="img/logo-32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="https://kit.fontawesome.com/801590478f.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- ===========================================================
+            NAVBAR
+        ============================================================ -->
 
-    <!-- <header>
-        <h1>ARTHUR HWANG</h1>
-    </header> -->
+		<nav class="nav" id="nav">
+			<a class="nav-logo" href="#hero">AH</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="#about">About</a></li>
+				<li><a href="#skills">Skills</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#media">Media</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+			<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
+		</nav>
 
+		<!-- ===========================================================
+            HERO SECTION
+        ============================================================ -->
 
-    <nav class="navbar">
-        <a id="logo" href="/"><b>Arthur Hwang</b></a>
-        <div class="hamburger" onclick=openHamburger(this)>
-            <div class="line" id="l1"></div>
-            <div class="line" id="l2"></div>
-            <div class="line" id="l3"></div>
-        </div>
-        <ul>
-            <li class="contactref">
-                <button>Contact</button>
+		<section class="hero" id="hero">
+			<div class="hero-grid" aria-hidden="true"></div>
+			<div class="hero-content">
+				<p class="hero-eyebrow">Mechanical Engineer Student</p>
+				<h1 class="hero-name">Arthur Hwang</h1>
+				<p class="hero-tagline">
+					Robotics &nbsp;·&nbsp; Mechatronics &nbsp;·&nbsp; Aerospace
+				</p>
+				<p class="hero-sub">Designing systems that pushes human limits.</p>
+				<div class="hero-links">
+					<a href="assets/resume.pdf" class="btn btn-primary" target="_blank">Resume</a>
+					<!--download="Resume-Arthur-Hwang.pdf"-->
+					<a
+						href="https://www.linkedin.com/in/arthur-jiun-wei-hwang"
+						class="btn btn-secondary"
+						target="_blank"
+						>LinkedIn</a
+					>
+					<a href="https://github.com/ArthurJWH" class="btn btn-secondary" target="_blank"
+						>GitHub</a
+					>
+					<a href="#projects" class="btn btn-ghost"
+						>See Projects<i class="fa-solid fa-arrow-down fa-xs"></i
+					></a>
+				</div>
+			</div>
+			<div class="hero-scroll-hint" aria-hidden="true">
+				<i class="fa-solid fa-arrow-down"></i>scroll<i class="fa-solid fa-arrow-down"></i>
+			</div>
+		</section>
 
-                <div class="contactlinks">
-                    <a href="tel:+16479647178" target="_blank">Phone</a>
-                    <a href="mailto:arthurjwhwang@gmail.com" target="_blank">Email</a>
-                    <a href="https://www.linkedin.com/in/arthur-jiun-wei-hwang" target="_blank">LinkedIn</a>
-                    <a href="https://github.com/ArthurJWH" target="_blank">GitHub</a>
-                </div>
-            </li>
-            <li><a id="projectsref" href="/#projects">Projects</a></li>
-            <li><a id="mediaref" href="/#media">Media</a></li>
-            <li><a id="aboutmeref" href="/#aboutme">About Me</a></li>
-            <li><a id="homeref" href="/#home">Home</a></li>
-        </ul>
-    </nav>
+		<!-- ===========================================================
+            ABOUT SECTION
+        ============================================================ -->
 
+		<section class="section" id="about">
+			<div class="container about-layout">
+				<div class="about-photo-wrap">
+					<img src="img/profile.jpg" alt="Arthur Hwang" class="about-photo" />
+				</div>
+				<div class="about-text">
+					<p class="section-eyebrow">About Me</p>
+					<h2 class="section-title">Building things that move, sense, and think.</h2>
+					<p>
+						I'm a Mechanical Engineering + PEY student at University of Toronto,
+						expected to graduate in 2029. I am primarily interested in robotics and
+						mechatronics systems, where mechanical and electrical components are
+						integrated to expand human capabilities.
+					</p>
+					<p>
+						I aspire to contribute to the development and innovation of cutting-edge
+						technologies within aerospace and automotive industries, with focus on
+						advancing transportation efficiency. I have been developing both technical
+						and soft skills through involvement in various groups, design teams and
+						engineering projects.
+					</p>
+					<div class="about-interests">
+						<span class="interest-tag">Aerospace Engineering</span>
+						<span class="interest-tag">Aerodynamic Optimization</span>
+						<span class="interest-tag">Electrical Vehicles</span>
+						<span class="interest-tag">Advanced Manufacturing</span>
+						<span class="interest-tag">Simulation & Modeling</span>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- ===========================================================
+            SKILLS SECTION
+        ============================================================ -->
 
-    <main>
-        <section id="home">
-            <h1>Welcome to my WebPage</h1>
-        </section>
+		<section class="section section-alt" id="skills">
+			<div class="container">
+				<p class="section-eyebrow">Competences</p>
+				<h2 class="section-title">Technical Skills</h2>
+				<div class="skills-grid">
+					<!-- SKILLS GROUPS -->
 
+					<!--
+                    <div class="skills-group">
+                        <h3 class="skills-group-label">Group Label</h3>
+                        <div class="skills-tags">
+                            <span class="skills-tag">Skill</span>
+                            ...
+                        </div>
+                    </div>
+                    -->
 
+					<div class="skills-group">
+						<h3 class="skills-group-label">Simulation</h3>
+						<div class="skills-tags">
+							<span class="skills-tag">RocketPy</span>
+							<span class="skills-tag">Simulink</span>
+							<span class="skills-tag">ANSYS</span>
+						</div>
+					</div>
 
-        <section id="aboutme">
-            <h2>About Me</h2>
+					<div class="skills-group">
+						<h3 class="skills-group-label">Design & CAD</h3>
+						<div class="skills-tags">
+							<span class="skills-tag">SolidWorks</span>
+							<span class="skills-tag">Siemens NX</span>
+							<span class="skills-tag">FEA</span>
+						</div>
+					</div>
 
-            <div id="profile"><img id="pfp" src="img/profile.jpg" alt="Profile Picture"></div>
-            <p>
-                I’m a Mechanical Engineering + PEY student at University of Toronto, expecting to graduate in 2029.
-                <br>
-                I am primarily interested in robotics and mechatronics systems, where mechanical and electrical components are integrated to expand human capabilities.
-                <br>
-                I aspire to contribute to the development and innovation of cutting-edge technologies within aerospace and automotive industries, with focus on advancing transportation efficiency.
-                <br>
-                I have been developing both technical and soft skills through involvement in various groups, design teams and engineering projects.
-            </p>
-        </section>
+					<div class="skills-group">
+						<h3 class="skills-group-label">Programming</h3>
+						<div class="skills-tags">
+							<span class="skills-tag">Python</span>
+							<span class="skills-tag">C / C++</span>
+							<span class="skills-tag">MATLAB</span>
+							<span class="skills-tag">Julia</span>
+							<span class="skills-tag">Git</span>
+						</div>
+					</div>
 
+					<div class="skills-group">
+						<h3 class="skills-group-label">Manufacturing</h3>
+						<div class="skills-tags">
+							<span class="skills-tag">CNC Machining</span>
+							<span class="skills-tag">Balsa Manufacturing</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
+		<!-- ===========================================================
+            PROJECTS SECTION
+        ============================================================ -->
 
-        <section id="media">
-            <h2>Media</h2>
+		<section class="section" id="projects">
+			<div class="container">
+				<p class="section-eyebrow">Work</p>
+				<h2 class="section-title">Featured Projects</h2>
 
-            <div class="carousel">
+				<div class="projects-toolbar">
+					<button
+						class="layout-btn active"
+						id="btn-grid"
+						aria-label="Grid layout"
+						title="Grid layout"
+						onclick="setProjectsLayout('grid')">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+							<rect x="0" y="0" width="7" height="7" rx="1" />
+							<rect x="9" y="0" width="7" height="7" rx="1" />
+							<rect x="0" y="9" width="7" height="7" rx="1" />
+							<rect x="9" y="9" width="7" height="7" rx="1" />
+						</svg>
+					</button>
+					<button
+						class="layout-btn"
+						id="btn-list"
+						aria-label="List layout"
+						title="List layout"
+						onclick="setProjectsLayout('list')">
+						<svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+							<rect x="0" y="1" width="16" height="2" rx="1" />
+							<rect x="0" y="7" width="16" height="2" rx="1" />
+							<rect x="0" y="13" width="16" height="2" rx="1" />
+						</svg>
+					</button>
+				</div>
 
-                <img class="card" src="img/profile.jpg" alt="Media 1">
-                <!-- <h3>Media Title 1</h3>
-                <p>Brief description of Media 1.</p> -->
+				<div class="projects-container grid-layout" id="projects-container">
+					<!-- PROJECT CARDS -->
 
-            </div>
-        </section>
+					<!--
+                    <article class="project-card" data-href="path-to-index.html">
+                        <div class="project-card-logo">
+                            <img class="project-img" src="path-to-img" alt="alt-txt">
+                        </div>
+                        <div class="project-card-body">
+                            <h3 class="project-card-title">TITLE</h3>
+                            <p class="project-card-desc">Description</p>
+                            <div class="tech-tags">
+                                <span class="tech-tag">Tags</span>
+                                ...
+                            </div>
+                        </div>
+                        <div class="project-card-links">
+                            <a href="github-link" class="card-link" target="_blank" rel="noopener" onclick="event.stopPropagation()">GitHub</a>
+                            <a href="path-to-index.html" class="card-link" onclick="event.stopPropagation()">More <i class="fa-solid fa-arrow-right fa-xs"></i></a>
+                        </div>
+                    </article>
+                    -->
 
+					<article class="project-card" data-href="projects/glow/index.html">
+						<div class="project-card-logo">
+							<img
+								class="project-img"
+								src="https://raw.githubusercontent.com/ArthurJWH/GLOW/main/assets/img/icon.png"
+								alt="GLOW" />
+						</div>
+						<div class="project-card-body">
+							<h3 class="project-card-title">GLOW</h3>
+							<p class="project-card-desc">
+								G-Code generator for direct energy deposition additive
+								manufacturing.
+							</p>
+							<div class="tech-tags">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">PyQt6</span>
+								<span class="tech-tag">NumPy</span>
+								<span class="tech-tag">CAD</span>
+							</div>
+						</div>
+						<div class="project-card-links">
+							<a
+								href="https://github.com/ArthurJWH/GLOW"
+								class="card-link"
+								target="_blank"
+								rel="noopener"
+								onclick="event.stopPropagation()"
+								>GitHub</a
+							>
+							<a
+								href="projects/glow/index.html"
+								class="card-link"
+								onclick="event.stopPropagation()"
+								>More <i class="fa-solid fa-arrow-right fa-xs"></i
+							></a>
+						</div>
+					</article>
 
+					<article class="project-card" data-href="projects/rocketpy/index.html">
+						<div class="project-card-logo">
+							<img
+								class="project-img"
+								src="https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png"
+								alt="RocketPy" />
+						</div>
+						<div class="project-card-body">
+							<h3 class="project-card-title">RocketPy Flight Sim</h3>
+							<p class="project-card-desc">
+								Next generation High-Power Rocketry 6-DOF Trajectory Simulation
+							</p>
+							<div class="tech-tags">
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">RocketPy</span>
+								<span class="tech-tag">Matplotlib</span>
+								<span class="tech-tag">CFD</span>
+							</div>
+						</div>
+						<div class="project-card-links">
+							<a
+								href="https://github.com/RocketPy-Team/RocketPy"
+								class="card-link"
+								target="_blank"
+								rel="noopener"
+								onclick="event.stopPropagation()"
+								>GitHub</a
+							>
+							<a
+								href="projects/rocketpy/index.html"
+								class="card-link"
+								onclick="event.stopPropagation()"
+								>More <i class="fa-solid fa-arrow-right fa-xs"></i
+							></a>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
 
-        <section id="projects">
-            <h2>Projects</h2>
+		<!-- ===========================================================
+            EXPERIENCE SECTION
+        ============================================================ -->
 
-            <div id="project-displayer">
+		<section class="section section-alt" id="experience">
+			<div class="container">
+				<p class="section-eyebrow">Experience</p>
+				<h2 class="section-title">Work Timeline</h2>
 
-                <div class="project" project-name="GLOW">
-                    <a href="https://github.com/ArthurJWH/GLOW" target="_blank">
-                        <img class="project-img" src="https://raw.githubusercontent.com/ArthurJWH/GLOW/main/assets/img/icon.png" alt="GLOW">
-                    </a>
-                    <details>
-                        <summary></summary>
-                        <p>
-                            GLOW is part of my 2025 Summer project.
-                            It is a G-Code generator application for Direct Energy Deposition additive manufacturing.
-                        </p>
-                    </details>
-                </div>
+				<div class="timeline">
+					<!-- TIMELINE ITEMS -->
 
-                <div class="project" project-name="RocketPy">
-                    <a href="https://docs.rocketpy.org/en/latest/index.html" target="_blank">
-                        <img class="project-img" src="https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png" alt="RocketPy">
-                    </a>
-                    <details>
-                        <summary></summary>
-                        <p>
-                            RocketPy is the next-generation trajectory simulation solution for High-Power Rocketry.
-                        The code is written as a Python library and allows for a complete 6 degrees of freedom simulation of a rocket’s flight trajectory.
-                        </p>
-                    </details>
-                </div>
+					<!--
+                    <div class="timeline-item">
+                        <div class="timeline-meta">
+                            <span class="timeline-date">20XX – Present</span>
+                        </div>
+                        <div class="timeline-content">
+                            <p class="timeline-org">Organization Name</p>
+                            <h3 class="timeline-role">Role</h3>
+                            <ul class="timeline-bullets">
+                                <li>Bullet Point</li>
+                                ...
+                            </ul>
+                        </div>
+                    </div>
+                    -->
+				</div>
+			</div>
+		</section>
 
-            </div>
-        </section>
+		<!-- ===========================================================
+            MEDIA
+        ============================================================ -->
 
+		<section class="section" id="media">
+			<div class="container">
+				<p class="section-eyebrow">Media</p>
+				<h2 class="section-title">Photos & Videos</h2>
+			</div>
+			<div class="media-scroll-wrap">
+				<div class="media-gallery" id="media-gallery">
+					<!-- IMAGES -->
 
-    </main>
+					<!--
+                    <img class="media-item" src="path-to-img" alt="alt-txt">
+                    -->
+				</div>
+			</div>
+		</section>
 
+		<!-- ===========================================================
+            CONTACT
+        ============================================================ -->
 
-    <footer>
+		<section class="section section-alt" id="contact">
+			<div class="container contact-layout">
+				<div class="contact-text">
+					<p class="section-eyebrow">Contact</p>
+					<h2 class="section-title">Let's build something together.</h2>
+					<p class="contact-pitch">
+						Currently seeking internship, research, and engineering opportunities in
+						Robotics, Aerospace, and Mechanical industries.
+					</p>
+				</div>
+				<div class="contact-links">
+					<a href="mailto:arthurjwhwang@gmail.com" class="contact-item">
+						<i class="fa-solid fa-envelope contact-icon"></i>
+						<span>arthurjwhwang@gmail.com</span>
+					</a>
 
-    </footer>
-    
-    <script src="script.js"></script>
-</body>
+					<a href="tel:+16479647178" class="contact-item" target="_blank">
+						<i class="fa-solid fa-phone contact-icon"></i>
+						<span>+1 (647) 964-7178</span>
+					</a>
+
+					<a
+						href="https://www.linkedin.com/in/arthur-jiun-wei-hwang"
+						class="contact-item"
+						target="_blank">
+						<i class="fa-brands fa-linkedin contact-icon"></i>
+						<span>linkedin.com/in/arthur-jiun-wei-hwang</span>
+					</a>
+
+					<a href="https://github.com/ArthurJWH" class="contact-item" target="_blank">
+						<i class="fa-brands fa-github contact-icon"></i>
+						<span>github.com/ArthurJWH</span>
+					</a>
+
+					<a href="assets/resume.pdf" class="contact-item" target="_blank">
+						<i class="fa-solid fa-file-arrow-down contact-icon"></i>
+						<span>Download Resume</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- ===========================================================
+            FOOTER
+        ============================================================ -->
+
+		<footer class="footer">
+			<div class="container footer-inner">
+				<span>© 2025 Arthur Hwang</span>
+				<span class="footer-mono">Built with HTML · CSS · JS</span>
+			</div>
+		</footer>
+
+		<script src="script.js"></script>
+	</body>
 </html>
