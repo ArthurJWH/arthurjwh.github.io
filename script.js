@@ -1,27 +1,78 @@
-function openHamburger(hamburger) {
-  hamburger.classList.toggle("hamburger-open");
+function getHamburgerElements() {
+	return {
+		hamburger: document.getElementById("hamburger"),
+		navLinks: document.getElementById("nav-links"),
+		nav: document.getElementById("nav"),
+	};
 }
 
-
-const home = document.getElementById("home");
-const layers = [];
-const count = 100; // number of glowing spots
-
-for (let i = 0; i < count; i++) {
-  const x = Math.random() * 100;
-  const y = Math.random() * 100;
-
-  const size = Math.random() * 0.5; // glow size
-  const hue = 220 + Math.random() * 40; // bluish glow
-  const color = `hsla(${hue}, 100%, 80%, 1)`;
-
-  layers.push(
-    `radial-gradient(circle at ${x}% ${y}%, ${color} 0%, transparent ${size}%)`
-  );
+function setHamburgerOpen(isOpen) {
+	const { hamburger, navLinks } = getHamburgerElements();
+	if (!hamburger || !navLinks) return;
+	hamburger.classList.toggle("open", isOpen);
+	navLinks.classList.toggle("open", isOpen);
 }
 
+function toggleHamburger() {
+	const { navLinks } = getHamburgerElements();
+	if (!navLinks) return;
+	setHamburgerOpen(!navLinks.classList.contains("open"));
+}
 
-layers.push(`radial-gradient(ellipse at center, hsl(240, 20%, 20%) 60%, hsl(0, 0%, 0%) 100%)`)
+function closeHamburger() {
+	setHamburgerOpen(false);
+}
 
+document.addEventListener("DOMContentLoaded", () => {
+	const { hamburger } = getHamburgerElements();
+	if (hamburger) {
+		hamburger.addEventListener("click", toggleHamburger);
+	}
+});
 
-home.style.backgroundImage = layers.join(",");
+document.addEventListener("click", (event) => {
+	const { nav, navLinks } = getHamburgerElements();
+	if (!nav || !navLinks) return;
+	if (!navLinks.classList.contains("open")) return;
+
+	const target = event.target;
+	if (nav.contains(target)) {
+		if (target.closest("#nav-links a")) {
+			closeHamburger();
+		}
+		return;
+	}
+
+	closeHamburger();
+});
+
+const btnGrid = document.getElementById("btn-grid");
+const btnList = document.getElementById("btn-list");
+const projects = document.getElementById("projects-container");
+
+function setProjectsLayout(layout) {
+	if (!projects) return;
+	if (layout === "grid") {
+		projects.classList.remove("list-layout");
+		projects.classList.add("grid-layout");
+		if (btnGrid) btnGrid.classList.add("active");
+		if (btnList) btnList.classList.remove("active");
+	} else {
+		projects.classList.remove("grid-layout");
+		projects.classList.add("list-layout");
+		if (btnGrid) btnGrid.classList.remove("active");
+		if (btnList) btnList.classList.add("active");
+	}
+	try {
+		localStorage.setItem("projectsLayout", layout);
+	} catch (e) {}
+}
+
+const saved = (() => {
+	try {
+		return localStorage.getItem("projectsLayout");
+	} catch (e) {
+		return null;
+	}
+})();
+if (saved === "list" || saved === "grid") setLayout(saved);
