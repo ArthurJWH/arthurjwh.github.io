@@ -290,10 +290,22 @@
 
 					<article class="project-card" data-href="projects/rocketpy/index.html">
 						<div class="project-card-logo">
-							<img
-								class="project-img"
-								src="https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png"
-								alt="RocketPy" />
+							<picture>
+								<source
+									media="(prefers-color-scheme: dark)"
+									srcset="
+										https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_white.png
+									" />
+								<source
+									media="(prefers-color-scheme: light)"
+									srcset="
+										https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png
+									" />
+								<img
+									class="project-img"
+									src="https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png"
+									alt="RocketPy" />
+							</picture>
 						</div>
 						<div class="project-card-body">
 							<h3 class="project-card-title">RocketPy Open Source</h3>
