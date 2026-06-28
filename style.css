@@ -884,6 +884,7 @@ button {
 
 	.timeline-item {
 		grid-template-columns: 1fr;
+        gap: var(--space-sm);
 		padding-left: var(--space-md);
 		padding-bottom: var(--space-lg);
 	}
