@@ -4,8 +4,23 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Arthur Hwang</title>
-		<link rel="icon" type="image/png" href="img/logo-32.png" />
+		<link rel="icon" type="image/png" href="img/icon-32-light-mode.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="img/icon-32-light-mode.png"
+			media="(prefers-color-scheme: light)" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="img/icon-32-dark-mode.png"
+			media="(prefers-color-scheme: dark)" />
 		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+			rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/801590478f.js" crossorigin="anonymous"></script>
 	</head>
 	<body>
@@ -14,7 +29,17 @@
         ============================================================ -->
 
 		<nav class="nav" id="nav">
-			<a class="nav-logo" href="#hero">AH</a>
+			<a class="nav-logo" href="#hero">
+				<picture class="nav-picture">
+					<source
+						srcset="img/icon-500-dark-mode.png"
+						media="(prefers-color-scheme: dark)" />
+					<source
+						srcset="img/icon-500-light-mode.png"
+						media="(prefers-color-scheme: light)" />
+					<img src="img/icon-500-light-mode.png" alt="Icon" class="nav-img" />
+				</picture>
+			</a>
 			<ul class="nav-links" id="nav-links">
 				<li><a href="#about">About</a></li>
 				<li><a href="#skills">Skills</a></li>
@@ -57,8 +82,11 @@
 					></a>
 				</div>
 			</div>
-			<div class="hero-scroll-hint" aria-hidden="true">
-				<i class="fa-solid fa-arrow-down"></i>scroll<i class="fa-solid fa-arrow-down"></i>
+			<div class="hero-scroll-hint-wrapper" aria-hidden="true">
+				<div class="hero-scroll-hint">
+					<i class="fa-solid fa-arrow-down"></i>scroll<i
+						class="fa-solid fa-arrow-down"></i>
+				</div>
 			</div>
 		</section>
 
@@ -234,9 +262,12 @@
 							</p>
 							<div class="tech-tags">
 								<span class="tech-tag">Python</span>
-								<span class="tech-tag">PyQt6</span>
-								<span class="tech-tag">NumPy</span>
-								<span class="tech-tag">CAD</span>
+								<span class="tech-tag">Qt Framework</span>
+								<span class="tech-tag">C++</span>
+								<div class="tech-tag">App Deployment</div>
+								<div class="tech-tag">UI/UX Design</div>
+								<span class="tech-tag">Addivitive Manufacturing</span>
+								<div class="tech-tag">Documentation</div>
 							</div>
 						</div>
 						<div class="project-card-links">
@@ -265,15 +296,16 @@
 								alt="RocketPy" />
 						</div>
 						<div class="project-card-body">
-							<h3 class="project-card-title">RocketPy Flight Sim</h3>
+							<h3 class="project-card-title">RocketPy Open Source</h3>
 							<p class="project-card-desc">
 								Next generation High-Power Rocketry 6-DOF Trajectory Simulation
 							</p>
 							<div class="tech-tags">
 								<span class="tech-tag">Python</span>
 								<span class="tech-tag">RocketPy</span>
-								<span class="tech-tag">Matplotlib</span>
-								<span class="tech-tag">CFD</span>
+								<span class="tech-tag">Version Control</span>
+								<span class="tech-tag">Documentation</span>
+								<span class="tech-tag">Testing</span>
 							</div>
 						</div>
 						<div class="project-card-links">
@@ -324,6 +356,202 @@
                         </div>
                     </div>
                     -->
+
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">Jul 2026 – Present</span>
+						</div>
+						<div class="timeline-content">
+							<p class="timeline-org">
+								University of Toronto Aerospace Team, UAS Division
+							</p>
+							<h3 class="timeline-role">Structures Lead</h3>
+							<!-- <ul class="timeline-bullets">
+                                <li></li>
+                            </ul> -->
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">Jan 2026 – Present</span>
+						</div>
+						<div class="timeline-content">
+							<p class="timeline-org">
+								University of Toronto Aerospace Team, Rocketry Division
+							</p>
+							<h3 class="timeline-role">Aerodynamics Co-Lead</h3>
+							<!-- <ul class="timeline-bullets">
+                                <li></li>
+                            </ul> -->
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">May 2025 – Aug 2025</span>
+						</div>
+						<div class="timeline-content">
+							<p class="timeline-org">
+								Laboratory for Extreme Mechanics & Additive Manufacturing
+							</p>
+							<h3 class="timeline-role">Summer Research Student</h3>
+							<ul class="timeline-bullets">
+								<li>
+									Developed GLOW, an open-source G-CODE generator for Direct
+									Energy Deposition Additive Manufacturing, supporting 3 print
+									geometries, 2 substrate configurations, 10 configurable print
+									parameters, and 11 preprogrammed machine-specific codes.
+								</li>
+								<li>
+									Deployed GLOW as a zero-dependency GUI desktop application using
+									PyQt6 and PyInstaller, and distributed with Inno Setup,
+									eliminating software dependency.
+								</li>
+								<li>
+									Ported GLOW from Python to C++ using Qt Creator, reducing binary
+									size from several GB to a lightweight executable and improving
+									runtime performance by 40%, enabling practical deployment across
+									lab workstations.
+								</li>
+								<li>
+									Presented GLOW and G-CODE generation methodology as guest
+									speaker in the graduate-level MSE1068 Additive Manufacturing
+									course at University of Toronto.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">Dec 2024 – Present</span>
+						</div>
+						<div class="timeline-content">
+							<p class="timeline-org">RocketPy Open Source</p>
+							<h3 class="timeline-role">Library Development Member</h3>
+							<ul class="timeline-bullets">
+								<li>
+									Developed serialization functions to save and quickly retrieve
+									Flight simulation data via a custom RPY file format.
+								</li>
+								<li>
+									Implemented "create_environment_object" method for
+									EnvironmentAnalysis class, enabling simulation Environment
+									rendering from historical data across user-defined time
+									intervals in a single function call.
+								</li>
+								<li>
+									Improved parachute aerodynamic model accuracy by modeling it as
+									a hemispheroid parameterized by radius, height, and porosity.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">Sep 2024 – Jun 2026</span>
+						</div>
+						<div class="timeline-content">
+							<p class="timeline-org">
+								University of Toronto Aerospace Team, UAS Division
+							</p>
+							<h3 class="timeline-role">SAE Aerodynamics Member</h3>
+							<ul class="timeline-bullets">
+								<li>
+									Designed SolidWorks CAD models for wings and ailerons of
+									autonomous hybrid tricopters, considering manufacturability and
+									ease-of-assembly.
+								</li>
+								<li>
+									Manufactured and repaired 6 composite wings across 15+ test
+									flights using balsa wood, carbon fiber, and heat-shrink film.
+								</li>
+								<li>
+									Selected lifting body fuselage airfoil from 14 candidates via
+									XFLR5 analysis, targeting stable CL and CD profiles at operating
+									Reynolds numbers and sufficient internal volume to house
+									avionics.
+								</li>
+								<li>
+									Designed motor arm supports to withstand 920g propeller thrust
+									and torsional loads on the wing.
+								</li>
+								<li>
+									Designed modular assembly jigs that eliminated significant
+									dimensional deviation in manufactured wings and resolved
+									recurring fuselage alignment and wing warping issues from
+									previous iterations.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">Sep 2024 – Dec 2025</span>
+						</div>
+						<div class="timeline-content">
+							<p class="timeline-org">
+								University of Toronto Aerospace Team, Rocketry Division
+							</p>
+							<h3 class="timeline-role">Aerodynamics Member</h3>
+							<ul class="timeline-bullets">
+								<li>
+									Conducted aeroelasticity, fin flutter, and stability margin
+									analyses in OpenRocket across dozens of nose cone and fin
+									designs, achieving 1.5-3 caliber stablity across 0-8 m/s wind
+									conditions and 2x flutter safety factor.
+								</li>
+								<li>
+									Built a RocketPy Monte Carlo simulation environment for 4 rocket
+									projects, modeling manufacturing tolerances and environmental
+									variability (including ballistic descent scenarios) to verify
+									landing zones via KML export to Google Earth for safety
+									compliance.
+								</li>
+								<li>
+									Developed a Jupyter Notebook to automatically build Rocketpy
+									simulations from OpenRocket files and scattered data sources
+									(Excel, RSE files), reducing cross-validation tasks from several
+									hours to minutes.
+								</li>
+								<li>
+									Implemented a Genetic Algorithm Multidisciplinary Optimization
+									framework integrated with RocketPy to automatically optimize
+									aerosurface geometry, replacing manual parameter sweeps.
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<div class="timeline-item">
+						<div class="timeline-meta">
+							<span class="timeline-date">Apr 2024 – Aug 2024</span>
+						</div>
+						<div class="timeline-content">
+							<p class="timeline-org">Keep Flying Poli USP</p>
+							<h3 class="timeline-role">Aerodynamics Member</h3>
+							<ul class="timeline-bullets">
+								<li>
+									Designed a micro class aircraft with 2.16kg MTOW able to take
+									off in 4 m runway for SAE Brasil Aerodesign 2024.
+								</li>
+								<li>
+									Developed Julia programs for custom airfoil parametrization and
+									generation, Sobol global sensitivity analysis of 10 design
+									variables on MTOW, critical section analysis, and aircraft
+									performance robustness test.
+								</li>
+								<li>
+									Co-authored two sections of the SAE Brasil Aerodesign 2024
+									aerodynamics report and led a word reduction pass cutting word
+									count by 5% to meet submission requirements.
+								</li>
+							</ul>
+						</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -344,6 +572,52 @@
 					<!--
                     <img class="media-item" src="path-to-img" alt="alt-txt">
                     -->
+
+					<img
+						class="media-item"
+						src="img/mse1068-presentation-1.jpeg"
+						alt="G-CODE presentation in MSE1068 course" />
+					<img
+						class="media-item"
+						src="img/utat-team-2026.jpeg"
+						alt="UTAT in SAE Aerodesign West 2026" />
+					<img
+						class="media-item"
+						src="img/sae-aerodesign-west-2026.jpeg"
+						alt="Portrait with UT-26 aircraft" />
+					<img
+						class="media-item"
+						src="img/wing-manufacturing.jpeg"
+						alt="Manufacturing balsa wings" />
+					<img
+						class="media-item"
+						src="img/piloting.jpeg"
+						alt="Learning how to pilot RC plane" />
+					<img
+						class="media-item"
+						src="img/wing-repairing.jpeg"
+						alt="Repairing balsa wings" />
+					<img class="media-item" src="img/utat-2025.jpeg" alt="UT-25 aircraft" />
+					<img
+						class="media-item"
+						src="img/world-scout-moot-2025.jpeg"
+						alt="World Scout Moot 2025" />
+					<img
+						class="media-item"
+						src="img/embraer-visit.jpeg"
+						alt="Embraer facility visit from inside" />
+					<img
+						class="media-item"
+						src="img/embraer-visit-1.jpeg"
+						alt="Embraer facility visit" />
+					<img
+						class="media-item"
+						src="img/keep-flying-2024.jpeg"
+						alt="Keep Flying 2024 aircraft" />
+					<img
+						class="media-item"
+						src="img/10th-forum-sae-brasil-aerodesign.jpeg"
+						alt="10th Forum SAE Brasil Aerodesign" />
 				</div>
 			</div>
 		</section>
@@ -400,7 +674,7 @@
 
 		<footer class="footer">
 			<div class="container footer-inner">
-				<span>© 2025 Arthur Hwang</span>
+				<span>© 2026 Arthur Hwang</span>
 				<span class="footer-mono">Built with HTML · CSS · JS</span>
 			</div>
 		</footer>
