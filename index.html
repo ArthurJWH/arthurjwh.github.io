@@ -3,14 +3,16 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta name="description" content="" />
-		<meta name="keywords" content="Arthur, Jiun, Wei, Hwang" />
+		<meta name="description" content="Mechanical Engineering Student @ University of Toronto" />
+		<meta name="keywords" content="Arthur, Jiun, Wei, Hwang, ArthurJWH" />
 		<meta name="author" content="Arthur Hwang" />
 		<title>Arthur Hwang</title>
 		<meta property="og:site_name" content="Arthur Hwang" />
 		<meta property="og:url" content="https://arthurjwh.github.io/" />
 		<meta property="og:title" content="Arthur Hwang" />
-		<meta property="og:description" content="" />
+		<meta
+			property="og:description"
+			content="Mechanical Engineering Student @ University of Toronto" />
 		<meta
 			property="og:image"
 			content="https://arthurjwh.github.io/img/icon-500-light-mode.png" />
@@ -54,6 +56,7 @@
 				<li><a href="#about">About</a></li>
 				<li><a href="#skills">Skills</a></li>
 				<li><a href="#projects">Projects</a></li>
+				<li><a href="#experience">Timeline</a></li>
 				<li><a href="#media">Media</a></li>
 				<li><a href="#contact">Contact</a></li>
 			</ul>
@@ -61,7 +64,6 @@
 				<span></span><span></span><span></span>
 			</button>
 		</nav>
-
 		<!-- ===========================================================
             HERO SECTION
         ============================================================ -->
@@ -257,18 +259,28 @@
                     </article>
                     -->
 
-					<article class="project-card" data-href="projects/glow/index.html">
-						<div class="project-card-logo">
+					<article
+						class="project-card"
+						data-href="projects/glow/index.html"
+						style="view-transition-name: glow">
+						<div
+							class="project-card-logo"
+							style="
+								--page-bg: url(&quot;projects/glow/img/example_configuration.png&quot;);
+								background-position: bottom;
+							">
 							<img
 								class="project-img"
 								src="https://raw.githubusercontent.com/ArthurJWH/GLOW/main/assets/img/icon.png"
 								alt="GLOW" />
 						</div>
 						<div class="project-card-body">
-							<h3 class="project-card-title">GLOW</h3>
+							<h3 class="project-card-title" style="view-transition-name: glow-title">
+								GLOW
+							</h3>
 							<p class="project-card-desc">
-								G-Code generator for direct energy deposition additive
-								manufacturing.
+								G-CODE Generator for Direct Energy Deposition Additive
+								Manufacturing.
 							</p>
 							<div class="tech-tags">
 								<span class="tech-tag">Python</span>
@@ -276,7 +288,6 @@
 								<span class="tech-tag">C++</span>
 								<div class="tech-tag">App Deployment</div>
 								<div class="tech-tag">UI/UX Design</div>
-								<span class="tech-tag">Addivitive Manufacturing</span>
 								<div class="tech-tag">Documentation</div>
 							</div>
 						</div>
@@ -299,23 +310,15 @@
 					</article>
 
 					<article class="project-card" data-href="projects/rocketpy/index.html">
-						<div class="project-card-logo">
-							<picture>
-								<source
-									media="(prefers-color-scheme: dark)"
-									srcset="
-										https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_white.png
-									" />
-								<source
-									media="(prefers-color-scheme: light)"
-									srcset="
-										https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png
-									" />
-								<img
-									class="project-img"
-									src="https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png"
-									alt="RocketPy" />
-							</picture>
+						<div
+							class="project-card-logo"
+							style="
+								--page-bg: url(&quot;projects/rocketpy/img/trajectory.png&quot;);
+							">
+							<img
+								class="project-img"
+								src="https://raw.githubusercontent.com/RocketPy-Team/RocketPy/master/docs/static/RocketPy_Logo_black.png"
+								alt="RocketPy" />
 						</div>
 						<div class="project-card-body">
 							<h3 class="project-card-title">RocketPy Open Source</h3>
