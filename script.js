@@ -1,78 +1,88 @@
-function getHamburgerElements() {
-	return {
-		hamburger: document.getElementById("hamburger"),
-		navLinks: document.getElementById("nav-links"),
-		nav: document.getElementById("nav"),
+(() => {
+	"use strict";
+
+	history.scrollRestoration = "manual";
+
+	const STORAGE_KEY = "projectsLayout";
+
+	// Centralized, silently-failing storage access — used in one place only.
+	const storage = {
+		get(key) {
+			try {
+				return localStorage.getItem(key);
+			} catch {
+				return null;
+			}
+		},
+		set(key, value) {
+			try {
+				localStorage.setItem(key, value);
+			} catch {
+				/* storage unavailable (private mode, quota, etc.) — ignore */
+			}
+		},
 	};
-}
 
-function setHamburgerOpen(isOpen) {
-	const { hamburger, navLinks } = getHamburgerElements();
-	if (!hamburger || !navLinks) return;
-	hamburger.classList.toggle("open", isOpen);
-	navLinks.classList.toggle("open", isOpen);
-}
+	function initHamburgerNav() {
+		const hamburger = document.getElementById("hamburger");
+		const navLinks = document.getElementById("nav-links");
+		const nav = document.getElementById("nav");
 
-function toggleHamburger() {
-	const { navLinks } = getHamburgerElements();
-	if (!navLinks) return;
-	setHamburgerOpen(!navLinks.classList.contains("open"));
-}
+		if (!hamburger || !navLinks || !nav) return;
 
-function closeHamburger() {
-	setHamburgerOpen(false);
-}
+		const isOpen = () => navLinks.classList.contains("open");
 
-document.addEventListener("DOMContentLoaded", () => {
-	const { hamburger } = getHamburgerElements();
-	if (hamburger) {
-		hamburger.addEventListener("click", toggleHamburger);
-	}
-});
+		const setOpen = (open) => {
+			hamburger.classList.toggle("open", open);
+			navLinks.classList.toggle("open", open);
+			hamburger.setAttribute("aria-expanded", String(open));
+		};
 
-document.addEventListener("click", (event) => {
-	const { nav, navLinks } = getHamburgerElements();
-	if (!nav || !navLinks) return;
-	if (!navLinks.classList.contains("open")) return;
+		hamburger.addEventListener("click", () => setOpen(!isOpen()));
 
-	const target = event.target;
-	if (nav.contains(target)) {
-		if (target.closest("#nav-links a")) {
-			closeHamburger();
-		}
-		return;
+		// Close on outside click, or when a nav link is clicked.
+		document.addEventListener("click", (event) => {
+			if (!isOpen()) return;
+
+			const target = event.target;
+			if (nav.contains(target)) {
+				if (target.closest("#nav-links a")) setOpen(false);
+				return;
+			}
+			setOpen(false);
+		});
+
+		// Close on Escape — standard expected behavior for dismissible menus.
+		document.addEventListener("keydown", (event) => {
+			if (event.key === "Escape" && isOpen()) setOpen(false);
+		});
 	}
 
-	closeHamburger();
-});
+	function initProjectsLayout() {
+		const btnGrid = document.getElementById("btn-grid");
+		const btnList = document.getElementById("btn-list");
+		const projects = document.getElementById("projects-container");
 
-const btnGrid = document.getElementById("btn-grid");
-const btnList = document.getElementById("btn-list");
-const projects = document.getElementById("projects-container");
+		if (!projects) return;
 
-function setProjectsLayout(layout) {
-	if (!projects) return;
-	if (layout === "grid") {
-		projects.classList.remove("list-layout");
-		projects.classList.add("grid-layout");
-		if (btnGrid) btnGrid.classList.add("active");
-		if (btnList) btnList.classList.remove("active");
-	} else {
-		projects.classList.remove("grid-layout");
-		projects.classList.add("list-layout");
-		if (btnGrid) btnGrid.classList.remove("active");
-		if (btnList) btnList.classList.add("active");
+		const setLayout = (layout) => {
+			const isGrid = layout !== "list";
+			projects.classList.toggle("grid-layout", isGrid);
+			projects.classList.toggle("list-layout", !isGrid);
+			btnGrid?.classList.toggle("active", isGrid);
+			btnList?.classList.toggle("active", !isGrid);
+			storage.set(STORAGE_KEY, isGrid ? "grid" : "list");
+		};
+
+		btnGrid?.addEventListener("click", () => setLayout("grid"));
+		btnList?.addEventListener("click", () => setLayout("list"));
+
+		const saved = storage.get(STORAGE_KEY);
+		setLayout(saved === "list" ? "list" : "grid");
 	}
-	try {
-		localStorage.setItem("projectsLayout", layout);
-	} catch (e) {}
-}
 
-const saved = (() => {
-	try {
-		return localStorage.getItem("projectsLayout");
-	} catch (e) {
-		return null;
-	}
+	document.addEventListener("DOMContentLoaded", () => {
+		initHamburgerNav();
+		initProjectsLayout();
+	});
 })();
-if (saved === "list" || saved === "grid") setLayout(saved);
