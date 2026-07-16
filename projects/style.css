@@ -688,10 +688,10 @@ body {
 	box-shadow: 0 4px 20px var(--accent-glow);
 }
 
-/* .proj-card-icon {
+.proj-card-icon {
 	font-size: 1.2rem;
 	margin-bottom: 0.25rem;
-} */
+}
 
 .proj-card-title {
 	font-size: 0.9rem;
@@ -794,11 +794,11 @@ body {
 }
 
 .proj-gallery-item:focus {
-  overflow: visible;
+	overflow: visible;
 }
 
 .proj-gallery-item:focus img {
-  position: fixed;
+	position: fixed;
 	top: 50vh;
 	left: 50vh;
 	transform: translate(-50%, -50%) scale(2);
@@ -855,11 +855,11 @@ body {
 	border-radius: var(--radius-md);
 }
 
-/* .proj-lesson-icon {
+.proj-lesson-icon {
 	font-size: 1rem;
 	flex-shrink: 0;
 	margin-top: 0.1rem;
-} */
+}
 
 .proj-lesson-text {
 	font-size: 0.875rem;
