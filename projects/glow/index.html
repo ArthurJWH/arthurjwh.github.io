@@ -1,0 +1,837 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="G-Code Generator for Direct Energy Deposition Additive Manufacturing." />
+		<meta name="keywords" content="Arthur, Jiun, Wei, Hwang, ArthurJWH" />
+		<meta name="author" content="Arthur Hwang" />
+		<title>GLOW — Arthur Hwang</title>
+		<meta property="og:site_name" content="Arthur Hwang" />
+		<meta property="og:url" content="https://arthurjwh.github.io/projects/glow/index.html" />
+		<meta property="og:title" content="GLOW" />
+		<meta
+			property="og:description"
+			content="G-Code Generator for Direct Energy Deposition Additive Manufacturing." />
+		<meta
+			property="og:image"
+			content="https://arthurjwh.github.io/img/icon-500-light-mode.png" />
+		<link rel="icon" type="image/png" href="../../img/icon-32-light-mode.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-light-mode.png"
+			media="(prefers-color-scheme: light)" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-dark-mode.png"
+			media="(prefers-color-scheme: dark)" />
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+			rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/801590478f.js" crossorigin="anonymous"></script>
+	</head>
+	<body style="view-transition-name: post-hero">
+		<!-- ===========================================================
+            NAVBAR
+        ============================================================ -->
+
+		<nav class="nav proj-nav-solid" id="nav">
+			<a class="nav-logo" href="../../index.html#hero">
+				<picture class="nav-picture">
+					<source
+						srcset="../../img/icon-500-dark-mode.png"
+						media="(prefers-color-scheme: dark)" />
+					<source
+						srcset="../../img/icon-500-light-mode.png"
+						media="(prefers-color-scheme: light)" />
+					<img src="../../img/icon-500-light-mode.png" alt="Icon" class="nav-img" />
+				</picture>
+			</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="../../index.html#about">About</a></li>
+				<li><a href="../../index.html#skills">Skills</a></li>
+				<li><a href="../../index.html#projects">Projects</a></li>
+				<li><a href="../../index.html#experience">Timeline</a></li>
+				<li><a href="../../index.html#media">Media</a></li>
+				<li><a href="../../index.html#contact">Contact</a></li>
+			</ul>
+			<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
+		</nav>
+
+		<div style="view-transition-name: glow">
+			<!-- ===========================================================
+            PROJECT HERO
+        ============================================================ -->
+
+			<header class="proj-hero">
+				<div class="proj-hero-inner">
+					<a class="back-link" href="../../index.html#projects">
+						<svg
+							width="14"
+							height="14"
+							viewBox="0 0 14 14"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path d="M8.5 2.5L4 7l4.5 4.5" />
+						</svg>
+						All Projects
+					</a>
+
+					<!-- ── EDIT: category + status ── -->
+					<div class="proj-eyebrow-row">
+						<span class="proj-category">Advanced Manufacturing · Software</span>
+						<span class="proj-status complete">Complete</span>
+						<!-- Other options: <span class="proj-status ongoing">Ongoing</span> -->
+						<!-- Other options: <span class="proj-status prototype">Prototype</span> -->
+					</div>
+
+					<!-- ── EDIT: title & subtitle ── -->
+					<h1 class="proj-title" style="view-transition-name: glow-title">GLOW</h1>
+					<p class="proj-subtitle">
+						An open source G-Code generation tool for Direct Energy Deposition Additive
+						Manufacturing, built to automate high throughput toolpath planning for
+						standard testing geometries, and streamline research of optimal printing
+						parameters.
+					</p>
+
+					<!-- ── EDIT: meta row — dates, role, organization ── -->
+					<div class="proj-meta-row">
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Timeline</span>
+							<span class="proj-meta-value">May 2025 – Aug 2025</span>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Role</span>
+							<span class="proj-meta-value">Lead Developer</span>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Team</span>
+							<span class="proj-meta-value">Solo</span>
+						</div>
+					</div>
+
+					<!-- ── EDIT: CTA buttons — one .btn-primary, any number of
+                         .btn-secondary / .cta-dropdown. Swap for whatever the
+                         project's main artifacts are (repo, report, CAD files,
+                         video, etc.) ── -->
+					<div class="proj-cta-row">
+						<a
+							href="https://github.com/ArthurJWH/GLOW"
+							class="btn btn-primary"
+							target="_blank"
+							rel="noopener"
+							>GitHub Repository</a
+						>
+						<a
+							href="https://github.com/ArthurJWH/GLOW/blob/main/README.md"
+							class="btn btn-secondary"
+							target="_blank"
+							>Documentation</a
+						>
+						<details class="cta-dropdown horizontal">
+							<summary class="btn btn-ghost">
+								<i class="fa-solid fa-download sidebar-link-icon"></i> Install
+								G.L.O.W.
+							</summary>
+							<ul>
+								<li>
+									<a
+										href="https://github.com/ArthurJWH/GLOW/raw/refs/heads/main/glow_v1.0_setup.exe?download="
+										class="dropdown-link"
+										target="_blank"
+										rel="noopener">
+										Full version
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://github.com/ArthurJWH/GLOW/raw/refs/heads/main/glow_lite/glow_lite_v1.0_setup.exe?download="
+										class="dropdown-link"
+										target="_blank"
+										rel="noopener">
+										Lite version
+									</a>
+								</li>
+								<li>
+									<a
+										href="https://github.com/ArthurJWH/GLOW/raw/refs/heads/main/glow++/glowpp_v1.0_setup.exe?download="
+										class="dropdown-link"
+										target="_blank"
+										rel="noopener">
+										C++ version
+									</a>
+								</li>
+							</ul>
+						</details>
+					</div>
+				</div>
+
+				<div class="proj-hero-image-wrap">
+					<img
+						class="proj-hero-image"
+						src="img/example_configuration.png"
+						alt="GLOW application" />
+				</div>
+			</header>
+
+			<!-- ============================================================
+       PROJECT BODY  (main prose + sticky sidebar)
+  ============================================================ -->
+			<div class="proj-body">
+				<!-- ============================================================
+         MAIN CONTENT COLUMN
+    ============================================================ -->
+				<main class="proj-main">
+					<!-- ── OVERVIEW ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Overview</p>
+						<h2 class="proj-section-title">What is GLOW?</h2>
+						<div class="proj-prose">
+							<p>
+								GLOW is an open-source research workflow automation desktop
+								application for generating G-Code used in Direct Energy Deposition
+								(DED) additive manufacturing. It was developed for the Laboratory
+								for Extreme Mechanics & Additive Manufacturing
+								(<strong>LEMAM</strong>), where researchers had previously
+								configured, generated, and verified G-Code by hand for every new
+								print. That process was slow, prone to error, and difficult to
+								reproduce across experiments.
+							</p>
+							<p>
+								The application supports three print geometries, two substrate
+								configurations, ten configurable print parameters, and eleven
+								preprogrammed machine-specific codes. Researchers define an
+								experiment as a row in a CSV file, and GLOW produces a complete,
+								machine-ready batch of G-Code in seconds. Generated toolpaths can be
+								inspected in integrated
+								<a
+									href="https://ncviewer.com/"
+									target="_blank"
+									rel="noopener noreferrer"
+									>NC Viewer</a
+								>
+								prior to production.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── PROBLEM STATEMENT ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Problem Statement</p>
+						<h2 class="proj-section-title">The cost of manual experiment setup</h2>
+						<div class="proj-prose">
+							<p>
+								DED parameter studies require testing many combinations of laser
+								power, scanning speed, and powder feed rate across multiple
+								geometries. Writing G-Code by hand for each combination meant every
+								new experiment cost hours of setup before a single track could be
+								printed. Each hand-edited file also introduced a new opportunity for
+								transcription error or an inconsistent toolpath.
+							</p>
+						</div>
+
+						<div class="proj-callout">
+							<p>
+								<strong>Core constraint:</strong> geometric parameters such as track
+								width, height, and layer overlap are not always known in advance.
+								They depend on process parameters in ways that resist simple
+								analytical prediction, particularly for new alloy compositions with
+								no prior print history.
+							</p>
+						</div>
+
+						<div class="proj-prose">
+							<p>
+								The objective was not to remove the researcher from the process, but
+								to eliminate the repetitive, mechanical parts of G-Code authoring.
+								Testing a new parameter set needed to become a matter of adding a
+								row to a spreadsheet rather than writing a new program by hand.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── OBJECTIVES ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Objectives</p>
+						<h2 class="proj-section-title">What the tool had to do</h2>
+
+						<div class="proj-objectives">
+							<div class="proj-objective">
+								<span class="proj-objective-num">01</span>
+								<span
+									>Generate G-Code in batch from a CSV of process parameters,
+									supporting single track, thin wall, and cube geometries, each
+									governed by distinct toolpath rules.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">02</span>
+								<span
+									>Determine whether a batch of objects fits on a rectangular or
+									circular substrate, and arrange them in a filled grid
+									layout.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">03</span>
+								<span
+									>Predict missing geometric parameters, including track width,
+									height, and layer overlap, using a trained machine learning
+									model, so incomplete input does not block an experiment.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">04</span>
+								<span
+									>Support configurable, machine-specific command sets so the same
+									workflow can target multiple DED systems without requiring
+									changes to underlying logic.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">05</span>
+								<span
+									>Provide interactive visualization of the print layout, with
+									optional camera-based monitoring during fabrication.</span
+								>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── DESIGN PROCESS ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Design Process</p>
+						<h2 class="proj-section-title">From manual files to a production tool</h2>
+
+						<div class="proj-timeline">
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">01</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Mapping the manual workflow
+									</h3>
+									<p class="proj-timeline-step-text">
+										Reviewed LEMAM's existing process to identify each manual
+										decision made per print, including toolpath direction,
+										object spacing, cooldown timing, and machine-specific
+										command syntax. These decisions formed the basis of the CSV
+										schema and the ten configurable print parameters the
+										application would need to support.
+									</p>
+								</div>
+							</div>
+
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">02</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Substrate fitting and layout engine
+									</h3>
+									<p class="proj-timeline-step-text">
+										Developed placement logic that fits a bounding rectangle of
+										objects against a rectangular or circular substrate,
+										favoring a filled grid arrangement. An interactive plot was
+										added to allow researchers to override placement manually by
+										selecting a position on the layout.
+									</p>
+								</div>
+							</div>
+
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">03</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Toolpath rules per geometry
+									</h3>
+									<p class="proj-timeline-step-text">
+										Implemented distinct toolpath logic for each supported
+										geometry. Single tracks and thin walls print bottom to top,
+										alternating direction each layer. Cubes print in a zigzag
+										pattern and rotate ninety degrees between layers, resuming
+										from the endpoint of the previous layer to minimize
+										unnecessary travel moves.
+									</p>
+								</div>
+							</div>
+
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">04</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Machine learning integration
+									</h3>
+									<p class="proj-timeline-step-text">
+										Integrated a machine learning model, built on the
+										<strong>AIDED</strong> framework and trained on
+										single-powder print data, to predict track width, height,
+										and layer overlap when absent from the input CSV. Predicted
+										values are written to a separate output file, keeping
+										measured and inferred data clearly distinguished.
+									</p>
+								</div>
+							</div>
+
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">05</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Deployment as a GUI application
+									</h3>
+									<p class="proj-timeline-step-text">
+										Built the interface with PyQt6 and packaged it as a
+										zero-dependency desktop application using PyInstaller,
+										distributed via an Inno Setup installer. This eliminated the
+										need for lab workstations to maintain a separate Python
+										environment or manage package dependencies.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── ARCHITECTURE ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Architecture</p>
+						<h2 class="proj-section-title">How the pipeline works</h2>
+
+						<div class="proj-split">
+							<!-- ── EDIT: replace src ── -->
+							<div class="proj-split-image-wrap">
+								<img
+									class="proj-split-image"
+									src="img/flowchart.jpeg"
+									alt="GLOW software architecture" />
+							</div>
+							<div class="proj-split-text">
+								<h4>Three-stage pipeline</h4>
+								<p>
+									The input stage parses the CSV, validates required columns, and
+									flags rows with missing geometric parameters for ML prediction.
+									The core stage handles substrate fitting, per-geometry toolpath
+									generation, and substitution of the eleven preprogrammed
+									machine-specific codes. The output stage writes the final
+									<code>.gcode</code> file and hands it to NC Viewer for
+									simulation.
+								</p>
+								<p>
+									Machine settings, including command codes, cooldown sequences,
+									and camera timing, are stored separately from the toolpath
+									logic. As a result, supporting a new DED system requires
+									updating a configuration file rather than modifying the
+									application's source code.
+								</p>
+							</div>
+						</div>
+
+						<!-- ── EDIT: replace src ── -->
+						<img
+							class="proj-image proj-image--compact"
+							src="img/ui.png"
+							alt="GLOW main window" />
+						<p class="proj-image-caption">
+							GLOW main window. Left: geometry and substrate parameters. Right:
+							interactive configuration plot with click-to-place positioning.
+						</p>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── CHALLENGES ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Challenges</p>
+						<h2 class="proj-section-title">Where the hard problems were</h2>
+
+						<div class="proj-cards-grid">
+							<div class="proj-card">
+								<!-- <span class="proj-card-icon">replaceIcon</span> -->
+								<h3 class="proj-card-title">
+									Grid fitting under two substrate types
+								</h3>
+								<p class="proj-card-text">
+									Rectangular and circular substrates require different fitting
+									logic; a grid that fits inside a rectangle does not necessarily
+									fit inside a circle of equivalent area. This was resolved by
+									bounding all objects in a rectangle grid first, then evaluating
+									that rectangle's fit against each substrate type independently.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<!-- <span class="proj-card-icon">replaceIcon</span> -->
+								<h3 class="proj-card-title">Continuity across layers</h3>
+								<p class="proj-card-text">
+									Cube geometries rotate ninety degrees between layers while
+									needing to begin each new layer at the endpoint of the previous
+									one, in order to avoid unnecessary travel moves. This required
+									tracking toolpath endpoint state across the full print rather
+									than within a single layer.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<!-- <span class="proj-card-icon">replaceIcon</span> -->
+								<h3 class="proj-card-title">
+									Predicting geometry from process parameters
+								</h3>
+								<p class="proj-card-text">
+									Track width, height, and layer overlap depend on laser power,
+									scan speed, and feed rate in ways that do not reduce to a simple
+									formula. Rather than requiring every researcher to know these
+									values in advance, missing values are predicted by an ML model
+									and clearly separated from user-provided input in the output
+									file.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<!-- <span class="proj-card-icon">replaceIcon</span> -->
+								<h3 class="proj-card-title">Porting from Python to C++</h3>
+								<p class="proj-card-text">
+									The full Python distribution reached 1.6 GB, which was
+									impractical for deployment across multiple lab workstations. The
+									application was ported to C++ using Qt Creator, producing a 270
+									MB optimized build with a 40 percent improvement in runtime
+									performance relative to the lightweight Python build, and
+									reducing installation time from roughly one minute to nearly
+									instantaneous.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── RESULTS ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Results</p>
+						<h2 class="proj-section-title">Measured outcomes</h2>
+
+						<div class="proj-metrics">
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">5 → 1</h3>
+								<p class="proj-metric-label">
+									Button presses to open G-Code generator
+								</p>
+							</div>
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">6x</h3>
+								<p class="proj-metric-label">
+									Smaller app size, full to optimized build
+								</p>
+							</div>
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">40%</h3>
+								<p class="proj-metric-label">
+									Runtime improvement over lite version
+								</p>
+							</div>
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">87%</h3>
+								<p class="proj-metric-label">
+									Installation time reduction, full to optimized build
+								</p>
+							</div>
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">9 → 0</h3>
+								<p class="proj-metric-label">Required dependencies installed</p>
+							</div>
+						</div>
+
+						<div class="proj-prose">
+							<p>
+								GLOW converted experiment setup from a manual, individually verified
+								process into a repeatable pipeline. Batches of G-Code that
+								previously required careful, one-off authoring can now be generated
+								directly from a spreadsheet of parameters. This gain in throughput
+								directly supported LEMAM's research into in-situ compositional
+								modification and functionally graded materials (FGMs), where
+								evaluating many alloy combinations quickly is essential. The
+								application is distributed as a standalone installer, an open-source
+								Python package, and an optimized C++ build, and remains in active
+								daily use at LEMAM.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── MEDIA GALLERY ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Gallery</p>
+						<h2 class="proj-section-title">Build documentation</h2>
+
+						<div class="proj-gallery">
+							<!-- ── EDIT: replace with real images ── -->
+
+							<div class="proj-gallery-item" tabindex="0">
+								<img
+									src="img/original_interface.jpeg"
+									alt="Original G-Code generator interface" />
+								<span class="proj-gallery-caption"
+									>Original G-Code generator interface in LEMAM</span
+								>
+							</div>
+
+							<div class="proj-gallery-item" tabindex="0">
+								<img
+									src="img/machine_settings.png"
+									alt="GLOW machine settings page" />
+								<span class="proj-gallery-caption">Machine settings page</span>
+							</div>
+
+							<div class="proj-gallery-item" tabindex="0">
+								<img src="img/sample_tracks.jpeg" alt="Sample printed tracks" />
+								<span class="proj-gallery-caption">Sample printed tracks</span>
+							</div>
+
+							<div class="proj-gallery-item" tabindex="0">
+								<img
+									src="img/example_cube.png"
+									alt="Generated G-Code loaded in NC Viewer" />
+								<span class="proj-gallery-caption"
+									>Generated G-Code toolpath previewed in NC Viewer</span
+								>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── LESSONS LEARNED ── -->
+					<section class="proj-section reveal">
+						<p class="proj-section-label">Lessons Learned</p>
+						<h2 class="proj-section-title">What I'd do differently</h2>
+
+						<div class="proj-lessons">
+							<div class="proj-lesson">
+								<!-- <span class="proj-lesson-icon">replaceIcon</span> -->
+								<p class="proj-lesson-text">
+									<strong
+										>Separate machine dialect from toolpath logic from the
+										outset.</strong
+									>
+									Keeping machine-specific command codes fully external to the
+									toolpath generator made it considerably easier to support
+									additional DED systems later. This is a decision I would make
+									earlier in a future project.
+								</p>
+							</div>
+
+							<div class="proj-lesson">
+								<!-- <span class="proj-lesson-icon">replaceIcon</span> -->
+								<p class="proj-lesson-text">
+									<strong
+										>Keep predicted and measured data visibly distinct.</strong
+									>
+									Writing ML-predicted parameters to a separate output file,
+									rather than filling gaps in the original CSV silently, proved
+									important for researchers who needed to know precisely which
+									values were measured and which were inferred.
+								</p>
+							</div>
+
+							<div class="proj-lesson">
+								<!-- <span class="proj-lesson-icon">replaceIcon</span> -->
+								<p class="proj-lesson-text">
+									<strong
+										>Build the manual override alongside the automated
+										path.</strong
+									>
+									The automated grid-fitting logic does not cover every layout a
+									researcher might want. Adding click-to-place positioning early
+									kept the tool useful for cases the algorithm did not anticipate.
+								</p>
+							</div>
+
+							<div class="proj-lesson">
+								<!-- <span class="proj-lesson-icon">replaceIcon</span> -->
+								<p class="proj-lesson-text">
+									<strong
+										>Plan for deployment constraints before the first
+										release.</strong
+									>
+									The 1.6 GB footprint of the initial Python build was manageable
+									for one machine but impractical to distribute across the lab.
+									Porting to C++ solved this, but planning for binary size and
+									install time earlier would have avoided a full rewrite.
+								</p>
+							</div>
+						</div>
+					</section>
+				</main>
+				<!-- end .proj-main -->
+
+				<!-- ============================================================
+         SIDEBAR
+    ============================================================ -->
+				<aside class="proj-sidebar">
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Cited by</p>
+						<ul class="citations">
+							<li>
+								<a
+									class="citation-title"
+									href="https://www.nature.com/articles/s44334-026-00098-5"
+									target="_blank"
+									>Active learning for the accelerated discovery of complex
+									concentrated NiCoCr alloys in additive manufacturing</a
+								>
+								<span class="citation-authors"
+									>A. Talbot, S. S. Dash, J. Li, C. Cheng, M. Ramesh, X. Shang, J.
+									Zhang, C. Cojocaru, J. Hattrick-Simpers & Y. Zou</span
+								>
+							</li>
+						</ul>
+					</div>
+
+					<!-- Tools — works for code libraries, CAD/analysis software,
+                         or physical fabrication methods alike -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Tools</p>
+						<div class="sidebar-tag-group">
+							<span class="capability-tag">Python 3.8-3.11</span>
+							<span class="capability-tag">C++</span>
+							<span class="capability-tag">PyQt6/Qt</span>
+							<span class="capability-tag">Pandas</span>
+							<span class="capability-tag">Pathlib</span>
+							<span class="capability-tag">Matplotlib</span>
+							<span class="capability-tag">PyInstaller</span>
+							<span class="capability-tag">Inno Setup</span>
+							<span class="capability-tag">Git</span>
+						</div>
+					</div>
+
+					<!-- Key stats -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Project Stats</p>
+						<div class="sidebar-stats">
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Duration</span>
+								<span class="sidebar-stat-value">4 months</span>
+							</div>
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Lines of code</span>
+								<span class="sidebar-stat-value">~6,000</span>
+							</div>
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Samples tested</span>
+								<span class="sidebar-stat-value">90+</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Links -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Links</p>
+						<div class="sidebar-links">
+							<a
+								href="https://github.com/ArthurJWH/GLOW"
+								class="sidebar-link"
+								target="_blank"
+								rel="noopener">
+								<i class="fa-brands fa-github sidebar-link-icon"></i>
+								GitHub Repository
+							</a>
+							<a
+								href="https://github.com/ArthurJWH/GLOW/blob/main/README.md"
+								class="sidebar-link"
+								target="_blank">
+								<i class="fa-brands fa-readme sidebar-link-icon"></i>
+								Documentation
+							</a>
+							<details>
+								<summary class="sidebar-link">
+									<i class="fa-solid fa-download sidebar-link-icon"></i> Install
+									G.L.O.W.
+								</summary>
+								<ul>
+									<li>
+										<a
+											href="https://github.com/ArthurJWH/GLOW/raw/refs/heads/main/glow_v1.0_setup.exe?download="
+											class="dropdown-link"
+											target="_blank"
+											rel="noopener">
+											Full version
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://github.com/ArthurJWH/GLOW/raw/refs/heads/main/glow_lite/glow_lite_v1.0_setup.exe?download="
+											class="dropdown-link"
+											target="_blank"
+											rel="noopener">
+											Lite version
+										</a>
+									</li>
+									<li>
+										<a
+											href="https://github.com/ArthurJWH/GLOW/raw/refs/heads/main/glow++/glowpp_v1.0_setup.exe?download="
+											class="dropdown-link"
+											target="_blank"
+											rel="noopener">
+											C++ version
+										</a>
+									</li>
+								</ul>
+							</details>
+						</div>
+					</div>
+				</aside>
+			</div>
+			<!-- end .proj-body -->
+
+			<!-- ============================================================
+       NEXT PROJECT
+  ============================================================ -->
+			<section class="proj-next">
+				<div class="proj-next-inner">
+					<p class="proj-next-label">Next Project</p>
+					<!-- ── EDIT: update href, title, and desc ── -->
+					<a class="proj-next-card" href="../rocketpy/index.html">
+						<div class="proj-next-info">
+							<p class="proj-next-title">RocketPy Flight Simulation</p>
+							<p class="proj-next-desc">
+								6-DOF trajectory simulation and aerodynamic analysis for a
+								university launch vehicle.
+							</p>
+						</div>
+						<span class="proj-next-arrow">→</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- ============================================================
+       FOOTER  (identical to main page)
+  ============================================================ -->
+			<footer class="footer">
+				<div class="container footer-inner">
+					<span>© 2026 Arthur Hwang</span>
+					<span class="footer-mono">Built with HTML · CSS · JS</span>
+				</div>
+			</footer>
+		</div>
+
+		<script src="../../script.js"></script>
+	</body>
+</html>
