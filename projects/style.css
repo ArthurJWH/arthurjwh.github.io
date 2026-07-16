@@ -1,0 +1,969 @@
+/* ================================================================
+   PROJECT PAGE — SHARED TEMPLATE STYLESHEET
+   Reusable across every project page. Extends the site-wide style.css
+   and defines nothing project-specific — only structural/layout CSS.
+   Load both stylesheets on every project page:
+     <link rel="stylesheet" href="../../style.css" />
+     <link rel="stylesheet" href="../style.css" />
+   ================================================================ */
+
+body {
+	margin: 0;
+	background: var(--surface);
+}
+
+/* ----------------------------------------------------------------
+   BACK LINK
+   ---------------------------------------------------------------- */
+.back-link {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.4rem;
+	font-family: var(--mono);
+	font-size: 0.72rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	transition: color var(--dur-fast);
+	margin-bottom: var(--space-lg);
+}
+.back-link:hover {
+	color: var(--accent-mid);
+}
+.back-link svg {
+	flex-shrink: 0;
+}
+
+/* ----------------------------------------------------------------
+   PROJECT HERO
+   Sits flush under the nav. Contains title block + hero image.
+   ---------------------------------------------------------------- */
+.proj-hero {
+	padding-top: calc(var(--nav-h) + var(--space-xl));
+	padding-bottom: 0;
+	background: var(--bg);
+}
+
+.proj-hero-inner {
+	max-width: var(--max-w);
+	margin-inline: auto;
+	padding-inline: var(--space-lg);
+}
+
+/* Eyebrow row: category + status badge */
+.proj-eyebrow-row {
+	display: flex;
+	align-items: center;
+	gap: var(--space-sm);
+	margin-bottom: var(--space-sm);
+}
+
+.proj-category {
+	font-family: var(--mono);
+	font-size: 0.72rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--accent-mid);
+}
+
+.proj-status {
+	font-family: var(--mono);
+	font-size: 0.65rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	padding: 0.2rem 0.6rem;
+	border-radius: 99px;
+	border: 1px solid;
+}
+/* Semantic status colors. Defined here (rather than the main
+   stylesheet) so this file stays fully self-contained and portable —
+   move these three lines into the site-wide :root if other
+   components ever need "success/warning" colors too. */
+:root {
+	--status-complete: #2d7a4f;
+	--status-prototype: #9a6b00;
+}
+
+.proj-status.complete {
+	color: var(--status-complete);
+	border-color: var(--status-complete);
+	background: color-mix(in srgb, var(--status-complete) 8%, transparent);
+}
+.proj-status.ongoing {
+	color: var(--accent-mid);
+	border-color: var(--accent-mid);
+	background: var(--accent-tag);
+}
+.proj-status.prototype {
+	color: var(--status-prototype);
+	border-color: var(--status-prototype);
+	background: color-mix(in srgb, var(--status-prototype) 8%, transparent);
+}
+
+.proj-title {
+	font-size: clamp(2.2rem, 6vw, 4rem);
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	line-height: 1.05;
+	color: var(--text-primary);
+	margin-bottom: var(--space-sm);
+}
+
+.proj-subtitle {
+	font-size: clamp(1rem, 2vw, 1.2rem);
+	color: var(--text-secondary);
+	max-width: 60ch;
+	line-height: 1.6;
+	margin-bottom: var(--space-lg);
+}
+
+/* Meta row: date, role, org */
+.proj-meta-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-md);
+	padding-block: var(--space-md);
+	border-top: 1px solid var(--border);
+	border-bottom: 1px solid var(--border);
+	margin-bottom: var(--space-xl);
+}
+
+.proj-meta-item {
+	display: flex;
+	flex-direction: column;
+	gap: 0.2rem;
+}
+
+.proj-meta-label {
+	font-family: var(--mono);
+	font-size: 0.65rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+}
+
+.proj-meta-value {
+	font-size: 0.875rem;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+/* CTA buttons row */
+.proj-cta-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--space-xs);
+	margin-bottom: var(--space-xl);
+}
+
+.horizontal ul {
+	height: 100%;
+	display: flex;
+	align-items: stretch;
+	gap: 0.5rem;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.horizontal ul li {
+	height: 100%;
+	display: flex;
+	align-items: stretch;
+}
+
+.horizontal ul li a {
+	white-space: nowrap;
+	height: 100%;
+	display: flex;
+	align-items: center;
+}
+
+/* Hero image — full-width banner below the title block */
+.proj-hero-image {
+	width: 100%;
+	max-width: var(--max-w);
+	max-height: 300px;
+	margin-inline: auto;
+	display: block;
+	height: clamp(240px, 45vw, 520px);
+	object-fit: cover;
+	object-position: bottom;
+	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+	border: 1px solid var(--border);
+	border-bottom: none;
+	background: var(--surface-2);
+	/* placeholder stripe for missing images */
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent,
+		transparent 24px,
+		var(--border) 24px,
+		var(--border) 25px
+	);
+}
+
+/* Hero image wrapper so padding applies correctly */
+.proj-hero-image-wrap {
+	padding-inline: var(--space-lg);
+	max-width: var(--max-w);
+	margin-inline: auto;
+}
+
+/* ----------------------------------------------------------------
+   PROJECT BODY LAYOUT
+   Narrow prose column + optional sticky sidebar
+   ---------------------------------------------------------------- */
+.proj-body {
+	max-width: var(--max-w);
+	margin-inline: auto;
+	padding-inline: var(--space-lg);
+	padding-block: var(--space-2xl);
+	display: grid;
+	grid-template-columns: 1fr 280px;
+	gap: var(--space-xl);
+	align-items: start;
+}
+
+.proj-main {
+	min-width: 0;
+}
+
+.proj-sidebar {
+	position: sticky;
+	top: calc(var(--nav-h) + var(--space-md));
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-md);
+	padding-right: 12px;
+	max-height: calc(100vh - var(--nav-h) - var(--space-md));
+	overflow-y: auto;
+}
+
+.proj-sidebar::-webkit-scrollbar {
+	width: 6px;
+}
+
+.proj-sidebar::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.proj-sidebar::-webkit-scrollbar-thumb {
+	background: var(--accent);
+	border-radius: 999px;
+}
+
+.proj-sidebar::-webkit-scrollbar-thumb:hover {
+	background: var(--accent-mid);
+}
+
+@supports (-moz-appearance: none) {
+	.proj-sidebar {
+		scrollbar-width: thin;
+		scrollbar-color: var(--accent) transparent;
+	}
+}
+
+@media (max-width: 900px) {
+	.proj-body {
+		grid-template-columns: 1fr;
+	}
+	.proj-sidebar {
+		position: static;
+		/* Sidebar moves above main content on mobile */
+		order: -1;
+	}
+}
+
+/* ----------------------------------------------------------------
+   SIDEBAR WIDGETS
+   ---------------------------------------------------------------- */
+.sidebar-card {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	padding: var(--space-md);
+}
+
+.sidebar-card-title {
+	font-family: var(--mono);
+	font-size: 0.68rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	margin-bottom: var(--space-sm);
+}
+
+.citations {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.citation-title {
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text-primary);
+	text-decoration: none;
+	text-align: left;
+	text-wrap: balance;
+	display: block;
+}
+
+.citation-title:hover {
+	color: var(--accent);
+	text-decoration: underline;
+}
+
+.citation-authors {
+	font-size: 0.68rem;
+	color: var(--text-secondary);
+	text-align: left;
+	text-wrap: balance;
+}
+
+/* Wrapped row of tool/skill tags inside sidebar */
+.sidebar-tag-group {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.6rem;
+}
+
+.capability-tag {
+	font-size: 0.9rem;
+	color: var(--text-primary);
+}
+
+/* Sidebar stat */
+.sidebar-stats {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+}
+
+.sidebar-stat {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+	font-size: 0.8rem;
+	padding-bottom: var(--space-xs);
+	border-bottom: 1px solid var(--border);
+}
+.sidebar-stat:last-child {
+	border-bottom: none;
+	padding-bottom: 0;
+}
+
+.sidebar-stat-label {
+	color: var(--text-muted);
+}
+.sidebar-stat-value {
+	font-weight: 600;
+	font-family: var(--mono);
+	font-size: 0.75rem;
+}
+
+/* Sidebar link list */
+.sidebar-links {
+	display: flex;
+	flex-direction: column;
+	gap: 0.4rem;
+}
+
+.sidebar-link {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	font-size: 0.82rem;
+	font-weight: 500;
+	color: var(--accent-mid);
+	padding: 0.45rem 0.6rem;
+	border-radius: var(--radius-sm);
+	border: 1px solid transparent;
+	transition: all var(--dur-fast);
+}
+
+.sidebar-link:hover {
+	background: var(--accent-tag);
+	border-color: var(--accent-mid);
+}
+
+.dropdown-link {
+	display: block;
+	font-size: 0.7rem;
+	font-weight: 500;
+	letter-spacing: 0.04rem;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--text-secondary);
+	padding: 0.3rem;
+	border-radius: var(--radius-sm);
+	border: 1px solid transparent;
+	transition: all var(--dur-fast);
+}
+
+.dropdown-link:hover {
+	color: var(--text-primary);
+	background: var(--accent-tag);
+	border-color: var(--border);
+}
+
+/* ----------------------------------------------------------------
+   PROSE SECTIONS
+   Each content section inside .proj-main
+   ---------------------------------------------------------------- */
+.proj-section {
+	margin-bottom: var(--space-2xl);
+}
+.proj-section:last-child {
+	margin-bottom: 0;
+}
+
+.proj-section-label {
+	font-family: var(--mono);
+	font-size: 0.68rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--accent-mid);
+	margin-bottom: 0.6rem;
+}
+
+.proj-section-title {
+	font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+	font-weight: 700;
+	letter-spacing: -0.025em;
+	line-height: 1.25;
+	color: var(--text-primary);
+	margin-bottom: var(--space-md);
+}
+
+.proj-prose p {
+	font-size: 0.9375rem;
+	color: var(--text-secondary);
+	line-height: 1.85;
+	margin-bottom: var(--space-md);
+}
+.proj-prose p:last-child {
+	margin-bottom: 0;
+}
+
+.proj-prose strong {
+	color: var(--text-primary);
+	font-weight: 600;
+}
+
+.proj-prose a {
+	color: var(--accent-mid);
+	text-decoration: underline;
+	text-underline-offset: 3px;
+	transition: opacity var(--dur-fast);
+}
+.proj-prose a:hover {
+	opacity: 0.7;
+}
+
+/* ----------------------------------------------------------------
+   CALLOUT / HIGHLIGHT BOX
+   ---------------------------------------------------------------- */
+.proj-callout {
+	background: var(--accent-tag);
+	border-left: 3px solid var(--accent-mid);
+	border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+	padding: var(--space-md) var(--space-md);
+	margin-block: var(--space-md);
+}
+.proj-callout p {
+	color: var(--text-secondary);
+	font-size: 0.9rem;
+	line-height: 1.7;
+	margin: 0;
+}
+.proj-callout strong {
+	color: var(--accent-mid);
+}
+
+/* ----------------------------------------------------------------
+   OBJECTIVES LIST
+   ---------------------------------------------------------------- */
+.proj-objectives {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	margin-block: var(--space-md);
+}
+
+.proj-objective {
+	display: flex;
+	align-items: flex-start;
+	gap: var(--space-sm);
+	font-size: 0.9rem;
+	color: var(--text-secondary);
+	line-height: 1.6;
+}
+
+.proj-objective-num {
+	font-family: var(--mono);
+	font-size: 0.68rem;
+	font-weight: 500;
+	color: var(--accent-mid);
+	background: var(--accent-tag);
+	border: 1px solid color-mix(in srgb, var(--accent-mid) 18%, transparent);
+	border-radius: 4px;
+	padding: 0.1rem 0.45rem;
+	margin-top: 0.15rem;
+	flex-shrink: 0;
+	letter-spacing: 0.04em;
+}
+
+/* ----------------------------------------------------------------
+   INLINE IMAGE (inside prose, full-width of column)
+   ---------------------------------------------------------------- */
+.proj-image {
+	width: 100%;
+	border-radius: var(--radius-md);
+	border: 1px solid var(--border);
+	object-fit: cover;
+	display: block;
+	margin-block: var(--space-lg);
+	background: var(--surface-2);
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent,
+		transparent 20px,
+		var(--border) 20px,
+		var(--border) 21px
+	);
+}
+
+/* Use on .proj-image when the image is wide/short (e.g. a UI
+   screenshot) and shouldn't stretch to the column's full height. */
+.proj-image--compact {
+	max-height: 380px;
+	object-fit: contain;
+}
+
+.proj-image-caption {
+	font-family: var(--mono);
+	font-size: 0.68rem;
+	color: var(--text-muted);
+	letter-spacing: 0.06em;
+	text-align: center;
+	margin-top: calc(-1 * var(--space-md) + 0.5rem);
+	margin-bottom: var(--space-lg);
+}
+
+/* ----------------------------------------------------------------
+   SIDE-BY-SIDE: image beside a text block
+   ---------------------------------------------------------------- */
+.proj-split {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: var(--space-lg);
+	align-items: start;
+	margin-block: var(--space-lg);
+}
+
+.proj-split-image {
+	border-radius: var(--radius-md);
+	border: 1px solid var(--border);
+	object-fit: contain;
+}
+
+.proj-split-text {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: var(--space-sm);
+}
+
+.proj-split-text h4 {
+	font-size: 1rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--text-primary);
+}
+
+.proj-split-text p {
+	font-size: 0.875rem;
+	color: var(--text-secondary);
+	line-height: 1.75;
+}
+
+@media (max-width: 640px) {
+	.proj-split {
+		grid-template-columns: 1fr;
+		direction: ltr;
+	}
+}
+
+/* ----------------------------------------------------------------
+   DESIGN PROCESS TIMELINE
+   Vertical steps inside a section
+   ---------------------------------------------------------------- */
+.proj-timeline {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 0;
+	margin-block: var(--space-md);
+}
+
+.proj-timeline::before {
+	content: "";
+	position: absolute;
+	left: 18px;
+	top: 0;
+	bottom: 0;
+	width: 1px;
+	background: var(--border);
+}
+
+.proj-timeline-step {
+	display: grid;
+	grid-template-columns: 36px 1fr;
+	gap: var(--space-md);
+	padding-bottom: var(--space-lg);
+	position: relative;
+}
+.proj-timeline-step:last-child {
+	padding-bottom: 0;
+}
+
+.proj-timeline-dot {
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: var(--surface);
+	border: 2px solid var(--accent-mid);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: var(--mono);
+	font-size: 0.68rem;
+	font-weight: 500;
+	color: var(--accent-mid);
+	flex-shrink: 0;
+	position: relative;
+	z-index: 1;
+}
+
+.proj-timeline-step-title {
+	font-size: 0.95rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	margin-bottom: 0.4rem;
+	padding-top: 0.4rem;
+}
+
+.proj-timeline-step-text {
+	font-size: 0.875rem;
+	color: var(--text-secondary);
+	line-height: 1.75;
+}
+
+/* ----------------------------------------------------------------
+   CHALLENGES & DECISIONS — TWO-COLUMN CARDS
+   ---------------------------------------------------------------- */
+.proj-cards-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: var(--space-md);
+	margin-block: var(--space-md);
+}
+
+.proj-card {
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	padding: var(--space-md);
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-xs);
+	transition:
+		border-color var(--dur-fast),
+		box-shadow var(--dur-fast);
+}
+.proj-card:hover {
+	border-color: var(--accent-mid);
+	box-shadow: 0 4px 20px var(--accent-glow);
+}
+
+/* .proj-card-icon {
+	font-size: 1.2rem;
+	margin-bottom: 0.25rem;
+} */
+
+.proj-card-title {
+	font-size: 0.9rem;
+	font-weight: 700;
+	color: var(--text-primary);
+	letter-spacing: -0.01em;
+}
+
+.proj-card-text {
+	font-size: 0.82rem;
+	color: var(--text-secondary);
+	line-height: 1.7;
+}
+
+/* ----------------------------------------------------------------
+   RESULTS — KEY METRICS ROW
+   ---------------------------------------------------------------- */
+.proj-metrics {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+	gap: var(--space-md);
+	margin-block: var(--space-lg);
+}
+
+.proj-metric {
+	display: grid;
+	grid-template-rows: subgrid;
+	grid-row: span 2;
+	gap: 0;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	padding: var(--space-md);
+	text-align: center;
+	align-items: center;
+}
+
+.proj-metric-value {
+	font-size: 2rem;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+	color: var(--accent-mid);
+	line-height: 1;
+	margin-bottom: 0.4rem;
+	font-variant-numeric: tabular-nums;
+}
+
+.proj-metric-label {
+	font-family: var(--mono);
+	font-size: 0.68rem;
+	letter-spacing: 0.08em;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	line-height: 1.4;
+}
+
+/* ----------------------------------------------------------------
+   MEDIA GALLERY (project page version)
+   Three-column masonry-feel grid, no scroll
+   ---------------------------------------------------------------- */
+.proj-gallery {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: var(--space-sm);
+	margin-block: var(--space-md);
+}
+
+.proj-gallery-item {
+	position: relative;
+	border-radius: var(--radius-md);
+	overflow: hidden;
+	border: 1px solid var(--border);
+	aspect-ratio: 4/3;
+	background: var(--surface-2);
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent,
+		transparent 20px,
+		var(--border) 20px,
+		var(--border) 21px
+	);
+	transition: transform var(--dur-mid) var(--ease);
+}
+
+.proj-gallery-item:first-child {
+	grid-column: span 2;
+	aspect-ratio: 16/9;
+}
+
+.proj-gallery-item img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+}
+
+.proj-gallery-item:hover {
+	transform: scale(1.02);
+}
+
+.proj-gallery-item:focus {
+  overflow: visible;
+}
+
+.proj-gallery-item:focus img {
+  position: fixed;
+	top: 50vh;
+	left: 50vh;
+	transform: translate(-50%, -50%) scale(2);
+}
+
+.proj-gallery-caption {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	padding: 0.5rem 0.75rem;
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
+	font-family: var(--mono);
+	font-size: 0.65rem;
+	color: rgba(255, 255, 255, 0.85);
+	letter-spacing: 0.06em;
+}
+
+@media (max-width: 640px) {
+	.proj-gallery {
+		grid-template-columns: 1fr 1fr;
+	}
+	.proj-gallery-item:first-child {
+		grid-column: span 2;
+	}
+}
+
+@media (max-width: 420px) {
+	.proj-gallery {
+		grid-template-columns: 1fr;
+	}
+	.proj-gallery-item:first-child {
+		grid-column: span 1;
+	}
+}
+
+/* ----------------------------------------------------------------
+   LESSONS LEARNED
+   ---------------------------------------------------------------- */
+.proj-lessons {
+	display: flex;
+	flex-direction: column;
+	gap: var(--space-sm);
+	margin-block: var(--space-md);
+}
+
+.proj-lesson {
+	display: flex;
+	gap: var(--space-md);
+	align-items: flex-start;
+	padding: var(--space-md);
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+}
+
+/* .proj-lesson-icon {
+	font-size: 1rem;
+	flex-shrink: 0;
+	margin-top: 0.1rem;
+} */
+
+.proj-lesson-text {
+	font-size: 0.875rem;
+	color: var(--text-secondary);
+	line-height: 1.7;
+}
+.proj-lesson-text strong {
+	color: var(--text-primary);
+	font-weight: 600;
+}
+
+/* ----------------------------------------------------------------
+   SECTION DIVIDER
+   ---------------------------------------------------------------- */
+.proj-divider {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin-block: var(--space-xl);
+}
+
+/* ----------------------------------------------------------------
+   NEXT PROJECT CARD (footer of page)
+   ---------------------------------------------------------------- */
+.proj-next {
+	background: var(--bg-alt);
+	border-top: 1px solid var(--border);
+	padding-block: var(--space-2xl);
+}
+
+.proj-next-inner {
+	max-width: var(--max-w);
+	margin-inline: auto;
+	padding-inline: var(--space-lg);
+}
+
+.proj-next-label {
+	font-family: var(--mono);
+	font-size: 0.68rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	margin-bottom: var(--space-sm);
+}
+
+.proj-next-card {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: var(--surface);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md);
+	padding: var(--space-lg);
+	transition: all var(--dur-mid) var(--ease);
+	cursor: pointer;
+	text-decoration: none;
+	color: inherit;
+}
+.proj-next-card:hover {
+	border-color: var(--accent-mid);
+	box-shadow: 0 8px 32px var(--accent-glow);
+	transform: translateY(-2px);
+}
+
+.proj-next-title {
+	font-size: 1.1rem;
+	font-weight: 700;
+	letter-spacing: -0.02em;
+	color: var(--text-primary);
+	margin-bottom: 0.25rem;
+}
+
+.proj-next-desc {
+	font-size: 0.82rem;
+	color: var(--text-secondary);
+}
+
+.proj-next-arrow {
+	font-size: 1.4rem;
+	color: var(--accent-mid);
+	flex-shrink: 0;
+	margin-left: var(--space-md);
+	transition: transform var(--dur-fast);
+}
+.proj-next-card:hover .proj-next-arrow {
+	transform: translateX(4px);
+}
+
+/* ----------------------------------------------------------------
+   RESPONSIVE — small screen overrides
+   ---------------------------------------------------------------- */
+@media (max-width: 500px) {
+	.proj-hero-inner {
+		padding-inline: var(--space-md);
+	}
+	.proj-hero-image-wrap {
+		padding-inline: var(--space-md);
+	}
+	.proj-body {
+		padding-inline: var(--space-md);
+	}
+	.proj-metrics {
+		grid-template-columns: 1fr 1fr;
+	}
+	.proj-next-inner {
+		padding-inline: var(--space-md);
+	}
+}
