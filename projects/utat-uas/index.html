@@ -1,0 +1,1114 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Autonomous hybrid fixed-wing/VTOL aircraft for the SAE Aerodesign Competition, Advanced Class." />
+		<meta name="keywords" content="Arthur, Jiun, Wei, Hwang, ArthurJWH" />
+		<meta name="author" content="Arthur Hwang" />
+		<title>UTAT UAS — SAE Aerodesign — Arthur Hwang</title>
+		<meta property="og:site_name" content="Arthur Hwang" />
+		<meta
+			property="og:url"
+			content="https://arthurjwh.github.io/projects/utat-uas/index.html" />
+		<meta property="og:title" content="UTAT UAS — SAE Aerodesign" />
+		<meta
+			property="og:description"
+			content="Autonomous hybrid fixed-wing/VTOL aircraft for the SAE Aerodesign Competition, Advanced Class." />
+		<meta
+			property="og:image"
+			content="https://arthurjwh.github.io/img/icon-500-light-mode.png" />
+		<link rel="icon" type="image/png" href="../../img/icon-32-light-mode.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-light-mode.png"
+			media="(prefers-color-scheme: light)" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-dark-mode.png"
+			media="(prefers-color-scheme: dark)" />
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+			rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/801590478f.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- ===========================================================
+            NAVBAR
+        ============================================================ -->
+
+		<nav class="nav proj-nav-solid" id="nav">
+			<a class="nav-logo" href="../../index.html#hero">
+				<picture class="nav-picture">
+					<source
+						srcset="../../img/icon-500-dark-mode.png"
+						media="(prefers-color-scheme: dark)" />
+					<source
+						srcset="../../img/icon-500-light-mode.png"
+						media="(prefers-color-scheme: light)" />
+					<img src="../../img/icon-500-light-mode.png" alt="Icon" class="nav-img" />
+				</picture>
+			</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="../../index.html#about">About</a></li>
+				<li><a href="../../index.html#skills">Skills</a></li>
+				<li><a href="../../index.html#projects">Projects</a></li>
+				<li><a href="../../index.html#experience">Timeline</a></li>
+				<li><a href="../../index.html#media">Media</a></li>
+				<li><a href="../../index.html#contact">Contact</a></li>
+			</ul>
+			<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
+		</nav>
+
+		<div style="view-transition-name: utat-uas">
+			<!-- ===========================================================
+            PROJECT HERO  (shared context across every year — competition
+            rules, weight class, mission, team. Year-specific role/results
+            live in the tabs below.)
+        ============================================================ -->
+
+			<header class="proj-hero">
+				<div class="proj-hero-inner">
+					<a class="back-link" href="../../index.html#projects">
+						<svg
+							width="14"
+							height="14"
+							viewBox="0 0 14 14"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path d="M8.5 2.5L4 7l4.5 4.5" />
+						</svg>
+						All Projects
+					</a>
+
+					<!-- ── EDIT: category + status ── -->
+					<div class="proj-eyebrow-row">
+						<span class="proj-category">Aerostructures · Aerodynamics</span>
+						<span class="proj-status ongoing">Ongoing</span>
+						<!-- Other options: <span class="proj-status complete">Complete</span> -->
+						<!-- Other options: <span class="proj-status prototype">Prototype</span> -->
+					</div>
+
+					<!-- ── EDIT: title & subtitle ── -->
+					<h1 class="proj-title" style="view-transition-name: utat-uas-title">
+						UTAT UAS — SAE Aerodesign
+					</h1>
+					<p class="proj-subtitle">
+						University of Toronto Aerospace Team UAS division that competes annually in
+						the SAE Aerodesign Competition, Advanced Class. We build RC fixed-wing
+						planes from conceptual design to flight-ready assemblies, meeting annual
+						mission requirements.
+					</p>
+
+					<!-- ── EDIT: meta row — dates, role, organization ── -->
+					<div class="proj-meta-row">
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Timeline</span>
+							<span class="proj-meta-value">Sept 2024 – Present</span>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Team</span>
+							<span class="proj-meta-value"
+								>Aerodynamics/Structures Subteams · UTAT UAS SAE</span
+							>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Competition</span>
+							<span class="proj-meta-value">SAE Aerodesign — Advanced Class</span>
+						</div>
+					</div>
+
+					<!-- ── EDIT: CTA buttons — replace with real links once available
+                         (competition results page, design reports, UTAT UAS site) ── -->
+					<div class="proj-cta-row">
+						<a
+							href="https://www.saeaerodesign.com/"
+							class="btn btn-primary"
+							target="_blank"
+							rel="noopener"
+							>SAE Aerodesign Competition</a
+						>
+						<a
+							href="https://www.utat.ca/uas"
+							class="btn btn-secondary"
+							target="_blank"
+							rel="noopener"
+							>UTAT UAS</a
+						>
+					</div>
+				</div>
+
+				<div class="proj-hero-image-wrap">
+					<!-- ── EDIT: replace src with a hero photo of the aircraft ── -->
+					<img
+						class="proj-hero-image placeholder"
+						src="img/aircraft_hero.jpg"
+						alt="UTAT UAS aircraft on the runway" />
+				</div>
+			</header>
+
+			<!-- ============================================================
+       			PROJECT TABS
+  			============================================================ -->
+
+			<div class="proj-tabs">
+				<fieldset class="proj-tab-list">
+					<legend class="sr-only">Select season</legend>
+
+					<input
+						class="proj-tab-input"
+						type="radio"
+						name="season"
+						id="tab-2025-26"
+						checked />
+					<label class="proj-tab" for="tab-2025-26">
+						<span class="proj-tab-title">2025–26</span>
+						<span class="proj-tab-subtitle">Aerodynamics &amp; Structures</span>
+					</label>
+
+					<input class="proj-tab-input" type="radio" name="season" id="tab-2024-25" />
+					<label class="proj-tab" for="tab-2024-25">
+						<span class="proj-tab-title">2024–25</span>
+						<span class="proj-tab-subtitle">Aerostructures</span>
+					</label>
+
+					<input class="proj-tab-input" type="radio" name="season" id="tab-2026-27" />
+					<label class="proj-tab proj-tab" for="tab-2026-27">
+						<span class="proj-tab-title">2026–27</span>
+						<span class="proj-tab-subtitle">Structures Lead</span>
+					</label>
+				</fieldset>
+
+				<div class="proj-tab-panels">
+					<!-- ============================================================
+						2025-26 — Aerodynamics & Structures
+					============================================================ -->
+					<div class="proj-body proj-tab-panel is-active" data-tab="tab-2025-26">
+						<main class="proj-main">
+							<!-- ── OVERVIEW ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">2025–26 Overview</p>
+								<h2 class="proj-section-title">
+									A stable, no-crash competition season
+								</h2>
+								<div class="proj-prose">
+									<p>
+										In my second year on the subteam, I moved from wing and
+										aileron CAD into fuselage aerodynamics and propulsion
+										structure. That meant selecting the fuselage airfoil,
+										designing the motor mounts and arm supports, and building
+										assembly jigs to make wing manufacturing repeatable. The
+										aircraft flew stably through the entire competition,
+										including in heavy crosswind and rain, without a single
+										crash — a first for the team on this platform.
+									</p>
+								</div>
+
+								<div class="proj-callout">
+									<p>
+										<strong>Competition result:</strong> 3rd place, Design
+										Report · 4th place overall
+									</p>
+								</div>
+
+								<div class="proj-prose">
+									<p>
+										Mission requirement: design, build, and fly an autonomous
+										hybrid fixed-wing/VTOL aircraft under 3.5 lb, capable of
+										precisely picking up and dropping off a payload without
+										human intervention.
+									</p>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── FOCUS ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Focus</p>
+								<h2 class="proj-section-title">What I worked on</h2>
+
+								<div class="proj-objectives">
+									<div class="proj-objective">
+										<span class="proj-objective-num">01</span>
+										<span
+											>Designed SolidWorks CAD models for the motor mounts and
+											arm supports of the autonomous hybrid tricopter, with an
+											eye toward manufacturability and ease of assembly.</span
+										>
+									</div>
+									<div class="proj-objective">
+										<span class="proj-objective-num">02</span>
+										<span
+											>Selected the fuselage lifting-body airfoil from 14
+											candidates via XFLR5 analysis, balancing aerodynamic
+											performance against a hard internal-height constraint
+											from a tall onboard GPS unit.</span
+										>
+									</div>
+									<div class="proj-objective">
+										<span class="proj-objective-num">03</span>
+										<span
+											>Designed motor arm supports to carry 920 g of static
+											propeller thrust plus the torsional loads it introduces
+											into the wing.</span
+										>
+									</div>
+									<div class="proj-objective">
+										<span class="proj-objective-num">04</span>
+										<span
+											>Designed modular assembly jigs to standardize wing
+											manufacturing and remove recurring fuselage-alignment
+											and wing-warping defects from previous seasons.</span
+										>
+									</div>
+									<div class="proj-objective">
+										<span class="proj-objective-num">05</span>
+										<span
+											>Manufactured and repaired 4 pairs of composite wings,
+											using balsa wood, carbon fiber, and heat-shrink film,
+											across 10 test flights.</span
+										>
+									</div>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── DESIGN PROCESS ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Design Process</p>
+								<h2 class="proj-section-title">
+									From airfoil selection to a no-crash flight record
+								</h2>
+
+								<div class="proj-timeline">
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">01</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Constrained airfoil selection
+											</h3>
+											<p class="proj-timeline-step-text">
+												The fuselage needed a lifting-body airfoil that
+												could house a tall onboard GPS module — requiring
+												roughly 20% thickness-to-chord and a flat bottom to
+												keep the GPS level — while still holding a stable
+												CL/CD profile at the aircraft's operating Reynolds
+												number. Evaluated 14 candidate airfoils in XFLR5 and
+												adapted GOE386 with a flattened bottom surface to
+												fit the internal-volume and manufacturing
+												constraints, rather than chasing a theoretical CL/CD
+												optimum that couldn't physically house the
+												electronics.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">02</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Motor mount and arm design
+											</h3>
+											<p class="proj-timeline-step-text">
+												Designed the motor mount and arm to transfer the
+												full static thrust load — measured at 920 g — from
+												the motor into the arm, and from the arm into the
+												wing structure, accounting for the torsional load
+												the thrust introduces. Sized the components using
+												the team's established structural margins for this
+												type of load, rather than running a dedicated FEA
+												study.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">03</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Assembly jigs for manufacturing repeatability
+											</h3>
+											<p class="proj-timeline-step-text">
+												Previous seasons had persistent fuselage-alignment
+												and wing-warping issues traced back to freehand
+												assembly. Designed modular jigs that fixed the wing
+												and fuselage in position during layup and cure,
+												eliminating dimensional deviation between built
+												wings and turning wing manufacturing into a
+												repeatable process instead of a source of
+												build-to-build variation.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">04</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Composite build and flight-test cycle
+											</h3>
+											<p class="proj-timeline-step-text">
+												Manufactured 4 pairs of composite wings from balsa
+												wood, carbon fiber, and heat-shrink film, repairing
+												and iterating across 10 test flights ahead of
+												competition.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">05</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Competition — zero-crash flight record
+											</h3>
+											<p class="proj-timeline-step-text">
+												At competition, the aircraft completed its flight
+												mission in heavy crosswind and rain without a single
+												crash, validating the season's airfoil, structural,
+												and manufacturing decisions under real conditions.
+											</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── CHALLENGES ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Challenges</p>
+								<h2 class="proj-section-title">Where the hard problems were</h2>
+
+								<div class="proj-cards-grid">
+									<div class="proj-card">
+										<h3 class="proj-card-title">
+											A GPS module that dictated the airfoil
+										</h3>
+										<p class="proj-card-text">
+											The onboard GPS required roughly 20% internal thickness
+											and a flat mounting surface, ruling out most
+											conventional low-drag airfoils. Rather than search for a
+											theoretical optimum, evaluated 14 candidates in XFLR5
+											against the real packaging constraint and adapted GOE386
+											with a flattened bottom, prioritizing a manufacturable,
+											flyable shape over a marginal aerodynamic gain the
+											electronics couldn't fit inside.
+										</p>
+									</div>
+
+									<div class="proj-card">
+										<h3 class="proj-card-title">
+											Sizing a structural load without dedicated FEA
+										</h3>
+										<p class="proj-card-text">
+											With a 920 g static thrust load to carry and no
+											bandwidth for a full torsional stress analysis, the
+											motor arm and mount had to be sized from the team's
+											established structural margins on this class of load
+											rather than a dedicated simulation. It was a trade-off
+											between analysis time and build time — one that held up
+											through the season's test flights and the competition
+											itself.
+										</p>
+									</div>
+
+									<div class="proj-card">
+										<h3 class="proj-card-title">Manufacturing repeatability</h3>
+										<p class="proj-card-text">
+											Wing warping and fuselage misalignment were recurring
+											issues from prior seasons of freehand assembly. Modular
+											jigs fixed each wing during layup and cure, removing
+											dimensional deviation between builds entirely — every
+											wing came out the same.
+										</p>
+									</div>
+
+									<div class="proj-card">
+										<h3 class="proj-card-title">Flying through weather</h3>
+										<p class="proj-card-text">
+											The competition flight took place in heavy crosswind and
+											rain — conditions the airframe hadn't been extensively
+											tested in beforehand. The season's structural changes
+											held up without a single crash, in contrast to the
+											instability the team had faced the year prior.
+										</p>
+									</div>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── RESULTS ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Results</p>
+								<h2 class="proj-section-title">Measured outcomes</h2>
+
+								<div class="proj-metrics">
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">3rd</h3>
+										<p class="proj-metric-label">Design Report placement</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">4th</h3>
+										<p class="proj-metric-label">
+											Overall competition placement
+										</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">0</h3>
+										<p class="proj-metric-label">
+											Crashes during competition flights
+										</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">10</h3>
+										<p class="proj-metric-label">
+											Test flights across the season
+										</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">4</h3>
+										<p class="proj-metric-label">
+											Pairs of composite wings built
+										</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">14</h3>
+										<p class="proj-metric-label">
+											Candidate airfoils evaluated
+										</p>
+									</div>
+								</div>
+
+								<div class="proj-prose">
+									<p>
+										The aircraft completed its full competition flight mission —
+										precision payload pickup and delivery within a 5 cm accuracy
+										requirement — in heavy crosswind and rain without a single
+										crash. The airfoil selection, motor arm design, and assembly
+										jigs each fed directly into that result: a repeatable,
+										structurally sound airframe that held together under
+										conditions it hadn't been tested in before.
+									</p>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── MEDIA GALLERY ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Gallery</p>
+								<h2 class="proj-section-title">
+									Build and competition documentation
+								</h2>
+
+								<div class="proj-gallery">
+									<!-- ── EDIT: replace with real images/video ── -->
+									<div class="proj-gallery-item large placeholder">
+										<img
+											src="img/2526_aircraft.jpg"
+											alt="2025-26 aircraft, full build" />
+										<span class="proj-gallery-caption"
+											>Completed aircraft, 2025–26</span
+										>
+									</div>
+									<div class="proj-gallery-item placeholder">
+										<img
+											src="img/2526_cad_motor_mount.png"
+											alt="CAD render of motor mount and arm support" />
+										<span class="proj-gallery-caption"
+											>Motor mount and arm support, CAD</span
+										>
+									</div>
+									<div class="proj-gallery-item placeholder">
+										<img
+											src="img/2526_jigs.jpg"
+											alt="Modular wing assembly jigs" />
+										<span class="proj-gallery-caption"
+											>Modular wing assembly jigs</span
+										>
+									</div>
+									<div class="proj-gallery-item placeholder">
+										<img
+											src="img/2526_xflr5.png"
+											alt="XFLR5 airfoil analysis" />
+										<span class="proj-gallery-caption"
+											>Airfoil candidate analysis in XFLR5</span
+										>
+									</div>
+									<div class="proj-gallery-item placeholder">
+										<img
+											src="img/2526_test_flight.jpg"
+											alt="Test flight, 2025-26 season" />
+										<span class="proj-gallery-caption"
+											>Test flight ahead of competition</span
+										>
+									</div>
+									<div class="proj-gallery-item placeholder">
+										<img
+											src="img/2526_competition.jpg"
+											alt="Competition flight, heavy crosswind and rain" />
+										<span class="proj-gallery-caption"
+											>Competition flight in heavy crosswind and rain</span
+										>
+									</div>
+								</div>
+							</section>
+						</main>
+						<!-- end .proj-main -->
+
+						<!-- ============================================================
+         SIDEBAR — 2025-26
+    ============================================================ -->
+						<aside class="proj-sidebar">
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Competition Result</p>
+								<div class="sidebar-stats">
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Design Report</span>
+										<span class="sidebar-stat-value">3rd</span>
+									</div>
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Overall</span>
+										<span class="sidebar-stat-value">4th</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Tools</p>
+								<div class="sidebar-tag-group">
+									<span class="capability-tag">SolidWorks</span>
+									<span class="capability-tag">XFLR5</span>
+									<span class="capability-tag">Carbon Fiber Layup</span>
+									<span class="capability-tag">Balsa Construction</span>
+									<span class="capability-tag">Heat-Shrink Covering</span>
+								</div>
+							</div>
+
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Project Stats</p>
+								<div class="sidebar-stats">
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Role</span>
+										<span class="sidebar-stat-value">Subteam Member</span>
+									</div>
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Subteam size</span>
+										<span class="sidebar-stat-value">7</span>
+									</div>
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Thrust rating</span>
+										<span class="sidebar-stat-value">920 g</span>
+									</div>
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Precision target</span>
+										<span class="sidebar-stat-value">5 cm</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- ── EDIT: replace with real links once available ── -->
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Links</p>
+								<div class="sidebar-links">
+									<a href="#" class="sidebar-link" target="_blank" rel="noopener">
+										<i class="fa-solid fa-file-lines sidebar-link-icon"></i>
+										2025–26 Design Report
+									</a>
+									<a
+										href="https://www.saeaerodesign.com/"
+										class="sidebar-link"
+										target="_blank"
+										rel="noopener">
+										<i class="fa-solid fa-trophy sidebar-link-icon"></i>
+										Competition Results
+									</a>
+								</div>
+							</div>
+						</aside>
+					</div>
+					<!-- end 2025-26 .proj-body.proj-tab-panel -->
+
+					<!-- ============================================================
+       2024-25 — Aerostructures
+  ============================================================ -->
+					<div class="proj-body proj-tab-panel" data-tab="tab-2024-25">
+						<main class="proj-main">
+							<!-- ── OVERVIEW ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">2024–25 Overview</p>
+								<h2 class="proj-section-title">
+									Building the platform, chasing stability
+								</h2>
+								<div class="proj-prose">
+									<p>
+										In my first year on the subteam, I designed the CAD for the
+										aircraft's wings and ailerons and worked on composite
+										manufacturing, while the team spent much of the season
+										fighting flight instability. The root cause — an undersized
+										horizontal stabilizer — wasn't identified until late in the
+										year, after most of the season's testing and repairs were
+										already behind us.
+									</p>
+								</div>
+
+								<div class="proj-callout">
+									<p>
+										<strong>Competition result:</strong> 1st place, Design
+										Report · 5th place overall
+									</p>
+								</div>
+
+								<div class="proj-prose">
+									<p>
+										Mission requirement: design, build, and fly an autonomous
+										hybrid fixed-wing/VTOL aircraft under 3.5 lb, capable of
+										precisely picking up and dropping off a payload without
+										human intervention.
+									</p>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── FOCUS ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Focus</p>
+								<h2 class="proj-section-title">What I worked on</h2>
+
+								<div class="proj-objectives">
+									<div class="proj-objective">
+										<span class="proj-objective-num">01</span>
+										<span
+											>Designed SolidWorks CAD models for the wings and
+											ailerons of the autonomous hybrid tricopter, considering
+											manufacturability and ease of assembly.</span
+										>
+									</div>
+									<div class="proj-objective">
+										<span class="proj-objective-num">02</span>
+										<span
+											>Manufactured and repaired 2 pairs of composite wings,
+											using balsa wood, carbon fiber, and heat-shrink film,
+											across 7 test flights.</span
+										>
+									</div>
+									<div class="proj-objective">
+										<span class="proj-objective-num">03</span>
+										<span
+											>Researched frise ailerons and other methods to
+											counteract adverse yaw instability observed in flight
+											testing.</span
+										>
+									</div>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── DESIGN PROCESS ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Design Process</p>
+								<h2 class="proj-section-title">
+									A season spent diagnosing instability
+								</h2>
+
+								<div class="proj-timeline">
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">01</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Wing and aileron CAD
+											</h3>
+											<p class="proj-timeline-step-text">
+												Designed the wing and aileron geometry in
+												SolidWorks, working within the competition's 3.5 lb
+												weight ceiling while keeping the structure
+												manufacturable by the team's composite layup
+												process.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">02</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Composite construction
+											</h3>
+											<p class="proj-timeline-step-text">
+												Built 2 pairs of wings from balsa wood, carbon
+												fiber, and heat-shrink film, repairing wing
+												structure between test flights as damage occurred.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">03</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Diagnosing adverse yaw
+											</h3>
+											<p class="proj-timeline-step-text">
+												Flight testing showed adverse yaw instability.
+												Researched frise ailerons as a mechanical fix,
+												alongside other adverse-yaw mitigation approaches
+												used on similar airframes.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">04</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Choosing a software fix over a mechanical one
+											</h3>
+											<p class="proj-timeline-step-text">
+												We ultimately didn't implement frise ailerons. At
+												this aircraft's scale, small manufacturing
+												inaccuracies have an outsized effect on aerodynamic
+												performance, and without the tooling to validate the
+												geometry beforehand, committing material and
+												flight-test time to an unproven design felt too
+												risky. Adverse yaw was instead minimized through
+												software — differential aileron deflection — a
+												lower-risk fix given those validation constraints.
+											</p>
+										</div>
+									</div>
+
+									<div class="proj-timeline-step">
+										<div class="proj-timeline-dot">05</div>
+										<div class="proj-timeline-body">
+											<h3 class="proj-timeline-step-title">
+												Finding the real cause, late
+											</h3>
+											<p class="proj-timeline-step-text">
+												Repeated hard landings and crashes across the season
+												were initially treated as an adverse-yaw problem.
+												Late in the year, the actual root cause was traced
+												to an undersized horizontal stabilizer instead — by
+												which point most of the season's test flights and
+												wing repairs had already happened.
+											</p>
+										</div>
+									</div>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── CHALLENGES ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Challenges</p>
+								<h2 class="proj-section-title">Where the hard problems were</h2>
+
+								<div class="proj-cards-grid">
+									<div class="proj-card">
+										<h3 class="proj-card-title">Adverse yaw at small scale</h3>
+										<p class="proj-card-text">
+											Frise ailerons were the textbook mechanical fix for
+											adverse yaw, but at this aircraft's size, small
+											manufacturing inaccuracies would have had an outsized
+											aerodynamic effect, which the team couldn't evaluate
+											beforehand. Differential aileron deflection, a
+											software-side fix, was chosen over committing build time
+											to an unvalidated mechanical change.
+										</p>
+									</div>
+
+									<div class="proj-card">
+										<h3 class="proj-card-title">
+											An instability with the wrong suspect
+										</h3>
+										<p class="proj-card-text">
+											Hard landings and crashes were initially treated as an
+											aileron/adverse-yaw problem. The actual root cause, an
+											undersized horizontal stabilizer, wasn't confirmed until
+											late in the season, a lesson that directly shaped the
+											following year's structural priorities.
+										</p>
+									</div>
+
+									<div class="proj-card">
+										<h3 class="proj-card-title">
+											Repairing composite wings mid-season
+										</h3>
+										<p class="proj-card-text">
+											Built and repaired 2 pairs of wings across 7 test
+											flights, with each flight test run multiple times,
+											keeping the aircraft flight-ready under repeated
+											hard-landing damage.
+										</p>
+									</div>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── RESULTS ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Results</p>
+								<h2 class="proj-section-title">Measured outcomes</h2>
+
+								<div class="proj-metrics">
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">1st</h3>
+										<p class="proj-metric-label">Design Report placement</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">5th</h3>
+										<p class="proj-metric-label">
+											Overall competition placement
+										</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">7</h3>
+										<p class="proj-metric-label">
+											Test flights across the season
+										</p>
+									</div>
+									<div class="proj-metric">
+										<h3 class="proj-metric-value">2</h3>
+										<p class="proj-metric-label">
+											Pairs of composite wings built
+										</p>
+									</div>
+								</div>
+
+								<div class="proj-prose">
+									<p>
+										Despite placing 1st in Design Report, the aircraft's
+										in-flight instability limited the mission score, and the
+										team finished 5th overall. Correctly diagnosing the
+										horizontal stabilizer sizing issue came too late in the
+										season to fix that year — but it directly informed the
+										structural priorities carried into 2025–26, where the
+										aircraft went on to fly the full competition without a
+										single crash.
+									</p>
+								</div>
+							</section>
+
+							<hr class="proj-divider" />
+
+							<!-- ── MEDIA GALLERY ── -->
+							<section class="proj-section">
+								<p class="proj-section-label">Gallery</p>
+								<h2 class="proj-section-title">
+									Build and competition documentation
+								</h2>
+
+								<div class="proj-gallery">
+									<!-- ── EDIT: replace with real images/video ── -->
+									<div class="proj-gallery-item large">
+										<img
+											src="img/2425_aircraft.jpg"
+											alt="2024-25 aircraft, full build" />
+										<span class="proj-gallery-caption"
+											>Completed aircraft, 2024–25</span
+										>
+									</div>
+									<div class="proj-gallery-item">
+										<img
+											src="img/2425_cad_wing.png"
+											alt="CAD render of wing and aileron" />
+										<span class="proj-gallery-caption"
+											>Wing and aileron, CAD</span
+										>
+									</div>
+									<div class="proj-gallery-item">
+										<img
+											src="img/2425_wing_repair.jpg"
+											alt="Composite wing repair" />
+										<span class="proj-gallery-caption"
+											>Composite wing repair between flights</span
+										>
+									</div>
+									<div class="proj-gallery-item">
+										<img
+											src="img/2425_test_flight.jpg"
+											alt="Test flight, 2024-25 season" />
+										<span class="proj-gallery-caption"
+											>Test flight, 2024–25 season</span
+										>
+									</div>
+									<div class="proj-gallery-item">
+										<img
+											src="img/2425_competition.jpg"
+											alt="Competition, 2024-25" />
+										<span class="proj-gallery-caption"
+											>SAE Aerodesign Competition, 2024–25</span
+										>
+									</div>
+								</div>
+							</section>
+						</main>
+						<!-- end .proj-main -->
+
+						<!-- ============================================================
+         SIDEBAR — 2024-25
+    ============================================================ -->
+						<aside class="proj-sidebar">
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Competition Result</p>
+								<div class="sidebar-stats">
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Design Report</span>
+										<span class="sidebar-stat-value">1st</span>
+									</div>
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Overall</span>
+										<span class="sidebar-stat-value">5th</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Tools</p>
+								<div class="sidebar-tag-group">
+									<span class="capability-tag">SolidWorks</span>
+									<span class="capability-tag">Carbon Fiber Layup</span>
+									<span class="capability-tag">Balsa Construction</span>
+									<span class="capability-tag">Heat-Shrink Covering</span>
+								</div>
+							</div>
+
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Project Stats</p>
+								<div class="sidebar-stats">
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Role</span>
+										<span class="sidebar-stat-value">Subteam Member</span>
+									</div>
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Test flights</span>
+										<span class="sidebar-stat-value">7</span>
+									</div>
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Wing pairs built</span>
+										<span class="sidebar-stat-value">2</span>
+									</div>
+								</div>
+							</div>
+
+							<!-- ── EDIT: replace with real links once available ── -->
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Links</p>
+								<div class="sidebar-links">
+									<a href="#" class="sidebar-link" target="_blank" rel="noopener">
+										<i class="fa-solid fa-file-lines sidebar-link-icon"></i>
+										2024–25 Design Report
+									</a>
+									<a
+										href="https://www.saeaerodesign.com/"
+										class="sidebar-link"
+										target="_blank"
+										rel="noopener">
+										<i class="fa-solid fa-trophy sidebar-link-icon"></i>
+										Competition Results
+									</a>
+								</div>
+							</div>
+						</aside>
+					</div>
+					<!-- end 2024-25 .proj-body.proj-tab-panel -->
+
+					<!-- ============================================================
+       2026-27 — Structures Lead (RESERVED — fill in once the season
+       has content; structure matches the two panels above so this
+       just needs sections copied in, not a new layout)
+  ============================================================ -->
+					<div class="proj-body proj-tab-panel" data-tab="tab-2026-27">
+						<main class="proj-main">
+							<section class="proj-section">
+								<p class="proj-section-label">2026–27 Overview</p>
+								<h2 class="proj-section-title">Structures Lead</h2>
+
+								<div class="proj-placeholder">
+									<p class="proj-placeholder-title">
+										This season's write-up is coming soon
+									</p>
+									<p class="proj-placeholder-text">
+										<!-- ── EDIT: replace with real content once the season
+                                 progresses. Reuse the Focus / Design Process /
+                                 Challenges / Results / Gallery sections from the
+                                 2025-26 panel above as a structural template. ── -->
+										Now serving as Structures Lead for UTAT UAS SAE. Details —
+										scope, key decisions, and results — will be added here as
+										the season develops.
+									</p>
+								</div>
+							</section>
+						</main>
+
+						<aside class="proj-sidebar">
+							<div class="sidebar-card">
+								<p class="sidebar-card-title">Project Stats</p>
+								<div class="sidebar-stats">
+									<div class="sidebar-stat">
+										<span class="sidebar-stat-label">Role</span>
+										<span class="sidebar-stat-value">Structures Lead</span>
+									</div>
+								</div>
+							</div>
+						</aside>
+					</div>
+					<!-- end 2026-27 .proj-body.proj-tab-panel -->
+				</div>
+				<!-- end .proj-tab-panels -->
+			</div>
+			<!-- end .proj-tabs -->
+
+			<!-- ============================================================
+       NEXT PROJECT
+  ============================================================ -->
+			<section class="proj-next">
+				<div class="proj-next-inner">
+					<p class="proj-next-label">Next Project</p>
+					<!-- ── EDIT: update href, title, and desc ── -->
+					<a class="proj-next-card" href="../rocketpy/index.html">
+						<div class="proj-next-info">
+							<p class="proj-next-title">RocketPy Flight Simulation</p>
+							<p class="proj-next-desc">
+								Next generation High-Power Rocketry 6-DOF Trajectory Simulation.
+							</p>
+						</div>
+						<span class="proj-next-arrow">→</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- ============================================================
+       FOOTER  (identical to main page)
+  ============================================================ -->
+			<footer class="footer">
+				<div class="container footer-inner">
+					<span>© 2026 Arthur Hwang</span>
+					<span class="footer-mono">Built with HTML · CSS · JS</span>
+				</div>
+			</footer>
+		</div>
+
+		<script src="../../script.js"></script>
+	</body>
+</html>

@@ -1,20 +1,23 @@
 /* ================================================================
    PROJECT PAGE — SHARED TEMPLATE STYLESHEET
    Reusable across every project page. Extends the site-wide style.css
-   and defines nothing project-specific — only structural/layout CSS.
-   Load both stylesheets on every project page:
-     <link rel="stylesheet" href="../../style.css" />
-     <link rel="stylesheet" href="../style.css" />
-   ================================================================ */
+================================================================ */
 
 body {
 	margin: 0;
 	background: var(--surface);
 }
 
-/* ----------------------------------------------------------------
-   BACK LINK
-   ---------------------------------------------------------------- */
+/* Semantic status colors. Defined here (rather than the main stylesheet) */
+:root {
+	--status-complete: #2d7a4f;
+	--status-prototype: #9a6b00;
+}
+
+/* =============================================================
+    BACK LINK
+============================================================= */
+
 .back-link {
 	display: inline-flex;
 	align-items: center;
@@ -34,10 +37,10 @@ body {
 	flex-shrink: 0;
 }
 
-/* ----------------------------------------------------------------
-   PROJECT HERO
-   Sits flush under the nav. Contains title block + hero image.
-   ---------------------------------------------------------------- */
+/* =============================================================
+    PROJECT HERO
+============================================================= */
+
 .proj-hero {
 	padding-top: calc(var(--nav-h) + var(--space-xl));
 	padding-bottom: 0;
@@ -50,7 +53,6 @@ body {
 	padding-inline: var(--space-lg);
 }
 
-/* Eyebrow row: category + status badge */
 .proj-eyebrow-row {
 	display: flex;
 	align-items: center;
@@ -74,14 +76,6 @@ body {
 	padding: 0.2rem 0.6rem;
 	border-radius: 99px;
 	border: 1px solid;
-}
-/* Semantic status colors. Defined here (rather than the main
-   stylesheet) so this file stays fully self-contained and portable —
-   move these three lines into the site-wide :root if other
-   components ever need "success/warning" colors too. */
-:root {
-	--status-complete: #2d7a4f;
-	--status-prototype: #9a6b00;
 }
 
 .proj-status.complete {
@@ -156,7 +150,10 @@ body {
 	margin-bottom: var(--space-xl);
 }
 
-.horizontal ul {
+/* Dropdown CTA — a <details> that expands into a row of sub-links.
+   Reused for anything with multiple downloadable variants (installers,
+   CAD files, datasheets, reports) */
+.cta-dropdown ul {
 	height: 100%;
 	display: flex;
 	align-items: stretch;
@@ -166,13 +163,13 @@ body {
 	margin: 0;
 }
 
-.horizontal ul li {
+.cta-dropdown ul li {
 	height: 100%;
 	display: flex;
 	align-items: stretch;
 }
 
-.horizontal ul li a {
+.cta-dropdown ul li a {
 	white-space: nowrap;
 	height: 100%;
 	display: flex;
@@ -192,15 +189,6 @@ body {
 	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 	border: 1px solid var(--border);
 	border-bottom: none;
-	background: var(--surface-2);
-	/* placeholder stripe for missing images */
-	background-image: repeating-linear-gradient(
-		-45deg,
-		transparent,
-		transparent 24px,
-		var(--border) 24px,
-		var(--border) 25px
-	);
 }
 
 /* Hero image wrapper so padding applies correctly */
@@ -210,10 +198,10 @@ body {
 	margin-inline: auto;
 }
 
-/* ----------------------------------------------------------------
-   PROJECT BODY LAYOUT
-   Narrow prose column + optional sticky sidebar
-   ---------------------------------------------------------------- */
+/* =============================================================
+    PROJECT BODY LAYOUT
+============================================================= */
+
 .proj-body {
 	max-width: var(--max-w);
 	margin-inline: auto;
@@ -275,9 +263,10 @@ body {
 	}
 }
 
-/* ----------------------------------------------------------------
-   SIDEBAR WIDGETS
-   ---------------------------------------------------------------- */
+/* =============================================================
+    SIDEBAR WIDGETS
+============================================================= */
+
 .sidebar-card {
 	background: var(--surface);
 	border: 1px solid var(--border);
@@ -408,10 +397,10 @@ body {
 	border-color: var(--border);
 }
 
-/* ----------------------------------------------------------------
-   PROSE SECTIONS
-   Each content section inside .proj-main
-   ---------------------------------------------------------------- */
+/* =============================================================
+    PROSE SECTIONS
+============================================================= */
+
 .proj-section {
 	margin-bottom: var(--space-2xl);
 }
@@ -462,9 +451,10 @@ body {
 	opacity: 0.7;
 }
 
-/* ----------------------------------------------------------------
-   CALLOUT / HIGHLIGHT BOX
-   ---------------------------------------------------------------- */
+/* =============================================================
+    CALLOUT
+============================================================= */
+
 .proj-callout {
 	background: var(--accent-tag);
 	border-left: 3px solid var(--accent-mid);
@@ -482,9 +472,10 @@ body {
 	color: var(--accent-mid);
 }
 
-/* ----------------------------------------------------------------
-   OBJECTIVES LIST
-   ---------------------------------------------------------------- */
+/* =============================================================
+    OBJECTIVES
+============================================================= */
+
 .proj-objectives {
 	display: flex;
 	flex-direction: column;
@@ -515,9 +506,10 @@ body {
 	letter-spacing: 0.04em;
 }
 
-/* ----------------------------------------------------------------
-   INLINE IMAGE (inside prose, full-width of column)
-   ---------------------------------------------------------------- */
+/* =============================================================
+    IMAGES (inside prose, full-width of column)
+============================================================= */
+
 .proj-image {
 	width: 100%;
 	border-radius: var(--radius-md);
@@ -543,18 +535,14 @@ body {
 }
 
 .proj-image-caption {
-	font-family: var(--mono);
-	font-size: 0.68rem;
-	color: var(--text-muted);
-	letter-spacing: 0.06em;
-	text-align: center;
 	margin-top: calc(-1 * var(--space-md) + 0.5rem);
 	margin-bottom: var(--space-lg);
 }
 
-/* ----------------------------------------------------------------
-   SIDE-BY-SIDE: image beside a text block
-   ---------------------------------------------------------------- */
+/* =============================================================
+    SPLIT (2 columns side by side)
+============================================================= */
+
 .proj-split {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -596,10 +584,10 @@ body {
 	}
 }
 
-/* ----------------------------------------------------------------
-   DESIGN PROCESS TIMELINE
-   Vertical steps inside a section
-   ---------------------------------------------------------------- */
+/* =============================================================
+    TIMELINE
+============================================================= */
+
 .proj-timeline {
 	position: relative;
 	display: flex;
@@ -661,9 +649,10 @@ body {
 	line-height: 1.75;
 }
 
-/* ----------------------------------------------------------------
-   CHALLENGES & DECISIONS — TWO-COLUMN CARDS
-   ---------------------------------------------------------------- */
+/* =============================================================
+    CARDS
+============================================================= */
+
 .proj-cards-grid {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -688,11 +677,6 @@ body {
 	box-shadow: 0 4px 20px var(--accent-glow);
 }
 
-.proj-card-icon {
-	font-size: 1.2rem;
-	margin-bottom: 0.25rem;
-}
-
 .proj-card-title {
 	font-size: 0.9rem;
 	font-weight: 700;
@@ -706,9 +690,10 @@ body {
 	line-height: 1.7;
 }
 
-/* ----------------------------------------------------------------
-   RESULTS — KEY METRICS ROW
-   ---------------------------------------------------------------- */
+/* =============================================================
+    METRICS
+============================================================= */
+
 .proj-metrics {
 	display: grid;
 	grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -749,10 +734,10 @@ body {
 	line-height: 1.4;
 }
 
-/* ----------------------------------------------------------------
-   MEDIA GALLERY (project page version)
-   Three-column masonry-feel grid, no scroll
-   ---------------------------------------------------------------- */
+/* =============================================================
+    IMAGE GALLERY
+============================================================= */
+
 .proj-gallery {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
@@ -766,18 +751,10 @@ body {
 	overflow: hidden;
 	border: 1px solid var(--border);
 	aspect-ratio: 4/3;
-	background: var(--surface-2);
-	background-image: repeating-linear-gradient(
-		-45deg,
-		transparent,
-		transparent 20px,
-		var(--border) 20px,
-		var(--border) 21px
-	);
 	transition: transform var(--dur-mid) var(--ease);
 }
 
-.proj-gallery-item:first-child {
+.proj-gallery-item.large {
 	grid-column: span 2;
 	aspect-ratio: 16/9;
 }
@@ -793,35 +770,23 @@ body {
 	transform: scale(1.02);
 }
 
-.proj-gallery-item:focus {
-	overflow: visible;
-}
-
-.proj-gallery-item:focus img {
-	position: fixed;
-	top: 50vh;
-	left: 50vh;
-	transform: translate(-50%, -50%) scale(2);
-}
-
 .proj-gallery-caption {
 	position: absolute;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	padding: 0.5rem 0.75rem;
-	background: linear-gradient(transparent, rgba(0, 0, 0, 0.55));
-	font-family: var(--mono);
+	background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
+	text-align: left;
 	font-size: 0.65rem;
-	color: rgba(255, 255, 255, 0.85);
-	letter-spacing: 0.06em;
+	color: var(--text-lighter);
 }
 
 @media (max-width: 640px) {
 	.proj-gallery {
 		grid-template-columns: 1fr 1fr;
 	}
-	.proj-gallery-item:first-child {
+	.proj-gallery-item.large {
 		grid-column: span 2;
 	}
 }
@@ -830,22 +795,23 @@ body {
 	.proj-gallery {
 		grid-template-columns: 1fr;
 	}
-	.proj-gallery-item:first-child {
+	.proj-gallery-item.large {
 		grid-column: span 1;
 	}
 }
 
-/* ----------------------------------------------------------------
-   LESSONS LEARNED
-   ---------------------------------------------------------------- */
-.proj-lessons {
+/* =============================================================
+    ITEM LIST
+============================================================= */
+
+.proj-items {
 	display: flex;
 	flex-direction: column;
 	gap: var(--space-sm);
 	margin-block: var(--space-md);
 }
 
-.proj-lesson {
+.proj-item {
 	display: flex;
 	gap: var(--space-md);
 	align-items: flex-start;
@@ -855,34 +821,30 @@ body {
 	border-radius: var(--radius-md);
 }
 
-.proj-lesson-icon {
-	font-size: 1rem;
-	flex-shrink: 0;
-	margin-top: 0.1rem;
-}
-
-.proj-lesson-text {
+.proj-item-text {
 	font-size: 0.875rem;
 	color: var(--text-secondary);
 	line-height: 1.7;
 }
-.proj-lesson-text strong {
+.proj-item-text strong {
 	color: var(--text-primary);
 	font-weight: 600;
 }
 
-/* ----------------------------------------------------------------
-   SECTION DIVIDER
-   ---------------------------------------------------------------- */
+/* =============================================================
+    SECTION DIVIDER
+============================================================= */
+
 .proj-divider {
 	border: none;
 	border-top: 1px solid var(--border);
 	margin-block: var(--space-xl);
 }
 
-/* ----------------------------------------------------------------
-   NEXT PROJECT CARD (footer of page)
-   ---------------------------------------------------------------- */
+/* =============================================================
+    NEXT PROJECT
+============================================================= */
+
 .proj-next {
 	background: var(--bg-alt);
 	border-top: 1px solid var(--border);
@@ -917,6 +879,7 @@ body {
 	text-decoration: none;
 	color: inherit;
 }
+
 .proj-next-card:hover {
 	border-color: var(--accent-mid);
 	box-shadow: 0 8px 32px var(--accent-glow);
@@ -943,8 +906,171 @@ body {
 	margin-left: var(--space-md);
 	transition: transform var(--dur-fast);
 }
+
 .proj-next-card:hover .proj-next-arrow {
 	transform: translateX(4px);
+}
+
+/* ----------------------------------------------------------------
+   PROJECT TABS — multi-year/multi-edition project switcher.
+   Minimal JS (see script.js: initProjectTabs) drives which panel
+   shows, matched by id — robust to reordering or inserting a tab
+   anywhere, unlike position-based matching. CSS just needs one
+   plain class toggle; the tab-styling rules below (folder look,
+   active state) still work via plain :checked, no JS needed for those.
+
+   Markup shape required:
+     <div class="proj-tabs">
+       <input class="proj-tab-input" type="radio" name="…" id="tab-x" checked>
+       <input class="proj-tab-input" type="radio" name="…" id="tab-y">
+
+       <fieldset class="proj-tab-list">
+         <legend class="sr-only">Select season</legend>
+         <label class="proj-tab" for="tab-x">…</label>
+         <label class="proj-tab" for="tab-y">…</label>
+       </fieldset>
+
+       <div class="proj-tab-panels">
+         <div class="proj-body proj-tab-panel is-active" data-tab="tab-x">…</div>
+         <div class="proj-body proj-tab-panel" data-tab="tab-y">…</div>
+       </div>
+     </div>
+
+   To add a tab: one more input+label pair (matching for/id as
+   usual) and one more panel with a matching data-tab. Order doesn't
+   matter. Give the panel that should show by default (no JS, or
+   before JS runs) the `is-active` class directly in the HTML.
+   ---------------------------------------------------------------- */
+.sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.proj-tabs {
+	margin-top: var(--space-xl);
+}
+
+.proj-tab-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	gap: 0.3rem;
+	max-width: var(--max-w);
+	margin-inline: auto;
+	padding-inline: var(--space-lg);
+	/* reset native <fieldset> chrome */
+	border: 0;
+	margin-block: 0;
+}
+
+.proj-tab-input {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
+	border: 0;
+}
+
+.proj-tab {
+	position: relative;
+	top: 1px; /* overlaps the panel's top border by 1px, below */
+	z-index: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.15rem;
+	padding: 0.65rem 1.1rem;
+	background: var(--bg);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-md) var(--radius-md) 0 0;
+	color: var(--text-secondary);
+	cursor: pointer;
+	transition: color var(--dur-fast);
+}
+
+.proj-tab:hover {
+	color: var(--text-primary);
+}
+
+/* Checked tab — background matches the panel below it exactly,
+   which is what sells the "connected folder tab" illusion: the
+   seam between tab and panel disappears along that shared edge. */
+.proj-tab-input:checked + .proj-tab {
+	background: var(--bg);
+	color: var(--text-primary);
+	z-index: 2;
+	border-bottom: none;
+}
+
+.proj-tab-input:focus-visible + .proj-tab {
+	outline: 2px solid var(--accent-mid);
+	outline-offset: 2px;
+}
+
+.proj-tab-title {
+	font-family: var(--font-mono);
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.proj-tab-subtitle {
+	font-size: 0.72rem;
+	opacity: 0.75;
+}
+
+/* The panel box itself — this is the "folder body" the active tab
+   visually attaches to. */
+.proj-tab-panel {
+	display: none;
+}
+
+.proj-tab-panel.proj-body {
+	max-width: var(--max-w);
+	border: 1px solid var(--border);
+	border-radius: 0 var(--radius-md) var(--radius-md) var(--radius-md);
+	background: var(--surface);
+	position: relative;
+}
+
+/* JS toggles this one class — see script.js: initProjectTabs. */
+.proj-tab-panel.is-active {
+	display: grid;
+}
+
+/* Reserved-tab placeholder — swap for real content once written,
+   without needing a different page structure. */
+.proj-placeholder {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 0.75rem;
+	padding: var(--space-xl);
+	border: 1px dashed var(--border);
+	border-radius: var(--radius-md);
+	background: var(--surface);
+}
+
+.proj-placeholder-title {
+	font-size: 1.1rem;
+	font-weight: 600;
+	color: var(--text-primary);
+}
+
+.proj-placeholder-text {
+	font-size: 0.95rem;
+	color: var(--text-secondary);
+	line-height: 1.6;
+	max-width: 60ch;
 }
 
 /* ----------------------------------------------------------------
@@ -966,4 +1092,33 @@ body {
 	.proj-next-inner {
 		padding-inline: var(--space-md);
 	}
+	.year-tabs {
+		gap: 0.5rem;
+	}
+	.year-tab {
+		flex: 1 1 auto;
+		padding: 0.5rem 0.75rem;
+	}
+}
+
+/* ----------------------------------------------------------------
+   TRANSITIONS
+   ---------------------------------------------------------------- */
+
+::view-transition-group(glow) {
+	animation-duration: 0.1s;
+	animation-timing-function: var(--ease);
+}
+::view-transition-group(glow-title) {
+	animation-duration: 0.1s;
+	animation-timing-function: var(--ease);
+}
+
+::view-transition-group(utat-uas) {
+	animation-duration: 0.1s;
+	animation-timing-function: var(--ease);
+}
+::view-transition-group(utat-uas-title) {
+	animation-duration: 0.1s;
+	animation-timing-function: var(--ease);
 }

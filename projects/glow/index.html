@@ -38,12 +38,12 @@
 			rel="stylesheet" />
 		<script src="https://kit.fontawesome.com/801590478f.js" crossorigin="anonymous"></script>
 	</head>
-	<body style="view-transition-name: post-hero">
+	<body>
 		<!-- ===========================================================
             NAVBAR
         ============================================================ -->
 
-		<nav class="nav proj-nav-solid" id="nav">
+		<nav class="nav" id="nav">
 			<a class="nav-logo" href="../../index.html#hero">
 				<picture class="nav-picture">
 					<source
@@ -70,10 +70,11 @@
 
 		<div style="view-transition-name: glow">
 			<!-- ===========================================================
-            PROJECT HERO
-        ============================================================ -->
+				PROJECT HERO
+			============================================================ -->
 
 			<header class="proj-hero">
+				<!-- Return button -->
 				<div class="proj-hero-inner">
 					<a class="back-link" href="../../index.html#projects">
 						<svg
@@ -90,7 +91,7 @@
 						All Projects
 					</a>
 
-					<!-- ── EDIT: category + status ── -->
+					<!-- Project category -->
 					<div class="proj-eyebrow-row">
 						<span class="proj-category">Advanced Manufacturing · Software</span>
 						<span class="proj-status complete">Complete</span>
@@ -98,8 +99,8 @@
 						<!-- Other options: <span class="proj-status prototype">Prototype</span> -->
 					</div>
 
-					<!-- ── EDIT: title & subtitle ── -->
-					<h1 class="proj-title" style="view-transition-name: glow-title">GLOW</h1>
+					<!-- Title and subtitle -->
+					<h1 class="proj-title" style="view-transition-name: glow-title">G.L.O.W.</h1>
 					<p class="proj-subtitle">
 						An open source G-Code generation tool for Direct Energy Deposition Additive
 						Manufacturing, built to automate high throughput toolpath planning for
@@ -107,7 +108,7 @@
 						parameters.
 					</p>
 
-					<!-- ── EDIT: meta row — dates, role, organization ── -->
+					<!-- Project specs -->
 					<div class="proj-meta-row">
 						<div class="proj-meta-item">
 							<span class="proj-meta-label">Timeline</span>
@@ -123,10 +124,7 @@
 						</div>
 					</div>
 
-					<!-- ── EDIT: CTA buttons — one .btn-primary, any number of
-                         .btn-secondary / .cta-dropdown. Swap for whatever the
-                         project's main artifacts are (repo, report, CAD files,
-                         video, etc.) ── -->
+					<!-- CTA buttons — one .btn-primary, any number of .btn-secondary / .cta-dropdown + .btn-ghost -->
 					<div class="proj-cta-row">
 						<a
 							href="https://github.com/ArthurJWH/GLOW"
@@ -179,24 +177,27 @@
 					</div>
 				</div>
 
+				<!-- Hero image -->
 				<div class="proj-hero-image-wrap">
 					<img
-						class="proj-hero-image"
+						class="proj-hero-image placeholder"
 						src="img/example_configuration.png"
 						alt="GLOW application" />
 				</div>
 			</header>
 
 			<!-- ============================================================
-       PROJECT BODY  (main prose + sticky sidebar)
-  ============================================================ -->
+				PROJECT BODY  (main prose + sticky sidebar)
+			============================================================ -->
+
 			<div class="proj-body">
 				<!-- ============================================================
-         MAIN CONTENT COLUMN
-    ============================================================ -->
+					MAIN CONTENT COLUMN
+				============================================================ -->
+
 				<main class="proj-main">
 					<!-- ── OVERVIEW ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Overview</p>
 						<h2 class="proj-section-title">What is GLOW?</h2>
 						<div class="proj-prose">
@@ -231,7 +232,7 @@
 					<hr class="proj-divider" />
 
 					<!-- ── PROBLEM STATEMENT ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Problem Statement</p>
 						<h2 class="proj-section-title">The cost of manual experiment setup</h2>
 						<div class="proj-prose">
@@ -268,7 +269,7 @@
 					<hr class="proj-divider" />
 
 					<!-- ── OBJECTIVES ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Objectives</p>
 						<h2 class="proj-section-title">What the tool had to do</h2>
 
@@ -318,10 +319,11 @@
 					<hr class="proj-divider" />
 
 					<!-- ── DESIGN PROCESS ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Design Process</p>
 						<h2 class="proj-section-title">From manual files to a production tool</h2>
 
+						<!-- Timeline item -->
 						<div class="proj-timeline">
 							<div class="proj-timeline-step">
 								<div class="proj-timeline-dot">01</div>
@@ -411,12 +413,11 @@
 					<hr class="proj-divider" />
 
 					<!-- ── ARCHITECTURE ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Architecture</p>
 						<h2 class="proj-section-title">How the pipeline works</h2>
 
 						<div class="proj-split">
-							<!-- ── EDIT: replace src ── -->
 							<div class="proj-split-image-wrap">
 								<img
 									class="proj-split-image"
@@ -444,27 +445,30 @@
 							</div>
 						</div>
 
-						<!-- ── EDIT: replace src ── -->
-						<img
-							class="proj-image proj-image--compact"
-							src="img/ui.png"
-							alt="GLOW main window" />
-						<p class="proj-image-caption">
-							GLOW main window. Left: geometry and substrate parameters. Right:
-							interactive configuration plot with click-to-place positioning.
-						</p>
+						<figure>
+							<img
+								class="proj-image proj-image--compact"
+								src="img/ui.png"
+								alt="GLOW main window" />
+							<figcaption class="proj-image-caption">
+								GLOW main window. Left: geometry and substrate parameters. Right:
+								interactive configuration plot with click-to-place positioning.
+							</figcaption>
+						</figure>
 					</section>
 
 					<hr class="proj-divider" />
 
 					<!-- ── CHALLENGES ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Challenges</p>
 						<h2 class="proj-section-title">Where the hard problems were</h2>
 
 						<div class="proj-cards-grid">
 							<div class="proj-card">
-								<span class="proj-card-icon"><i class="fa-brands fa-buromobelexperte fa-lg"></i></span>
+								<span class="proj-card-icon"
+									><i class="fa-brands fa-buromobelexperte fa-lg"></i
+								></span>
 								<h3 class="proj-card-title">
 									Grid fitting under two substrate types
 								</h3>
@@ -478,7 +482,9 @@
 							</div>
 
 							<div class="proj-card">
-								<span class="proj-card-icon"><i class="fa-solid fa-layer-group"></i></span>
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-layer-group"></i
+								></span>
 								<h3 class="proj-card-title">Continuity across layers</h3>
 								<p class="proj-card-text">
 									Cube geometries rotate ninety degrees between layers while
@@ -490,7 +496,9 @@
 							</div>
 
 							<div class="proj-card">
-								<span class="proj-card-icon"><i class="fa-solid fa-robot"></i></span>
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-robot"></i
+								></span>
 								<h3 class="proj-card-title">
 									Predicting geometry from process parameters
 								</h3>
@@ -505,7 +513,9 @@
 							</div>
 
 							<div class="proj-card">
-								<span class="proj-card-icon"><i class="fa-solid fa-right-left"></i></span>
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-right-left"></i
+								></span>
 								<h3 class="proj-card-title">Porting from Python to C++</h3>
 								<p class="proj-card-text">
 									The full Python distribution reached 1.6 GB, which was
@@ -523,7 +533,7 @@
 					<hr class="proj-divider" />
 
 					<!-- ── RESULTS ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Results</p>
 						<h2 class="proj-section-title">Measured outcomes</h2>
 
@@ -534,24 +544,28 @@
 									Button presses to open G-Code generator
 								</p>
 							</div>
+
 							<div class="proj-metric">
 								<h3 class="proj-metric-value">6x</h3>
 								<p class="proj-metric-label">
 									Smaller app size, full to optimized build
 								</p>
 							</div>
+
 							<div class="proj-metric">
 								<h3 class="proj-metric-value">40%</h3>
 								<p class="proj-metric-label">
 									Runtime improvement over lite version
 								</p>
 							</div>
+
 							<div class="proj-metric">
 								<h3 class="proj-metric-value">87%</h3>
 								<p class="proj-metric-label">
 									Installation time reduction, full to optimized build
 								</p>
 							</div>
+
 							<div class="proj-metric">
 								<h3 class="proj-metric-value">9 → 0</h3>
 								<p class="proj-metric-label">Required dependencies installed</p>
@@ -577,56 +591,62 @@
 					<hr class="proj-divider" />
 
 					<!-- ── MEDIA GALLERY ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Gallery</p>
 						<h2 class="proj-section-title">Build documentation</h2>
 
 						<div class="proj-gallery">
 							<!-- ── EDIT: replace with real images ── -->
 
-							<div class="proj-gallery-item" tabindex="0">
+							<figure class="proj-gallery-item large placeholder">
 								<img
 									src="img/original_interface.jpeg"
 									alt="Original G-Code generator interface" />
-								<span class="proj-gallery-caption"
-									>Original G-Code generator interface in LEMAM</span
-								>
-							</div>
+								<figcaption class="proj-gallery-caption">
+									Original G-Code generator interface in LEMAM
+								</figcaption>
+							</figure>
 
-							<div class="proj-gallery-item" tabindex="0">
+							<figure class="proj-gallery-item placeholder">
 								<img
 									src="img/machine_settings.png"
 									alt="GLOW machine settings page" />
-								<span class="proj-gallery-caption">Machine settings page</span>
-							</div>
+								<figcaption class="proj-gallery-caption">
+									Machine settings page
+								</figcaption>
+							</figure>
 
-							<div class="proj-gallery-item" tabindex="0">
+							<figure class="proj-gallery-item placeholder">
 								<img src="img/sample_tracks.jpeg" alt="Sample printed tracks" />
-								<span class="proj-gallery-caption">Sample printed tracks</span>
-							</div>
+								<figcaption class="proj-gallery-caption">
+									Sample printed tracks
+								</figcaption>
+							</figure>
 
-							<div class="proj-gallery-item" tabindex="0">
+							<figure class="proj-gallery-item placeholder">
 								<img
 									src="img/example_cube.png"
 									alt="Generated G-Code loaded in NC Viewer" />
-								<span class="proj-gallery-caption"
-									>Generated G-Code toolpath previewed in NC Viewer</span
-								>
-							</div>
+								<figcaption class="proj-gallery-caption">
+									Generated G-Code toolpath previewed in NC Viewer
+								</figcaption>
+							</figure>
 						</div>
 					</section>
 
 					<hr class="proj-divider" />
 
 					<!-- ── LESSONS LEARNED ── -->
-					<section class="proj-section reveal">
+					<section class="proj-section">
 						<p class="proj-section-label">Lessons Learned</p>
 						<h2 class="proj-section-title">What I'd do differently</h2>
 
-						<div class="proj-lessons">
-							<div class="proj-lesson">
-								<span class="proj-lesson-icon"><i class="fa-solid fa-gears"></i></span>
-								<p class="proj-lesson-text">
+						<div class="proj-items">
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-gears"></i
+								></span>
+								<p class="proj-item-text">
 									<strong
 										>Separate machine dialect from toolpath logic from the
 										outset.</strong
@@ -638,9 +658,11 @@
 								</p>
 							</div>
 
-							<div class="proj-lesson">
-								<span class="proj-lesson-icon"><i class="fa-solid fa-database"></i></span>
-								<p class="proj-lesson-text">
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-database"></i
+								></span>
+								<p class="proj-item-text">
 									<strong
 										>Keep predicted and measured data visibly distinct.</strong
 									>
@@ -651,9 +673,11 @@
 								</p>
 							</div>
 
-							<div class="proj-lesson">
-								<span class="proj-lesson-icon"><i class="fa-solid fa-user-pen"></i></span>
-								<p class="proj-lesson-text">
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-user-pen"></i
+								></span>
+								<p class="proj-item-text">
 									<strong
 										>Build the manual override alongside the automated
 										path.</strong
@@ -664,9 +688,11 @@
 								</p>
 							</div>
 
-							<div class="proj-lesson">
-								<span class="proj-lesson-icon"><i class="fa-solid fa-laptop-file"></i></span>
-								<p class="proj-lesson-text">
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-laptop-file"></i
+								></span>
+								<p class="proj-item-text">
 									<strong
 										>Plan for deployment constraints before the first
 										release.</strong
@@ -680,11 +706,11 @@
 						</div>
 					</section>
 				</main>
-				<!-- end .proj-main -->
 
 				<!-- ============================================================
-         SIDEBAR
-    ============================================================ -->
+					SIDEBAR
+				============================================================ -->
+
 				<aside class="proj-sidebar">
 					<div class="sidebar-card">
 						<p class="sidebar-card-title">Cited by</p>
@@ -799,21 +825,20 @@
 					</div>
 				</aside>
 			</div>
-			<!-- end .proj-body -->
 
 			<!-- ============================================================
-       NEXT PROJECT
-  ============================================================ -->
+				NEXT PROJECT
+			============================================================ -->
+
 			<section class="proj-next">
 				<div class="proj-next-inner">
 					<p class="proj-next-label">Next Project</p>
 					<!-- ── EDIT: update href, title, and desc ── -->
-					<a class="proj-next-card" href="../rocketpy/index.html">
+					<a class="proj-next-card" href="../utat-uas/index.html">
 						<div class="proj-next-info">
-							<p class="proj-next-title">RocketPy Flight Simulation</p>
+							<p class="proj-next-title">UTAT UAS</p>
 							<p class="proj-next-desc">
-								6-DOF trajectory simulation and aerodynamic analysis for a
-								university launch vehicle.
+								Designing Unmanned Aero Systems for SAE Aerodesign competition.
 							</p>
 						</div>
 						<span class="proj-next-arrow">→</span>
@@ -822,8 +847,9 @@
 			</section>
 
 			<!-- ============================================================
-       FOOTER  (identical to main page)
-  ============================================================ -->
+				FOOTER
+			============================================================ -->
+
 			<footer class="footer">
 				<div class="container footer-inner">
 					<span>© 2026 Arthur Hwang</span>
