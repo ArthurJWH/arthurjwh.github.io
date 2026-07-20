@@ -81,8 +81,47 @@
 		setLayout(saved === "list" ? "list" : "grid");
 	}
 
+	function initProjectTabs() {
+		document.querySelectorAll(".proj-tabs").forEach((group) => {
+			const panels = group.querySelectorAll(".proj-tab-panel");
+			if (!panels.length) return;
+
+			const activate = (id, { updateHash = true } = {}) => {
+				const input = group.querySelector(`#${CSS.escape(id)}`);
+				if (!input) return false;
+
+				input.checked = true;
+				panels.forEach((panel) => {
+					panel.classList.toggle("is-active", panel.dataset.tab === id);
+				});
+
+				if (updateHash) history.replaceState(null, "", `#${id}`);
+				return true;
+			};
+
+			group.querySelectorAll(".proj-tab-input").forEach((input) => {
+				input.addEventListener("change", () => activate(input.id));
+			});
+
+			// Deep-link support: #tab-2024-25 opens directly on that tab.
+			// Falls back to whichever panel already has `is-active` in the
+			// HTML if the hash doesn't match one in this group.
+			const applyHash = () => {
+				const hashId = decodeURIComponent(location.hash.replace(/^#/, ""));
+				if (!hashId || !activate(hashId, { updateHash: false })) {
+					const checked = group.querySelector(".proj-tab-input:checked");
+					if (checked) activate(checked.id, { updateHash: false });
+				}
+			};
+
+			applyHash();
+			window.addEventListener("hashchange", applyHash);
+		});
+	}
+
 	document.addEventListener("DOMContentLoaded", () => {
 		initHamburgerNav();
 		initProjectsLayout();
+		initProjectTabs();
 	});
 })();

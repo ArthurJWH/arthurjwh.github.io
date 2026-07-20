@@ -12,6 +12,7 @@
 	--text-primary: #111110;
 	--text-secondary: #6b6b67;
 	--text-muted: #9b9b97;
+	--text-lighter: #ffffffd9;
 	--accent: #1a3c6b;
 	--accent-mid: #2b5ea7;
 	--accent-glow: rgba(43, 94, 167, 0.12);
@@ -554,7 +555,6 @@ summary {
 	border: 1px solid var(--border);
 	aspect-ratio: 1;
 	object-fit: cover;
-	background: var(--surface-2);
 }
 
 .about-text .section-title {
@@ -1034,24 +1034,24 @@ summary {
 	transform: scale(1.04);
 }
 
-.media-placeholder {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: var(--mono);
-	font-size: 0.72rem;
-	color: var(--text-muted);
-	letter-spacing: 0.06em;
-	text-align: center;
-	padding: 1rem;
-}
-
 figcaption {
 	font-family: var(--mono);
 	font-size: 0.68rem;
 	color: var(--text-muted);
 	letter-spacing: 0.06em;
 	text-align: center;
+}
+
+.placeholder {
+	background: var(--surface-2);
+	/* placeholder stripe for missing images */
+	background-image: repeating-linear-gradient(
+		-45deg,
+		transparent,
+		transparent 24px,
+		var(--border) 24px,
+		var(--border) 25px
+	);
 }
 
 /* =============================================================
@@ -1187,15 +1187,6 @@ figcaption {
 ::view-transition-new(root) {
 	animation: none;
 	mix-blend-mode: normal;
-}
-
-::view-transition-group(glow) {
-	animation-duration: 0.1s;
-	animation-timing-function: var(--ease);
-}
-::view-transition-group(glow-title) {
-	animation-duration: 0.1s;
-	animation-timing-function: var(--ease);
 }
 
 /* =============================================================
