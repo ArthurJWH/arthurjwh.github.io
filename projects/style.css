@@ -911,36 +911,27 @@ body {
 	transform: translateX(4px);
 }
 
-/* ----------------------------------------------------------------
-   PROJECT TABS — multi-year/multi-edition project switcher.
-   Minimal JS (see script.js: initProjectTabs) drives which panel
-   shows, matched by id — robust to reordering or inserting a tab
-   anywhere, unlike position-based matching. CSS just needs one
-   plain class toggle; the tab-styling rules below (folder look,
-   active state) still work via plain :checked, no JS needed for those.
+/* =============================================================
+    PROJECT TABS
 
-   Markup shape required:
-     <div class="proj-tabs">
-       <input class="proj-tab-input" type="radio" name="…" id="tab-x" checked>
-       <input class="proj-tab-input" type="radio" name="…" id="tab-y">
+   	Markup shape required:
+    	<div class="proj-tabs">
+		<input class="proj-tab-input" type="radio" name="…" id="tab-x" checked>
+		<input class="proj-tab-input" type="radio" name="…" id="tab-y">
 
-       <fieldset class="proj-tab-list">
-         <legend class="sr-only">Select season</legend>
-         <label class="proj-tab" for="tab-x">…</label>
-         <label class="proj-tab" for="tab-y">…</label>
-       </fieldset>
+		<fieldset class="proj-tab-list">
+			<legend class="sr-only">Select season</legend>
+			<label class="proj-tab" for="tab-x">…</label>
+			<label class="proj-tab" for="tab-y">…</label>
+		</fieldset>
 
-       <div class="proj-tab-panels">
-         <div class="proj-body proj-tab-panel is-active" data-tab="tab-x">…</div>
-         <div class="proj-body proj-tab-panel" data-tab="tab-y">…</div>
-       </div>
-     </div>
+		<div class="proj-tab-panels">
+			<div class="proj-body proj-tab-panel is-active" data-tab="tab-x">…</div>
+			<div class="proj-body proj-tab-panel" data-tab="tab-y">…</div>
+		</div>
+		</div>
+============================================================= */
 
-   To add a tab: one more input+label pair (matching for/id as
-   usual) and one more panel with a matching data-tab. Order doesn't
-   matter. Give the panel that should show by default (no JS, or
-   before JS runs) the `is-active` class directly in the HTML.
-   ---------------------------------------------------------------- */
 .sr-only {
 	position: absolute;
 	width: 1px;
@@ -1006,15 +997,10 @@ body {
    which is what sells the "connected folder tab" illusion: the
    seam between tab and panel disappears along that shared edge. */
 .proj-tab-input:checked + .proj-tab {
-	background: var(--bg);
+	background: var(--surface);
 	color: var(--text-primary);
 	z-index: 2;
 	border-bottom: none;
-}
-
-.proj-tab-input:focus-visible + .proj-tab {
-	outline: 2px solid var(--accent-mid);
-	outline-offset: 2px;
 }
 
 .proj-tab-title {
@@ -1042,7 +1028,6 @@ body {
 	position: relative;
 }
 
-/* JS toggles this one class — see script.js: initProjectTabs. */
 .proj-tab-panel.is-active {
 	display: grid;
 }
