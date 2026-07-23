@@ -993,9 +993,6 @@ body {
 	color: var(--text-primary);
 }
 
-/* Checked tab — background matches the panel below it exactly,
-   which is what sells the "connected folder tab" illusion: the
-   seam between tab and panel disappears along that shared edge. */
 .proj-tab-input:checked + .proj-tab {
 	background: var(--surface);
 	color: var(--text-primary);
@@ -1058,9 +1055,10 @@ body {
 	max-width: 60ch;
 }
 
-/* ----------------------------------------------------------------
-   RESPONSIVE — small screen overrides
-   ---------------------------------------------------------------- */
+/* =============================================================
+    RESPONSIVE LAYOUT
+============================================================= */
+
 @media (max-width: 500px) {
 	.proj-hero-inner {
 		padding-inline: var(--space-md);
@@ -1077,18 +1075,18 @@ body {
 	.proj-next-inner {
 		padding-inline: var(--space-md);
 	}
-	.year-tabs {
+	.proj-tabs {
 		gap: 0.5rem;
 	}
-	.year-tab {
+	.proj-tab {
 		flex: 1 1 auto;
 		padding: 0.5rem 0.75rem;
 	}
 }
 
-/* ----------------------------------------------------------------
-   TRANSITIONS
-   ---------------------------------------------------------------- */
+/* =============================================================
+    TRANSITIONS
+============================================================= */
 
 ::view-transition-group(glow) {
 	animation-duration: 0.1s;

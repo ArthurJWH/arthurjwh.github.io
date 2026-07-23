@@ -103,9 +103,6 @@
 				input.addEventListener("change", () => activate(input.id));
 			});
 
-			// Deep-link support: #tab-2024-25 opens directly on that tab.
-			// Falls back to whichever panel already has `is-active` in the
-			// HTML if the hash doesn't match one in this group.
 			const applyHash = () => {
 				const hashId = decodeURIComponent(location.hash.replace(/^#/, ""));
 				if (!hashId || !activate(hashId, { updateHash: false })) {
