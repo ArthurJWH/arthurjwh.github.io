@@ -146,12 +146,15 @@ details[open]::details-content {
 
 details.horizontal::details-content {
 	position-anchor: --details-anchor;
+	position: absolute;
+	top: anchor(top);
+	left: anchor(right);
 	block-size: anchor-size(height);
 	inline-size: 0;
 	max-width: 30dvw;
 	overflow-x: auto;
 	scrollbar-width: none;
-    -ms-overflow-style: none;
+	-ms-overflow-style: none;
 	transition:
 		inline-size 0.5s var(--ease),
 		content-visibility 0.5s var(--ease);
@@ -163,16 +166,23 @@ details.horizontal[open]::details-content {
 }
 
 details.horizontal::details-content::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
-details.horizontal *{
+details.horizontal * {
 	text-wrap: nowrap;
 }
 
 summary {
 	list-style: none;
 	cursor: pointer;
+}
+
+@media (max-width: 800px) {
+	details.horizontal::details-content {
+		top: anchor(bottom);
+		left: anchor(left);
+	}
 }
 
 /* =============================================================
