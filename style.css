@@ -129,7 +129,7 @@ details {
 
 details.horizontal {
 	display: inline-flex;
-	align-items: stretch;
+	anchor-name: --details-anchor;
 }
 
 details::details-content {
@@ -145,15 +145,29 @@ details[open]::details-content {
 }
 
 details.horizontal::details-content {
-	block-size: auto;
+	position-anchor: --details-anchor;
+	block-size: anchor-size(height);
 	inline-size: 0;
+	max-width: 30dvw;
+	overflow-x: auto;
+	scrollbar-width: none;
+    -ms-overflow-style: none;
 	transition:
 		inline-size 0.5s var(--ease),
 		content-visibility 0.5s var(--ease);
 	transition-behavior: allow-discrete;
 }
+
 details.horizontal[open]::details-content {
 	inline-size: auto;
+}
+
+details.horizontal::details-content::-webkit-scrollbar {
+    display: none;
+}
+
+details.horizontal *{
+	text-wrap: nowrap;
 }
 
 summary {
