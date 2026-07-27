@@ -951,7 +951,8 @@ body {
 
 .proj-tab-list {
 	display: flex;
-	flex-wrap: wrap;
+	position: relative;
+	flex-wrap: nowrap;
 	align-items: flex-end;
 	gap: 0.3rem;
 	max-width: var(--max-w);
@@ -980,6 +981,7 @@ body {
 	z-index: 1;
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
 	gap: 0.15rem;
 	padding: 0.65rem 1.1rem;
 	background: var(--bg);
@@ -994,6 +996,10 @@ body {
 	color: var(--text-primary);
 }
 
+.proj-tab * {
+	white-space: nowrap;
+}
+
 .proj-tab-input:checked + .proj-tab {
 	background: var(--surface);
 	color: var(--text-primary);
@@ -1002,7 +1008,7 @@ body {
 }
 
 .proj-tab-title {
-	font-family: var(--font-mono);
+	font-family: var(--mono);
 	font-size: 0.8rem;
 	font-weight: 600;
 }
