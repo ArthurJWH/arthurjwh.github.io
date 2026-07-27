@@ -92,7 +92,6 @@ body {
 }
 
 p {
-	text-align: justify;
 	text-wrap: pretty;
 }
 
@@ -106,7 +105,6 @@ ul {
 }
 
 li {
-	text-align: justify;
 	text-wrap: pretty;
 }
 
