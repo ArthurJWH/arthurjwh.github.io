@@ -949,18 +949,66 @@ body {
 	margin-top: var(--space-xl);
 }
 
+.proj-tab-scroll {
+	position: relative;
+	max-width: var(--max-w);
+	margin: 0 auto;
+	min-height: fit-content;
+	overflow: hidden;
+	margin-bottom: -1px;
+}
+
 .proj-tab-list {
 	display: flex;
 	position: relative;
 	flex-wrap: nowrap;
 	align-items: flex-end;
 	gap: 0.3rem;
+	min-width: 0;
 	max-width: var(--max-w);
-	margin-inline: auto;
-	padding-inline: var(--space-lg);
-	/* reset native <fieldset> chrome */
+	min-height: fit-content;
+	padding-block: 0;
+	box-sizing: border-box;
+	overflow-x: auto;
+	overflow-y: visible;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
 	border: 0;
-	margin-block: 0;
+}
+
+.proj-tab-scroll::before,
+.proj-tab-scroll::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: clamp(5rem, 10vw, 10rem);
+	pointer-events: none;
+	opacity: 0;
+	transition: opacity var(--dur-fast);
+	z-index: 99;
+}
+
+.proj-tab-scroll::before {
+	left: 0;
+	background: linear-gradient(to right, var(--surface) 0%, transparent 100%);
+}
+
+.proj-tab-scroll::after {
+	right: 0;
+	background: linear-gradient(to left, var(--surface) 0%, transparent 100%);
+}
+
+.proj-tab-scroll.is-scrollable-left::before {
+	opacity: 1;
+}
+
+.proj-tab-scroll.is-scrollable-right::after {
+	opacity: 1;
+}
+
+.proj-tab-list::-webkit-scrollbar {
+	display: none; /* Chrome, Safari */
 }
 
 .proj-tab-input {
@@ -977,8 +1025,6 @@ body {
 
 .proj-tab {
 	position: relative;
-	top: 1px; /* overlaps the panel's top border by 1px, below */
-	z-index: 1;
 	display: flex;
 	flex-direction: column;
 	flex-shrink: 0;
@@ -1034,6 +1080,7 @@ body {
 
 .proj-tab-panel.is-active {
 	display: grid;
+	z-index: 1;
 }
 
 /* Reserved-tab placeholder — swap for real content once written,

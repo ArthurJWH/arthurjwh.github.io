@@ -81,6 +81,26 @@
 		setLayout(saved === "list" ? "list" : "grid");
 	}
 
+	function initTabScrollFades() {
+		document.querySelectorAll(".proj-tab-scroll").forEach((scrollContainer) => {
+			const list = scrollContainer.querySelector(".proj-tab-list");
+			if (!list) return;
+
+			const updateFadeState = () => {
+				const maxScrollLeft = list.scrollWidth - list.clientWidth;
+				const canScrollLeft = list.scrollLeft > 1;
+				const canScrollRight = maxScrollLeft > 1 && list.scrollLeft < maxScrollLeft - 1;
+
+				scrollContainer.classList.toggle("is-scrollable-left", canScrollLeft);
+				scrollContainer.classList.toggle("is-scrollable-right", canScrollRight);
+			};
+
+			updateFadeState();
+			list.addEventListener("scroll", updateFadeState, { passive: true });
+			window.addEventListener("resize", updateFadeState);
+		});
+	}
+
 	function initProjectTabs() {
 		document.querySelectorAll(".proj-tabs").forEach((group) => {
 			const panels = group.querySelectorAll(".proj-tab-panel");
@@ -119,6 +139,7 @@
 	document.addEventListener("DOMContentLoaded", () => {
 		initHamburgerNav();
 		initProjectsLayout();
+		initTabScrollFades();
 		initProjectTabs();
 	});
 })();
