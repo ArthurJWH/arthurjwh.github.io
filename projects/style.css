@@ -962,15 +962,13 @@ body {
 	display: flex;
 	position: relative;
 	flex-wrap: nowrap;
-	align-items: flex-end;
+	align-items: flex-start;
 	gap: 0.3rem;
 	min-width: 0;
 	max-width: var(--max-w);
 	min-height: fit-content;
-	padding-block: 0;
-	box-sizing: border-box;
+	padding-inline: var(--space-lg);
 	overflow-x: auto;
-	overflow-y: visible;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
 	border: 0;
