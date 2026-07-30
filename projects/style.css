@@ -1127,13 +1127,13 @@ body {
 	.proj-next-inner {
 		padding-inline: var(--space-md);
 	}
-	.proj-tabs {
+	/* .proj-tabs {
 		gap: 0.5rem;
-	}
-	.proj-tab {
+	} */
+	/* .proj-tab {
 		flex: 1 1 auto;
 		padding: 0.5rem 0.75rem;
-	}
+	} */
 }
 
 /* =============================================================
