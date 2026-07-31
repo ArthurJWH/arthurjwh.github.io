@@ -1029,6 +1029,7 @@ body {
 	gap: 0.15rem;
 	padding: 0.65rem 1.1rem;
 	background: var(--bg);
+	box-sizing: border-box;
 	border: 1px solid var(--border);
 	border-radius: var(--radius-md) var(--radius-md) 0 0;
 	color: var(--text-secondary);
@@ -1038,6 +1039,41 @@ body {
 
 .proj-tab:hover {
 	color: var(--text-primary);
+}
+
+.proj-tab-input:checked + .proj-tab::before,
+.proj-tab-input:checked + .proj-tab::after {
+	content: "";
+	position: absolute;
+	bottom: 0.25px;
+	width: 13px; /* var(--radius-md) + 1px */
+	height: 13px;
+	background: black;
+	z-index: 10;
+}
+
+.proj-tab-input:checked + .proj-tab::before {
+	right: -12.75px;
+	background: radial-gradient(
+		circle at top right,
+		transparent 12px,
+		var(--border) 12px,
+		var(--border) 13px,
+		var(--surface) 13px
+	);
+	clip-path: path("M 0,13 L 0,0 L 1,0 A 12,12 0,0,0 13,12 L 13,13 L 0,13 Z");
+}
+
+.proj-tab-input:checked + .proj-tab::after {
+	left: -12.5px;
+	background: radial-gradient(
+		circle at top left,
+		transparent 12px,
+		var(--border) 12px,
+		var(--border) 13px,
+		var(--surface) 13px
+	);
+	clip-path: path("M 13,13 L 0,13 L 0,12 A 12,12 0,0,0 12,0 L 13,0 L 13,13 Z");
 }
 
 .proj-tab * {
