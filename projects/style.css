@@ -958,22 +958,6 @@ body {
 	margin-bottom: -1px;
 }
 
-.proj-tab-list {
-	display: flex;
-	position: relative;
-	flex-wrap: nowrap;
-	align-items: stretch;
-	gap: 0.3rem;
-	min-width: 0;
-	max-width: var(--max-w);
-	min-height: fit-content;
-	padding-inline: var(--space-lg);
-	overflow-x: auto;
-	scrollbar-width: none;
-	-ms-overflow-style: none;
-	border: 0;
-}
-
 .proj-tab-scroll::before,
 .proj-tab-scroll::after {
 	content: "";
@@ -1003,6 +987,22 @@ body {
 
 .proj-tab-scroll.is-scrollable-right::after {
 	opacity: 1;
+}
+
+.proj-tab-list {
+	display: flex;
+	position: relative;
+	flex-wrap: nowrap;
+	align-items: stretch;
+	gap: 0.3rem;
+	min-width: 0;
+	max-width: var(--max-w);
+	min-height: fit-content;
+	padding-inline: var(--space-lg);
+	overflow-x: auto;
+	scrollbar-width: none;
+	-ms-overflow-style: none;
+	border: 0;
 }
 
 .proj-tab-list::-webkit-scrollbar {
@@ -1045,15 +1045,13 @@ body {
 .proj-tab-input:checked + .proj-tab::after {
 	content: "";
 	position: absolute;
-	bottom: 0.25px;
+	bottom: 0;
 	width: 13px; /* var(--radius-md) + 1px */
 	height: 13px;
-	background: black;
-	z-index: 10;
 }
 
 .proj-tab-input:checked + .proj-tab::before {
-	right: -12.75px;
+	right: -13px;
 	background: radial-gradient(
 		circle at top right,
 		transparent 12px,
@@ -1065,7 +1063,7 @@ body {
 }
 
 .proj-tab-input:checked + .proj-tab::after {
-	left: -12.5px;
+	left: -13px;
 	background: radial-gradient(
 		circle at top left,
 		transparent 12px,
