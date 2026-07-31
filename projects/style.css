@@ -1045,13 +1045,13 @@ body {
 .proj-tab-input:checked + .proj-tab::after {
 	content: "";
 	position: absolute;
-	bottom: 0;
+	bottom: -0.5px;
 	width: 13px; /* var(--radius-md) + 1px */
 	height: 13px;
 }
 
 .proj-tab-input:checked + .proj-tab::before {
-	right: -13px;
+	right: -12.5px;
 	background: radial-gradient(
 		circle at top right,
 		transparent 12px,
@@ -1063,9 +1063,9 @@ body {
 }
 
 .proj-tab-input:checked + .proj-tab::after {
-	left: -13px;
+	left: -12.5px;
 	background: radial-gradient(
-		circle at top left,
+		circle farthest-corner at top left,
 		transparent 12px,
 		var(--border) 12px,
 		var(--border) 13px,
@@ -1082,7 +1082,7 @@ body {
 	background: var(--surface);
 	color: var(--text-primary);
 	z-index: 2;
-	border-bottom: none;
+	border-bottom-color: transparent;
 }
 
 .proj-tab-title {
