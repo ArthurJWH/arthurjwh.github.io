@@ -180,6 +180,7 @@ summary {
 	details.horizontal::details-content {
 		top: anchor(bottom);
 		left: anchor(left);
+		max-width: calc(100svw - 2 * var(--space-md));
 	}
 }
 
