@@ -150,6 +150,7 @@ details.horizontal::details-content {
 	block-size: anchor-size(height);
 	inline-size: 0;
 	max-width: 30dvw;
+	max-width: calc(100svw - var(--space-md) - anchor(right));
 	overflow-x: auto;
 	scrollbar-width: none;
 	-ms-overflow-style: none;
