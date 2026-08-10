@@ -778,6 +778,10 @@ summary {
 	object-fit: contain;
 }
 
+.project-card-logo .project-img.extra {
+	display: none;
+}
+
 .project-card-body {
 	flex: 1;
 }
@@ -874,6 +878,24 @@ summary {
 	width: 56px;
 	height: 48px;
 	margin-bottom: 0;
+}
+
+.projects-container.list-layout .project-card-logo .project-img.light{
+	display: block;
+}
+
+.projects-container.list-layout .project-card-logo .project-img.dark{
+	display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+	.projects-container.list-layout .project-card-logo .project-img.light{
+		display: none;
+	}
+
+	.projects-container.list-layout .project-card-logo .project-img.dark{
+		display: block;
+	}
 }
 
 .projects-container.list-layout .project-card-title {
