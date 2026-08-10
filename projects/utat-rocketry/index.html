@@ -1,0 +1,692 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="Researching, Designing, and Optimizing the Aerodynamics of High-Performance Rockets." />
+		<meta name="keywords" content="Arthur, Jiun, Wei, Hwang, ArthurJWH" />
+		<meta name="author" content="Arthur Hwang" />
+		<title>UTAT Rocketry — Arthur Hwang</title>
+		<meta property="og:site_name" content="Arthur Hwang" />
+		<meta
+			property="og:url"
+			content="https://arthurjwh.github.io/projects/utat-rocketry/index.html" />
+		<meta property="og:title" content="UTAT Rocketry" />
+		<meta
+			property="og:description"
+			content="Researching, Designing, and Optimizing the Aerodynamics of High-Performance Rockets." />
+		<meta
+			property="og:image"
+			content="https://arthurjwh.github.io/img/icon-500-light-mode.png" />
+		<link rel="icon" type="image/png" href="../../img/icon-32-light-mode.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-light-mode.png"
+			media="(prefers-color-scheme: light)" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-dark-mode.png"
+			media="(prefers-color-scheme: dark)" />
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+			rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/801590478f.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- ===========================================================
+            NAVBAR
+        ============================================================ -->
+
+		<nav class="nav" id="nav">
+			<a class="nav-logo" href="../../index.html#hero">
+				<picture class="nav-picture">
+					<source
+						srcset="../../img/icon-500-dark-mode.png"
+						media="(prefers-color-scheme: dark)" />
+					<source
+						srcset="../../img/icon-500-light-mode.png"
+						media="(prefers-color-scheme: light)" />
+					<img src="../../img/icon-500-light-mode.png" alt="Icon" class="nav-img" />
+				</picture>
+			</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="../../index.html#about">About</a></li>
+				<li><a href="../../index.html#skills">Skills</a></li>
+				<li><a href="../../index.html#projects">Projects</a></li>
+				<li><a href="../../index.html#experience">Timeline</a></li>
+				<li><a href="../../index.html#media">Media</a></li>
+				<li><a href="../../index.html#contact">Contact</a></li>
+			</ul>
+			<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
+		</nav>
+
+		<div style="view-transition-name: utat-rocketry">
+			<!-- ===========================================================
+				PROJECT HERO
+			============================================================ -->
+
+			<header class="proj-hero">
+				<div class="proj-hero-inner">
+					<a class="back-link" href="../../index.html#projects">
+						<svg
+							width="14"
+							height="14"
+							viewBox="0 0 14 14"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path d="M8.5 2.5L4 7l4.5 4.5" />
+						</svg>
+						All Projects
+					</a>
+
+					<!-- Project category -->
+					<div class="proj-eyebrow-row">
+						<span class="proj-category">Aerospace · R&D</span>
+						<span class="proj-status ongoing">Ongoing</span>
+					</div>
+
+					<!-- Title and subtitle -->
+					<h1 class="proj-title" style="view-transition-name: utat-rocketry-title">
+						UTAT Rocketry
+					</h1>
+					<p class="proj-subtitle">
+						Aerodynamic design, stability analysis, and flight simulation automation for
+						UTAT Rocketry, a University of Toronto R&D team developing hybrid, liquid,
+						and multi-stage rocket technology for Launch Canada.
+					</p>
+
+					<!-- Project meta -->
+					<div class="proj-meta-row">
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Timeline</span>
+							<span class="proj-meta-value">Sep 2024 – Present</span>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Role</span>
+							<span class="proj-meta-value">Aerodynamic Co-Lead</span>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Team</span>
+							<span class="proj-meta-value">~80</span>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Competition</span>
+							<span class="proj-meta-value">Launch Canada</span>
+						</div>
+					</div>
+
+					<!-- CTA buttons -->
+					<div class="proj-cta-row">
+						<a
+							href="https://www.utat.ca/rocketry"
+							class="btn btn-primary"
+							target="_blank"
+							rel="noopener"
+							>UTAT Rocketry</a
+						>
+						<a
+							href="https://github.com/ArthurJWH/UTAT-Rocketry"
+							class="btn btn-secondary"
+							target="_blank"
+							rel="noopener"
+							>GitHub Repository</a
+						>
+						<a
+							href="https://www.launchcanada.org/"
+							class="btn btn-ghost"
+							target="_blank"
+							rel="noopener"
+							>Launch Canada</a
+						>
+					</div>
+				</div>
+
+				<!-- Hero image -->
+				<div class="proj-hero-image-wrap">
+					<img
+						class="proj-hero-image placeholder"
+						src="img/defiance-launch.jpg"
+						loading="lazy"
+						alt="UTAT Rocketry aerodynamics subteam"
+						style="object-position: 50% 25%" />
+				</div>
+			</header>
+
+			<!-- ===========================================================
+				PROJECT BODY  (main prose + sticky sidebar)
+			============================================================ -->
+
+			<div class="proj-body">
+				<!-- ===========================================================
+					MAIN CONTENT COLUMN
+				============================================================ -->
+
+				<main class="proj-main">
+					<!-- ── OVERVIEW ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Overview</p>
+						<h2 class="proj-section-title">What is UTAT Rocketry?</h2>
+						<div class="proj-prose">
+							<p>
+								UTAT Rocketry is an undergraduate research and development team
+								competing at <strong>Launch Canada</strong>. Unlike teams that build
+								a single vehicle each year, UTAT Rocketry tries to push
+								university-level rocketry technology forward — developing hybrid and
+								liquid bipropellant motors and multi-stage architectures the team
+								has never flown before.
+							</p>
+							<p>
+								I joined as an <strong>Aerodynamic Member</strong> in September 2024
+								and was promoted to <strong>Aerodynamic Co-Lead</strong> in January
+								2026. My work centers on stability and aerostructure analysis,
+								flight simulation, and building automation tools that lets the
+								aerodynamics subteam evaluate many rocket configurations quickly and
+								confidently.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── ROCKET ROSTER ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Rocket Roster</p>
+						<h2 class="proj-section-title">Rockets I've contributed to</h2>
+						<div class="proj-prose">
+							<p>
+								Every rocket is the product of a multidisciplinary team, integrating
+								propulsion, airframe, structure, recovery, avionics, software and
+								aerodynamics into a single flight-ready vehicle.
+							</p>
+						</div>
+
+						<div class="proj-cards-grid">
+							<div class="proj-card">
+								<span class="proj-card-icon"><i class="fa-solid fa-fire"></i></span>
+								<h3 class="proj-card-title">Defiance</h3>
+								<div class="sidebar-tag-group">
+									<span class="capability-tag">Hybrid</span>
+									<span class="capability-tag">Member</span>
+								</div>
+								<p class="proj-card-text">
+									The team's first hybrid-motor rocket, used to validate hybrid
+									propulsion integration. It is also the first experimental hybrid
+									launch in Canada with the highest altitude achieved by Student
+									Research and Developed (SRAD) advanced engine in Canada.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-rocket"></i
+								></span>
+								<h3 class="proj-card-title">Enterprise</h3>
+								<div class="sidebar-tag-group">
+									<span class="capability-tag">Solid</span>
+									<span class="capability-tag">Member</span>
+								</div>
+								<p class="proj-card-text">
+									A solid-motor test vehicle flown to de-risk airframe and
+									recovery systems ahead of Discovery, the team's first liquid
+									rocket program.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-flask"></i
+								></span>
+								<h3 class="proj-card-title">Discovery</h3>
+								<div class="sidebar-tag-group">
+									<span class="capability-tag">Liquid</span>
+									<span class="capability-tag">Member → Co-Lead</span>
+								</div>
+								<p class="proj-card-text">
+									The team's first-ever liquid bipropellant rocket. It also
+									include new technologies, such as non-structural aero-body and
+									dual-separation dual-deployment recovery.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-layer-group"></i
+								></span>
+								<h3 class="proj-card-title">Dauntless</h3>
+								<div class="sidebar-tag-group">
+									<span class="capability-tag">Solid · Double-Stage</span>
+									<span class="capability-tag">Co-Lead</span>
+								</div>
+								<p class="proj-card-text">
+									The team's first double-stage solid rocket, which pushed the
+									teams analyses forward and served as a stepping stone for the
+									development of a hybrid-solid staging rocket.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"><i class="fa-solid fa-vial"></i></span>
+								<h3 class="proj-card-title">Density</h3>
+								<div class="sidebar-tag-group">
+									<span class="capability-tag">Hybrid</span>
+									<span class="capability-tag">Co-Lead</span>
+								</div>
+								<p class="proj-card-text">
+									The team's second hybrid rocket, currently in the design phase.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── STABILITY & AEROSTRUCTURE ANALYSIS ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Stability &amp; Aerostructure Analysis</p>
+						<h2 class="proj-section-title">
+							Designing aerosurfaces for predictability
+						</h2>
+						<div class="proj-prose">
+							<p>
+								Across dozens of nose cone and fin iterations in
+								<strong>OpenRocket</strong>, I ran aeroelasticity, fin flutter, and
+								stability margin analyses to size aerosurfaces against explicit
+								targets: 1.5–2 caliber margins for subsonic vehicles and 3–6 caliber
+								margins for supersonic vehicles, held across a 0–30 km/h wind
+								envelope, with every design verified against a 2× flutter safety
+								factor along the full flight trajectory.
+							</p>
+							<p>
+								I also extracted key flight performance metrics — apogee, max
+								velocity, Mach number, and CG travel — through iterative OpenRocket
+								simulations to inform aerosurface design trade-offs before
+								committing to a build.
+							</p>
+						</div>
+
+						<div class="proj-metrics">
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">1.5–3 cal</h3>
+								<p class="proj-metric-label">
+									Stability margin achieved across programs
+								</p>
+							</div>
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">2×</h3>
+								<p class="proj-metric-label">
+									Fin flutter safety factor maintained
+								</p>
+							</div>
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">0–30 km/h</h3>
+								<p class="proj-metric-label">Wind envelope analyzed</p>
+							</div>
+							<div class="proj-metric">
+								<h3 class="proj-metric-value">40+</h3>
+								<p class="proj-metric-label">
+									Nose cone &amp; fin design iterations
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── SIMULATION AUTOMATION & TOOLING ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Simulation Automation &amp; Tooling</p>
+						<h2 class="proj-section-title">
+							Turning manual analysis into repeatable pipelines
+						</h2>
+
+						<div class="proj-timeline">
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">01</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Monte Carlo dispersion automation
+									</h3>
+									<p class="proj-timeline-step-text">
+										Automated Monte Carlo dispersion analyses for four rocket
+										programs in <strong>RocketPy</strong>, modeling
+										manufacturing tolerances and wind variability as normal
+										distributions to predict landing zones for nominal,
+										drogue-failure, and ballistic descent scenarios, and
+										verifying safety compliance via KML export to Google Earth.
+									</p>
+								</div>
+							</div>
+
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">02</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Cross-validation pipeline
+									</h3>
+									<p class="proj-timeline-step-text">
+										Built a Jupyter Notebook that automatically constructs
+										RocketPy simulations directly from OpenRocket files and
+										scattered data sources — Excel sheets and RSE motor files —
+										reducing cross-validation tasks from several hours to four
+										seconds.
+									</p>
+								</div>
+							</div>
+
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">03</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">
+										Genetic algorithm optimization
+									</h3>
+									<p class="proj-timeline-step-text">
+										Implemented a Genetic Algorithm Multidisciplinary
+										Optimization framework integrated with RocketPy to optimize
+										aerosurface geometry, replacing manual parameter sweeps with
+										an automated search across hundreds of design iterations.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── CUSTOM ROCKETPY DEVELOPMENT ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Custom Simulation Development</p>
+						<h2 class="proj-section-title">
+							Building multi-stage dispersion support that didn't exist
+						</h2>
+
+						<div class="proj-split">
+							<div class="proj-split-image-wrap">
+								<img
+									class="proj-split-image placeholder"
+									src="img/monte-carlo-dispersion.jpg"
+									loading="lazy"
+									alt="Example Monte Carlo dispersion plot" />
+							</div>
+							<div class="proj-split-text">
+								<h4>Extending RocketPy's core classes</h4>
+								<p>
+									RocketPy does not natively support Monte Carlo dispersion
+									analysis for multi-stage flight. To assess landing risk for
+									Dauntless, the team's first double-stage rocket, I modified and
+									extended the RocketPy codebase — implementing custom classes and
+									overriding core methods to propagate dispersion through a
+									staging event rather than a single continuous trajectory.
+								</p>
+							</div>
+						</div>
+
+						<div class="proj-callout">
+							<p>
+								<strong>Why it mattered:</strong> without staged dispersion
+								modeling, the team had no quantitative way to verify recovery safety
+								compliance for a double-stage flight — this extension made that risk
+								analysis possible for the first time.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── CFD & FAIRINGS ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">CFD &amp; Fairings</p>
+						<h2 class="proj-section-title">
+							Characterizing drag on externally mounted hardware
+						</h2>
+
+						<div class="proj-split">
+							<div class="proj-split-image-wrap">
+								<img
+									class="proj-split-image placeholder"
+									src="img/camera-fairing.jpg"
+									loading="lazy"
+									alt="Teardrop fairing CAD model" />
+							</div>
+							<div class="proj-split-text">
+								<h4>Fairing design through simulation</h4>
+								<p>
+									Coordinated the design of fairings for externally mounted
+									hardware, running CFD simulations in
+									<strong>ANSYS Fluent</strong> to characterize aerodynamic
+									loading and drag impact and guide the fairing geometry before
+									manufacturing.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── TEAM LEADERSHIP ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Team Leadership</p>
+						<h2 class="proj-section-title">
+							Coordinating aerodynamics across three concurrent programs
+						</h2>
+
+						<div class="proj-items">
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-users"></i
+								></span>
+								<p class="proj-item-text">
+									<strong>Leading a 5-person aerodynamics subteam.</strong>
+									Directing aerosurface design and flight analysis simultaneously
+									across Discovery, Dauntless, and Density — the team's first
+									liquid rocket, first double-stage rocket, and second hybrid
+									rocket.
+								</p>
+							</div>
+
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-people-arrows"></i
+								></span>
+								<p class="proj-item-text">
+									<strong>Running weekly cross-subteam alignment.</strong>
+									Weekly meetings to track progress and align aerodynamics
+									deliverables with propulsion, airframe, recovery, and avionics.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── MEDIA GALLERY ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Gallery</p>
+						<h2 class="proj-section-title">Analysis and design documentation</h2>
+
+						<div class="proj-gallery">
+							<figure class="proj-gallery-item large placeholder">
+								<img
+									src="img/stability-analysis.jpg"
+									loading="lazy"
+									alt="OpenRocket stability analysis" />
+								<figcaption class="proj-gallery-caption">
+									Stability margin analysis in OpenRocket
+								</figcaption>
+							</figure>
+
+							<figure class="proj-gallery-item placeholder">
+								<img
+									src="img/enterprise-trajectory.png"
+									loading="lazy"
+									alt="Enterprise KML file for Google Earth" />
+								<figcaption class="proj-gallery-caption">
+									Enterprise trajectory exported to Google Earth
+								</figcaption>
+							</figure>
+
+                            <figure class="proj-gallery-item placeholder">
+								<img
+									src="img/enterprise-ellipses.png"
+									loading="lazy"
+									alt="Enterprise ellipses in Google Earth" />
+								<figcaption class="proj-gallery-caption">
+									Enterprise ellipses in Google Earth
+								</figcaption>
+							</figure>
+
+							<figure class="proj-gallery-item placeholder">
+								<img
+									src="img/ga-mdo-result.png"
+									loading="lazy"
+									alt="Genetic algorithm optimization results" />
+								<figcaption class="proj-gallery-caption">
+									Genetic algorithm during aerosurface optimization
+								</figcaption>
+							</figure>
+
+							<figure class="proj-gallery-item placeholder">
+								<img
+									src="img/nose-cone-analysis.jpg"
+									loading="lazy"
+									alt="Nose cone analysis" />
+								<figcaption class="proj-gallery-caption">
+									Nose cone analysis
+								</figcaption>
+							</figure>
+
+                            <figure class="proj-gallery-item placeholder">
+								<img
+									src="img/discovery-or-model.png"
+									loading="lazy"
+									alt="Discovery OR model" />
+								<figcaption class="proj-gallery-caption">
+									Discovery OR model
+								</figcaption>
+							</figure>
+						</div>
+					</section>
+				</main>
+
+				<!-- ===========================================================
+					SIDEBAR
+				============================================================ -->
+
+				<aside class="proj-sidebar">
+					<!-- Tools -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Tools</p>
+						<div class="sidebar-tag-group">
+							<span class="capability-tag">OpenRocket</span>
+							<span class="capability-tag">RocketPy</span>
+							<span class="capability-tag">Python</span>
+							<span class="capability-tag">ANSYS Fluent</span>
+							<span class="capability-tag">Jupyter</span>
+							<span class="capability-tag">Genetic Algorithms</span>
+							<span class="capability-tag">Excel</span>
+							<span class="capability-tag">KML / Google Earth</span>
+						</div>
+					</div>
+
+					<!-- Key stats -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Project Stats</p>
+						<div class="sidebar-stats">
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Timeline</span>
+								<span class="sidebar-stat-value">Sep 2024 – Present</span>
+							</div>
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Rockets contributed to</span>
+								<span class="sidebar-stat-value">5</span>
+							</div>
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Aero subteam</span>
+								<span class="sidebar-stat-value">5</span>
+							</div>
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Full team roster</span>
+								<span class="sidebar-stat-value">20</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Links -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Links</p>
+						<div class="sidebar-links">
+							<a
+								href="https://www.utat.ca/rocketry"
+								class="sidebar-link"
+								target="_blank"
+								rel="noopener">
+								<i class="fa-solid fa-globe sidebar-link-icon"></i>
+								Team Website
+							</a>
+							<a
+								href="https://github.com/ArthurJWH/UTAT-Rocketry"
+								class="sidebar-link"
+								target="_blank"
+								rel="noopener">
+								<i class="fa-brands fa-github sidebar-link-icon"></i>
+								GitHub Repository
+							</a>
+							<a
+								href="https://www.launchcanada.org/"
+								class="sidebar-link"
+								target="_blank"
+								rel="noopener">
+								<i class="fa-solid fa-flag sidebar-link-icon"></i>
+								Launch Canada
+							</a>
+						</div>
+					</div>
+				</aside>
+			</div>
+
+			<!-- ===========================================================
+				NEXT PROJECT
+			============================================================ -->
+
+			<section class="proj-next">
+				<div class="proj-next-inner">
+					<p class="proj-next-label">Next Project</p>
+					<a class="proj-next-card" href="../rocketpy/index.html">
+						<div class="proj-next-info">
+							<p class="proj-next-title">RocketPy Flight Simulation</p>
+							<p class="proj-next-desc">
+								Next generation High-Power Rocketry 6-DOF Trajectory Simulation.
+							</p>
+						</div>
+						<span class="proj-next-arrow">→</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- ===========================================================
+				FOOTER
+			============================================================ -->
+
+			<footer class="footer">
+				<div class="container footer-inner">
+					<span>© 2026 Arthur Hwang</span>
+					<span class="footer-mono">Built with HTML · CSS · JS</span>
+				</div>
+			</footer>
+		</div>
+
+		<script src="../../script.js" defer></script>
+	</body>
+</html>

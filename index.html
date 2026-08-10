@@ -52,10 +52,7 @@
 					<source
 						srcset="img/icon-500-light-mode.png"
 						media="(prefers-color-scheme: light)" />
-					<img
-						src="img/icon-500-light-mode.png"
-						alt="Icon"
-						class="nav-img" />
+					<img src="img/icon-500-light-mode.png" alt="Icon" class="nav-img" />
 				</picture>
 			</a>
 			<ul class="nav-links" id="nav-links">
@@ -338,7 +335,7 @@
 								UTAT UAS
 							</h3>
 							<p class="project-card-desc">
-								Designing Unmanned Aero Systems for SAE Aerodesign competition
+								Designing Unmanned Aero Systems for SAE Aerodesign competition.
 							</p>
 							<div class="tech-tags">
 								<span class="tech-tag">Aircraft design</span>
@@ -352,6 +349,50 @@
 							<!-- <a href="github-link" class="card-link" target="_blank" rel="noopener" onclick="event.stopPropagation()">GitHub</a> -->
 							<a
 								href="projects/utat-uas/index.html"
+								class="card-link"
+								onclick="event.stopPropagation()"
+								>More <i class="fa-solid fa-arrow-right fa-xs"></i
+							></a>
+						</div>
+					</article>
+
+					<article
+						class="project-card"
+						data-href="projects/utat-rocketry/index.html"
+						style="view-transition-name: utat-rocketry">
+						<div
+							class="project-card-logo"
+							style="
+								--page-bg: url(&quot;projects/utat-rocketry/img/defiance-launch.jpg&quot;);
+							">
+							<img
+								class="project-img"
+								src="projects/utat-rocketry/img/rocketry-logo.png"
+								loading="lazy"
+								alt="UTAT Rocketry" />
+						</div>
+						<div class="project-card-body">
+							<h3
+								class="project-card-title"
+								style="view-transition-name: utat-rocketry-title">
+								UTAT Rocketry
+							</h3>
+							<p class="project-card-desc">
+								Researching, Designing, and Optimizing the Aerodynamics of
+								High-Performance Rockets.
+							</p>
+							<div class="tech-tags">
+								<span class="tech-tag">Rocket design</span>
+								<span class="tech-tag">Aeroanalysis</span>
+								<span class="tech-tag">OpenRocket</span>
+								<span class="tech-tag">Python</span>
+								<span class="tech-tag">Monte Carlo simulation</span>
+							</div>
+						</div>
+						<div class="project-card-links">
+							<!-- <a href="github-link" class="card-link" target="_blank" rel="noopener" onclick="event.stopPropagation()">GitHub</a> -->
+							<a
+								href="projects/utat-rocketry/index.html"
 								class="card-link"
 								onclick="event.stopPropagation()"
 								>More <i class="fa-solid fa-arrow-right fa-xs"></i
@@ -442,9 +483,36 @@
 								University of Toronto Aerospace Team, UAS Division
 							</p>
 							<h3 class="timeline-role">Structures Lead</h3>
-							<!-- <ul class="timeline-bullets">
-                                <li></li>
-                            </ul> -->
+							<ul class="timeline-bullets">
+								<li>
+									Led a multidisciplinary team of <strong>6</strong> in the use of
+									computation and simulation tools (XFLR5, SolidWorks, MATLAB) to
+									design a lifting-body fuselage for an autonomous fixed-wing/VTOL
+									tricopter.
+								</li>
+								<li>
+									Ran weekly design reviews, delegating CAD, manufacturing, and
+									R&D tasks, and presenting progress updates during
+									cross-functional Leads meetings.
+								</li>
+								<li>
+									Conceptualized, designed and tested the aircraft fuselage
+									structure under <strong>150g</strong> mass constraint,
+									integrating the avionics bay, wing attachment, and tail mount
+									into a lightweight load-bearing architecture.
+								</li>
+								<li>
+									Defined aircraft structural flight envelope using V-N diagram
+									analysis in MATLAB, providing critical load inputs for
+									multidisciplinary optimization and structural sizing.
+								</li>
+								<li>
+									Engineered a lightweight, <strong>tool-free</strong> fuselage
+									hatch attachment mechanism that eliminated auxiliary hardware
+									need while enabling rapid field access to avionics and
+									aerosurfaces mounts.
+								</li>
+							</ul>
 						</div>
 					</div>
 
@@ -457,9 +525,33 @@
 								University of Toronto Aerospace Team, Rocketry Division
 							</p>
 							<h3 class="timeline-role">Aerodynamics Co-Lead</h3>
-							<!-- <ul class="timeline-bullets">
-                                <li></li>
-                            </ul> -->
+							<ul class="timeline-bullets">
+								<li>
+									Led a multidisciplinary team of <strong>5</strong>, directing
+									aerosurface design and flight analysis across three concurrent
+									rocket programs, including the team's first double-stage solid
+									rocket, first liquid rocket, and second hybrid rocket.
+								</li>
+								<li>
+									Designed and optimized nose cones and fins geometries in
+									OpenRocket to achieve target off the rail stability margins of
+									<strong>1.5 to 2 calibers</strong> for subsonic rocekts and
+									<strong>3 to 6 calibers</strong> for supersonic rockets across
+									varying wind conditions (0 to 30km/h).
+								</li>
+								<li>
+									Performed fin flutter analysis to verify aerostructure safety
+									margins against <strong>2x</strong> factor of safety standard
+									across the flight trajectory.
+								</li>
+								<li>
+									Modified and extended RocketPy codebase by implementing custom
+									classes and overriding core methods to support multi-stage Monte
+									Carlo dispersion simulations, not natively supported by the
+									library, enabling risk analysis for the team's first
+									double-stage rocket.
+								</li>
+							</ul>
 						</div>
 					</div>
 
@@ -474,26 +566,29 @@
 							<h3 class="timeline-role">Summer Research Student</h3>
 							<ul class="timeline-bullets">
 								<li>
-									Developed G.L.O.W., an open-source G-Code generator for Direct
-									Energy Deposition Additive Manufacturing, supporting 3 print
-									geometries, 2 substrate configurations, 10 configurable print
-									parameters, and 11 preprogrammed machine-specific codes.
+									Developed G.L.O.W., an open-source GCODE generator for Direct
+									Energy Deposition Additive Manufacturing. supporting
+									<strong>3</strong> print geometries,
+									<strong>2</strong> substrate configurations,
+									<strong>10</strong> configurable print parameters, and
+									<strong>11</strong> preprogrammed machine-specific codes.
 								</li>
 								<li>
-									Deployed G.L.O.W. as a zero-dependency GUI desktop application
-									using PyQt6 and PyInstaller, and distributed with Inno Setup,
-									eliminating software dependency.
+									Deployed G.L.O.W. as a <strong>zero-dependency</strong> GUI
+									desktop application using PyQt6 and PyInstaller, distributing
+									with Inno Setup, eliminating software dependency.
 								</li>
 								<li>
 									Ported G.L.O.W. from Python to C++ using Qt Creator, reducing
-									binary size from several GB to a lightweight executable and
-									improving runtime performance by 40%, enabling practical
+									binary size from <strong>1.6</strong> GB to a
+									<strong>270</strong> MB lightweight executable and improving
+									runtime performance by <strong>40%</strong>, enabling practical
 									deployment across lab workstations.
 								</li>
 								<li>
-									Presented G.L.O.W. and G-Code generation methodology as guest
-									speaker in the graduate-level MSE1068 Additive Manufacturing
-									course at University of Toronto.
+									Presented G.L.O.W. and GCODE generation methodology as guest
+									speaker in graduate-level MSE1068 Additive Manufacturing course
+									at University of Toronto.
 								</li>
 							</ul>
 						</div>
@@ -509,13 +604,12 @@
 							<ul class="timeline-bullets">
 								<li>
 									Developed serialization functions to save and quickly retrieve
-									Flight simulation data via a custom RPY file format.
+									Flight simulation data via custom RPY file format.
 								</li>
 								<li>
-									Implemented "create_environment_object" method for
-									EnvironmentAnalysis class, enabling simulation Environment
-									rendering from historical data across user-defined time
-									intervals in a single function call.
+									Implemented a method for EnvironmentAnalysis class, enabling
+									simulation Environment rendering from historical data across
+									user-defined time intervals through a single function call.
 								</li>
 								<li>
 									Improved parachute aerodynamic model accuracy by modeling it as
@@ -536,30 +630,40 @@
 							<h3 class="timeline-role">SAE Aerodynamics Member</h3>
 							<ul class="timeline-bullets">
 								<li>
-									Designed SolidWorks CAD models for wings and ailerons of
-									autonomous hybrid tricopters, considering manufacturability and
-									ease-of-assembly.
+									Modeled wings and ailerons of autonomous aircraft in SolidWorks,
+									considering manufacturability and ease-of-assembly.
 								</li>
 								<li>
-									Manufactured and repaired 6 pairs of composite wings across 15+
-									test flights using balsa wood, carbon fiber, and heat-shrink
-									film.
+									Manufactured and repaired <strong>6</strong> composite wings
+									across <strong>15+</strong> test flights using balsa wood,
+									carbon fiber, and heat-shrink film.
 								</li>
 								<li>
-									Selected lifting body fuselage airfoil from 14 candidates via
-									XFLR5 analysis, targeting stable CL and CD profiles at operating
-									Reynolds numbers and sufficient internal volume to house
-									avionics.
+									Selected lifting-body fuselage airfoil from
+									<strong>14</strong> candidates via XFLR5 analysis, targeting
+									stable CL and CD profiles at operating Reynolds numbers and
+									sufficient internal volume to house avionics.
 								</li>
 								<li>
-									Designed motor arm supports to withstand 920g propeller thrust
-									and torsional loads on the wing.
+									Designed motor arm supports to withstand
+									<strong>920g</strong> propeller thrust and torsional loads on
+									wings.
 								</li>
 								<li>
 									Designed modular assembly jigs that eliminated significant
 									dimensional deviation in manufactured wings and resolved
 									recurring fuselage alignment and wing warping issues from
 									previous iterations.
+								</li>
+								<li>
+									Benchmared openVSP and STAR-CCM+ against the team's lifting-line
+									method and XFLR5, introducing OpenVSP as a practical addition to
+									the aerodynamic design workflow.
+								</li>
+								<li>
+									Developed a custom Vortex Lattice Method (VLM) solver featuring
+									ring vortex panels, horseshoe wakes and aircraft meshing
+									validating results against XFLR5 and analytical solutions.
 								</li>
 							</ul>
 						</div>
@@ -578,26 +682,28 @@
 								<li>
 									Conducted aeroelasticity, fin flutter, and stability margin
 									analyses in OpenRocket across dozens of nose cone and fin
-									designs, achieving 1.5-3 caliber stability across 0-8 m/s wind
-									conditions and 2x flutter safety factor.
+									designs, achieving <strong>1.5-3 caliber</strong> stability
+									across <strong>0-8 m/s</strong> wind conditions with
+									<strong>2x</strong> flutter safety factor.
 								</li>
 								<li>
-									Built a RocketPy Monte Carlo simulation environment for 4 rocket
-									projects, modeling manufacturing tolerances and environmental
-									variability (including ballistic descent scenarios) to verify
-									landing zones via KML export to Google Earth for safety
-									compliance.
+									Automated Monte Carlo dispersion analyses for
+									<strong>4</strong> rocket projects in RocketPy by modeling
+									manufacturing tolerances and wind variability with normal
+									distributions to predict probable landing zones for nominal,
+									drogue-failure, and ballistic descent scenarios and verify
+									safety compliance via KML export to Google Earth.
 								</li>
 								<li>
-									Developed a Jupyter Notebook to automatically build Rocketpy
+									Developed a Jupyter Notebook to automatically build RocketPy
 									simulations from OpenRocket files and scattered data sources
 									(Excel, RSE files), reducing cross-validation tasks from several
-									hours to minutes.
+									hours to <strong>4</strong> seconds.
 								</li>
 								<li>
 									Implemented a Genetic Algorithm Multidisciplinary Optimization
-									framework integrated with RocketPy to automatically optimize
-									aerosurface geometry, replacing manual parameter sweeps.
+									framework integrated with RocketPy to optimize aerosurface
+									geometry, replacing manual parameter sweeps.
 								</li>
 							</ul>
 						</div>
@@ -612,19 +718,20 @@
 							<h3 class="timeline-role">Aerodynamics Member</h3>
 							<ul class="timeline-bullets">
 								<li>
-									Designed a micro class aircraft with 2.16kg MTOW able to take
-									off in 4 m runway for SAE Brasil Aerodesign 2024.
+									Designed a micro class aircraft with
+									<strong>2.16kg</strong> MTOW able to take off in
+									<strong>4m</strong> runway for SAE Brasil Aerodesign 2024.
 								</li>
 								<li>
 									Developed Julia programs for custom airfoil parametrization and
-									generation, Sobol global sensitivity analysis of 10 design
-									variables on MTOW, critical section analysis, and aircraft
-									performance robustness test.
+									generation, Sobol global sensitivity analysis of
+									<strong>10</strong> design variables on MTOW, critical section
+									analysis, and aircraft performance robustness test.
 								</li>
 								<li>
 									Co-authored two sections of the SAE Brasil Aerodesign 2024
 									aerodynamics report and led a word reduction pass cutting word
-									count by 5% to meet submission requirements.
+									count by <strong>5%</strong> to meet submission requirements.
 								</li>
 							</ul>
 						</div>
