@@ -317,6 +317,66 @@
 
 					<article
 						class="project-card"
+						data-href="projects/aircraft-optimizer/index.html"
+						style="view-transition-name: aircraft-optimizer">
+						<div
+							class="project-card-logo"
+							style="
+								--page-bg: url(&quot;projects/aircraft-optimizer/img/plane_mesh.png&quot;);
+								background-position: 50% 25%;
+							">
+							<img
+								class="project-img"
+								src="projects/aircraft-optimizer/img/ao-icon-light-mode.png"
+								loading="lazy"
+								alt="Aircraft Optimizer" />
+						</div>
+						<div class="project-card-body">
+							<h3
+								class="project-card-title"
+								style="view-transition-name: aircraft-optimizer-title">
+								Aircraft Optimizer
+							</h3>
+							<p class="project-card-desc">
+								A Julia-based Vortex Lattice Method solver for low Reynolds number
+								aircraft.
+							</p>
+							<div class="tech-tags">
+								<span class="tech-tag">VLM solver</span>
+								<span class="tech-tag">Numerical Methods</span>
+								<span class="tech-tag">Julia Programming Language</span>
+								<div class="tech-tag">OOP</div>
+								<div class="tech-tag">Documentation</div>
+							</div>
+						</div>
+						<div class="project-card-links">
+							<a
+								href="https://arthurjwh.github.io/Aircraft_Optimizer/dev/"
+								class="card-link"
+								target="_blank"
+								rel="noopener"
+								onclick="event.stopPropagation()"
+								>Documentation</a
+							>
+							<a
+								href="https://github.com/ArthurJWH/Aircraft-Optimizer"
+								class="card-link"
+								target="_blank"
+								rel="noopener"
+								onclick="event.stopPropagation()"
+								>GitHub</a
+							>
+							<a
+								href="projects/aircraft-optimizer/index.html"
+								class="card-link"
+								onclick="event.stopPropagation()"
+								>More <i class="fa-solid fa-arrow-right fa-xs"></i
+							></a>
+						</div>
+					</article>
+
+					<article
+						class="project-card"
 						data-href="projects/utat-uas/index.html"
 						style="view-transition-name: utat-uas">
 						<div
@@ -444,12 +504,12 @@
 								onclick="event.stopPropagation()"
 								>GitHub</a
 							>
-							<a
+							<!-- <a
 								href="projects/rocketpy/index.html"
 								class="card-link"
 								onclick="event.stopPropagation()"
 								>More <i class="fa-solid fa-arrow-right fa-xs"></i
-							></a>
+							></a> -->
 						</div>
 					</article>
 				</div>
@@ -495,7 +555,7 @@
 							<h3 class="timeline-role">Structures Lead</h3>
 							<ul class="timeline-bullets">
 								<li>
-									Led a multidisciplinary team of <strong>6</strong> in the use of
+									Led a multidisciplinary team of <strong>8</strong> in the use of
 									computation and simulation tools (XFLR5, FLOW5, SolidWorks,
 									MATLAB) to design a lifting-body fuselage for an autonomous
 									fixed-wing/VTOL tricopter.
@@ -612,6 +672,10 @@
 							<p class="timeline-org">RocketPy Open Source</p>
 							<h3 class="timeline-role">Library Development Member</h3>
 							<ul class="timeline-bullets">
+								<li>
+									Maintaining a Python library using Git version control, proper
+									documentation, testing, and code review practices
+								</li>
 								<li>
 									Developed serialization functions to save and quickly retrieve
 									Flight simulation data via custom RPY file format.

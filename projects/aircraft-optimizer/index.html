@@ -1,0 +1,929 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="description"
+			content="A Julia-based Vortex Lattice Method solver for multidisciplinary optimization of low Reynolds number aircraft." />
+		<meta name="keywords" content="Arthur, Jiun, Wei, Hwang, ArthurJWH" />
+		<meta name="author" content="Arthur Hwang" />
+		<title>Aircraft Optimizer — Arthur Hwang</title>
+		<meta property="og:site_name" content="Arthur Hwang" />
+		<meta
+			property="og:url"
+			content="https://arthurjwh.github.io/projects/aircraft-optimizer/index.html" />
+		<meta property="og:title" content="Aircraft Optimizer" />
+		<meta
+			property="og:description"
+			content="A Julia-based Vortex Lattice Method solver for multidisciplinary optimization of low Reynolds number aircraft." />
+		<meta
+			property="og:image"
+			content="https://arthurjwh.github.io/img/icon-500-light-mode.png" />
+		<link rel="icon" type="image/png" href="../../img/icon-32-light-mode.png" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-light-mode.png"
+			media="(prefers-color-scheme: light)" />
+		<link
+			rel="icon"
+			type="image/png"
+			href="../../img/icon-32-dark-mode.png"
+			media="(prefers-color-scheme: dark)" />
+		<link rel="stylesheet" href="../../style.css" />
+		<link rel="stylesheet" href="../style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+			rel="stylesheet" />
+		<script src="https://kit.fontawesome.com/801590478f.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<!-- ===========================================================
+            NAVBAR
+        ============================================================ -->
+
+		<nav class="nav" id="nav">
+			<a class="nav-logo" href="../../index.html#hero">
+				<picture class="nav-picture">
+					<source
+						srcset="../../img/icon-500-dark-mode.png"
+						media="(prefers-color-scheme: dark)" />
+					<source
+						srcset="../../img/icon-500-light-mode.png"
+						media="(prefers-color-scheme: light)" />
+					<img src="../../img/icon-500-light-mode.png" alt="Icon" class="nav-img" />
+				</picture>
+			</a>
+			<ul class="nav-links" id="nav-links">
+				<li><a href="../../index.html#about">About</a></li>
+				<li><a href="../../index.html#skills">Skills</a></li>
+				<li><a href="../../index.html#projects">Projects</a></li>
+				<li><a href="../../index.html#experience">Timeline</a></li>
+				<li><a href="../../index.html#media">Media</a></li>
+				<li><a href="../../index.html#contact">Contact</a></li>
+			</ul>
+			<button class="hamburger" id="hamburger" aria-label="Toggle menu">
+				<span></span><span></span><span></span>
+			</button>
+		</nav>
+
+		<div style="view-transition-name: aircraft-optimizer">
+			<!-- ===========================================================
+				PROJECT HERO
+			============================================================ -->
+
+			<header class="proj-hero">
+				<!-- Return button -->
+				<div class="proj-hero-inner">
+					<a class="back-link" href="../../index.html#projects">
+						<svg
+							width="14"
+							height="14"
+							viewBox="0 0 14 14"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="1.8"
+							stroke-linecap="round"
+							stroke-linejoin="round">
+							<path d="M8.5 2.5L4 7l4.5 4.5" />
+						</svg>
+						All Projects
+					</a>
+
+					<!-- Project category -->
+					<div class="proj-eyebrow-row">
+						<span class="proj-category">Computational Aerodynamics · Software</span>
+						<span class="proj-status ongoing">Ongoing</span>
+					</div>
+
+					<!-- Title and subtitle -->
+					<h1 class="proj-title" style="view-transition-name: aircraft-optimizer-title">
+						Aircraft Optimizer
+					</h1>
+					<p class="proj-subtitle">
+						A Julia-native Vortex Lattice Method solver, built to replace an in-house
+						lifting-line code as the aerodynamic analysis core of a multidisciplinary
+						optimization framework for low Reynolds number aircraft.
+					</p>
+
+					<div class="sidebar-tag-group proj-hero-tags">
+						<span class="capability-tag">Aerodynamics</span>
+						<span class="capability-tag">Numerical Methods</span>
+						<span class="capability-tag">Software Architecture</span>
+						<span class="capability-tag">Verification &amp; Validation</span>
+						<span class="capability-tag">Julia</span>
+					</div>
+
+					<!-- Project meta -->
+					<div class="proj-meta-row">
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Timeline</span>
+							<span class="proj-meta-value"
+								><!-- EDIT: start date -->
+								Present</span
+							>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Role</span>
+							<span class="proj-meta-value">Lead Developer</span>
+						</div>
+						<div class="proj-meta-item">
+							<span class="proj-meta-label">Team</span>
+							<span class="proj-meta-value">Solo</span>
+						</div>
+					</div>
+
+					<!-- CTA buttons -->
+					<div class="proj-cta-row">
+						<a
+							href="https://github.com/ArthurJWH/Aircraft_Optimizer"
+							class="btn btn-primary"
+							target="_blank"
+							rel="noopener"
+							>GitHub Repository</a
+						>
+						<a
+							href="https://arthurjwh.github.io/Aircraft_Optimizer/dev/"
+							class="btn btn-secondary"
+							target="_blank"
+							rel="noopener"
+							>Documentation</a
+						>
+					</div>
+				</div>
+
+				<!-- Hero image -->
+				<div class="proj-hero-image-wrap">
+					<img
+						class="proj-hero-image placeholder"
+						src="img/plane_mesh.png"
+						loading="lazy"
+						alt="Aircraft Optimizer VLM mesh render"
+						style="object-position: 50% 25%" />
+				</div>
+			</header>
+
+			<!-- ===========================================================
+				PROJECT BODY  (main prose + sticky sidebar)
+			============================================================ -->
+
+			<div class="proj-body">
+				<!-- ===========================================================
+					MAIN CONTENT COLUMN
+				============================================================ -->
+
+				<main class="proj-main">
+					<!-- ── OVERVIEW ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Overview</p>
+						<h2 class="proj-section-title">What is the Aircraft Optimizer?</h2>
+						<div class="proj-prose">
+							<p>
+								Aircraft Optimizer is a Vortex Lattice Method (VLM) solver for the
+								aerodynamic analysis of low Reynolds number, multi-surface aircraft,
+								built as the physics core of a multidisciplinary design optimization
+								(MDO) framework. It aims to replace an existing in-house
+								lifting-line method implemented in MATLAB, which had become a
+								limiting factor on the range of aircraft configurations the
+								optimizer could explore. The solver itself is developed as a
+								standalone Julia package (<code>MyPackage</code>), with analysis
+								scripts and documentation layered around it in the same repository.
+							</p>
+							<p>
+								The project spans two layers of rework, tackled together: a new
+								aerodynamic formulation (vortex lattice in place of lifting line)
+								and a new software architecture (a typed, struct-based Julia design
+								in place of MATLAB's functional style), so the solver can sit inside
+								an outer optimization loop that repeatedly reconfigures,
+								re-analyzes, and post-processes candidate aircraft.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── KEY ENGINEERING DECISIONS ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Key Engineering Decisions</p>
+						<h2 class="proj-section-title">Four calls that shaped the solver</h2>
+						<div class="proj-prose">
+							<p>
+								Four major design choices were made at conceptual phase to give the
+								initial design direction: each one a trade-off between accuracy,
+								performance, and implementation complexity.
+							</p>
+						</div>
+
+						<div class="proj-cards-grid">
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-diagram-project"></i
+								></span>
+								<h3 class="proj-card-title">Vortex Lattice over lifting-line</h3>
+								<p class="proj-card-text">
+									Lifting-line theory couldn't represent low aspect ratio, highly
+									swept, or multi-surface aircraft. VLM removes those restrictions
+									while staying cheap enough to call repeatedly inside an
+									optimization loop, which would be unfeasible with full CFD.
+								</p>
+							</div>
+							<div class="proj-card">
+								<span class="proj-card-icon"><i class="fa-solid fa-bolt"></i></span>
+								<h3 class="proj-card-title">Julia over MATLAB/Python</h3>
+								<p class="proj-card-text">
+									Chosen for JIT-compiled performance close to compiled languages
+									without giving up high-level, mathematical syntax. Additionally,
+									Julia's threading capabilities make it suitable for parallel
+									execution, which is essential since the solver runs many times
+									per optimization cycle, not once.
+								</p>
+							</div>
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-circle-nodes"></i
+								></span>
+								<h3 class="proj-card-title">Vortex rings over horseshoes</h3>
+								<p class="proj-card-text">
+									Rings calculate chordwise circulation gradients directly and
+									capture camber influence more accurately, trading the simplicity
+									of a purely horseshoe-based scheme for accuracy.
+								</p>
+							</div>
+							<div class="proj-card">
+								<span class="proj-card-icon"><i class="fa-solid fa-lock"></i></span>
+								<h3 class="proj-card-title">Immutable geometry, mutable results</h3>
+								<p class="proj-card-text">
+									Splitting the aircraft into an immutable <code>Plane</code> and
+									a mutable <code>Data</code> field closes off an entire class of
+									bugs where a geometry edit silently invalidates results already
+									computed for it, while still allowing data to be updated through
+									lazy simulation.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── MOTIVATION ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Motivation</p>
+						<h2 class="proj-section-title">Where the lifting-line method broke down</h2>
+						<div class="proj-prose">
+							<p>
+								The existing MATLAB lifting-line implementation had accumulated
+								constraints that increasingly conflicted with the aircraft
+								configurations the optimization needed to explore. Sections were
+								defined at a fixed, hardcoded number of spanwise stations linearly
+								connected, which made elliptical and other continuously-varying
+								planforms unrepresentable. The underlying theory itself also broke
+								down for low aspect ratio wings and could not model multi-surface
+								aircraft (e.g. wing-tail or wing-canard interaction) at all.
+							</p>
+							<p>
+								Separately, MATLAB's functional programming structure was limiting
+								the post-processing side of the workflow: plotting, storing results,
+								re-running a given configuration, and carrying one configuration
+								across different types of analyses. They all required redefining and
+								resimulating the plane and wouldn't allow more than one design to be
+								analyzed simultaneously, which was inefficient and error-prone. A
+								new object-oriented design was needed to support a more robust and
+								scalable workflow.
+							</p>
+						</div>
+
+						<div class="proj-objectives">
+							<div class="proj-objective">
+								<span class="proj-objective-num">01</span>
+								<span
+									>Support arbitrary chord, twist, dihedral, and sweep
+									distributions defined continuously along the span, rather than
+									at a fixed number of linearly-connected sections.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">02</span>
+								<span
+									>Represent planforms, including elliptical wings, that lifting
+									line's linear-section interpolation could not capture.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">03</span>
+								<span
+									>Extend validity to low aspect ratio wings and multi-surface
+									aircraft, both outside lifting-line theory's assumptions.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">04</span>
+								<span
+									>Move to an object-oriented design that supports reproducible
+									configuration storage, rerunning, and result
+									post-processing.</span
+								>
+							</div>
+							<div class="proj-objective">
+								<span class="proj-objective-num">05</span>
+								<span
+									>Keep high-level, readable syntax while reaching near-compiled
+									performance, since the solver needs to run repeatedly inside an
+									outer optimization loop.</span
+								>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── METHOD & LANGUAGE SELECTION ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Method &amp; Language Selection</p>
+						<h2 class="proj-section-title">Choosing VLM and Julia</h2>
+						<div class="proj-prose">
+							<p>
+								Addressing the lifting-line limitations meant researching
+								alternative aerodynamic formulations capable of handling swept,
+								tapered, dihedral, low aspect ratio, and multi-surface geometries
+								without the section-count restrictions of the existing code. The
+								Vortex Lattice Method met these requirements: it discretizes each
+								lifting surface into a grid of vortex elements rather than a single
+								spanwise line of circulation, which removes the planform
+								restrictions inherent to lifting-line theory while remaining a
+								potential-flow method (cheap enough to sit inside an optimization
+								loop, unlike higher-fidelity CFD).
+							</p>
+						</div>
+
+						<div class="proj-callout">
+							<p>
+								<strong>Language choice:</strong> Julia was selected as a balance
+								between high-level, mathematical syntax and just-in-time compiled
+								performance. The solver needed to be readable and fast to iterate on
+								during development, while still being fast enough at runtime to be
+								called inside an optimization loop. A combination MATLAB's
+								interpreted functional style and Python's dynamic typing both fall
+								short of without additional tooling.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── DESIGN PROCESS (simple timeline) ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Design Process</p>
+						<h2 class="proj-section-title">Build order</h2>
+
+						<div class="proj-timeline">
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">01</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">Numerical foundation</h3>
+									<p class="proj-timeline-step-text">
+										Built the reusable numerical-method utilities the solver
+										would depend on before writing the solver itself (e.g.
+										integration, splines, interpolation, root-finding).
+									</p>
+								</div>
+							</div>
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">02</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">Aircraft data model</h3>
+									<p class="proj-timeline-step-text">
+										Designed the immutable/mutable struct split for representing
+										a plane, its surfaces, and simulated data.
+									</p>
+								</div>
+							</div>
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">03</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">Mesh generation</h3>
+									<p class="proj-timeline-step-text">
+										Implemented the geometry pipeline turning a surface
+										definition into a paneled mesh with cosine distribution.
+									</p>
+								</div>
+							</div>
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">04</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">VLM solver</h3>
+									<p class="proj-timeline-step-text">
+										Implemented the vortex ring solver formulation, wake model,
+										and force/moment recovery.
+									</p>
+								</div>
+							</div>
+							<div class="proj-timeline-step">
+								<div class="proj-timeline-dot">05</div>
+								<div class="proj-timeline-body">
+									<h3 class="proj-timeline-step-title">Verification</h3>
+									<p class="proj-timeline-step-text">
+										Benchmarked against XFLR5 and a closed-form elliptical-wing
+										solution.
+									</p>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── NUMERICAL UTILITIES PACKAGE ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Numerical Foundation</p>
+						<h2 class="proj-section-title">Reusable building blocks</h2>
+						<div class="proj-prose">
+							<p>
+								Rather than writing numerical methods inline wherever needed, common
+								operations drawn from my MIE235 coursework, were implemented once as
+								callable structs and reused throughout the solver and its
+								pre/post-processing.
+							</p>
+						</div>
+
+						<div class="proj-cards-grid">
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-bezier-curve"></i
+								></span>
+								<h3 class="proj-card-title">Spline struct</h3>
+								<p class="proj-card-text">
+									Takes a set of data points and returns a callable spline
+									function as a struct, used to interpolate airfoil geometry and
+									spanwise properties.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-chart-line"></i
+								></span>
+								<h3 class="proj-card-title">Least-squares regression struct</h3>
+								<p class="proj-card-text">
+									Fits a regression to a data set following the same
+									callable-struct pattern as the spline utility.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-wave-square"></i
+								></span>
+								<h3 class="proj-card-title">Interpolation struct</h3>
+								<p class="proj-card-text">
+									General-purpose interpolation utility, structured the same way
+									as the spline and regression structs for a consistent calling
+									convention.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-square-root-variable"></i
+								></span>
+								<h3 class="proj-card-title">Gauss-quadrature integrator</h3>
+								<p class="proj-card-text">
+									A struct that takes a function once at construction, then
+									integrates it over arbitrary limits via a simple call, e.g.
+									<code>integrator(a, b)</code>.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-file-import"></i
+								></span>
+								<h3 class="proj-card-title">IO module</h3>
+								<p class="proj-card-text">
+									Handles input/output operations used in the solver. For example,
+									reading and processing airfoil coordinate (<code>.dat</code>)
+									files for use in mesh generation and camber-line interpolation.
+								</p>
+							</div>
+
+							<div class="proj-card">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-chart-area"></i
+								></span>
+								<h3 class="proj-card-title">MyPlots module</h3>
+								<p class="proj-card-text">
+									Visualization built on Plots.jl for 2D airfoil verification
+									plots and GLMakie.jl for 3D visualization of the assembled
+									aircraft mesh.
+								</p>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── AIRCRAFT REPRESENTATION ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Aircraft Representation</p>
+						<h2 class="proj-section-title">Plane, Data, and Surface</h2>
+						<div class="proj-prose">
+							<p>
+								A <code>Plane</code> is an immutable struct holding the list of
+								<code>Surface</code> objects that make it up, plus a mutable
+								<code>Data</code> field for anything that can only be known after
+								analysis, including force and moment coefficients, static margin,
+								stall and trim angles, and maximum takeoff weight. Keeping the
+								plane's geometry immutable while isolating analysis outputs in a
+								separate mutable field was a deliberate choice: it prevents a
+								geometry mutation from silently invalidating results already
+								computed for that configuration, which could otherwise mislead
+								downstream analysis.
+							</p>
+							<p>
+								Each <code>Surface</code> is defined by the position of its root
+								leading edge, its span, a list of airfoils together with their
+								spanwise positions for interpolation, and chord, twist, dihedral,
+								and sweep each defined as a function of the spanwise fraction rather
+								than as fixed values at discrete stations. Boolean flags mark
+								whether a surface is mirrored about the aircraft centerline or
+								vertical (e.g. a fin), so a single <code>Surface</code> definition
+								covers both planar lifting surfaces and vertical stabilizers.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── MESH GENERATION ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Mesh Generation</p>
+						<h2 class="proj-section-title">From unit square to aircraft geometry</h2>
+						<div class="proj-prose">
+							<p>
+								Each surface's mesh is built starting from a flat, normalized unit
+								square, with a cosine distribution applied to cluster panels toward
+								the leading and trailing edges and toward the tips, which is a
+								standard VLM practice for resolving the higher gradients in
+								circulation near those regions. Airfoil camber lines are
+								interpolated across the defined sections and layered onto the flat
+								mesh, after which the sweep, dihedral, and twist transformations,
+								each defined as a function of span fraction, are applied at every
+								spanwise station. The final mesh is returned as an array laid out
+								for column-major access, matching Julia's native memory layout for
+								the linear algebra performed in the solver.
+							</p>
+						</div>
+
+						<figure>
+							<img
+								class="proj-image proj-image--compact placeholder"
+								src="img/mesh_generation.png"
+								loading="lazy"
+								alt="Mesh generation pipeline" />
+							<figcaption class="proj-image-caption">
+								Surface mesh generation: cosine-distributed unit square →
+								camber-line interpolation → sweep/dihedral/twist transformation.
+							</figcaption>
+						</figure>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── SOLVER FORMULATION ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Solver Formulation</p>
+						<h2 class="proj-section-title">Vortex ring implementation</h2>
+						<div class="proj-prose">
+							<p>
+								The solver takes an assembled <code>Plane</code> along with the wind
+								direction, a ground-effect flag, and altitude, and returns the
+								aerodynamic solution for that condition.
+							</p>
+						</div>
+
+						<div class="proj-callout">
+							<p>
+								<strong>Ring vs. horseshoe formulation:</strong> the solver uses
+								ring vortices rather than horseshoe vortices for the bound elements,
+								with the front bound segment placed at the panel's 25% chord, the
+								collocation point at 75% chord, and the aft segment coincident with
+								the front segment of the next chordwise ring. This was chosen for
+								the additional accuracy of the ring formulation over horseshoes
+								while keeping the overall implementation simple, since a purely
+								horseshoe-based scheme would require separate treatment for
+								chordwise circulation gradients that the ring formulation captures
+								directly.
+							</p>
+						</div>
+
+						<div class="proj-prose">
+							<p>
+								The wake shed from the trailing edge is modeled as horseshoe
+								vortices carrying the same circulation as the trailing-edge rings.
+								The geometry-dependent component of the aerodynamic influence
+								coefficient (AIC) matrix is assembled once per configuration and
+								cached, since it is reused unchanged across multiple angles of
+								attack for the same geometry; wake influence is then added and the
+								right-hand side is computed for each flow condition. Solving the
+								resulting linear system gives the ring circulations, from which
+								forces are recovered two ways — via the Kutta-Joukowski theorem and
+								via the Trefftz-plane method, the latter used specifically for
+								induced drag, before being projected into aircraft axes and used to
+								compute moments and the corresponding aerodynamic coefficients.
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── VERIFICATION & BENCHMARKING ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Verification</p>
+						<h2 class="proj-section-title">Benchmarking against known solutions</h2>
+
+						<div class="proj-items">
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-square-check"></i
+								></span>
+								<p class="proj-item-text">
+									<strong>Rectangular wing vs. XFLR5.</strong>
+									Solver output for a rectangular planform closely matched XFLR5's
+									VLM results across the tested conditions.
+									<!-- EDIT: insert approximate % error once quantified -->
+								</p>
+							</div>
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-square-check"></i
+								></span>
+								<p class="proj-item-text">
+									<strong>Elliptical wing vs. closed-form solution.</strong>
+									Compared against the analytical result for an elliptical
+									planform, with results also in close agreement.
+									<!-- EDIT: insert approximate % error once quantified -->
+								</p>
+							</div>
+							<div class="proj-item">
+								<span class="proj-item-icon"
+									><i class="fa-solid fa-hourglass-half"></i
+								></span>
+								<p class="proj-item-text">
+									<strong>Further benchmarking planned.</strong>
+									Additional cases, including swept, tapered, and multi-surface
+									configurations, are planned to more thoroughly validate the
+									solver before it is implemented in the optimization loop.
+								</p>
+							</div>
+						</div>
+
+						<div class="proj-metrics">
+							<div class="proj-metric">
+								<span class="proj-metric-value"
+									><!-- EDIT: % error -->
+									—</span
+								>
+								<span class="proj-metric-label">Rectangular wing vs. XFLR5</span>
+							</div>
+							<div class="proj-metric">
+								<span class="proj-metric-value"
+									><!-- EDIT: % error -->
+									—</span
+								>
+								<span class="proj-metric-label"
+									>Elliptical wing vs. closed-form</span
+								>
+							</div>
+							<div class="proj-metric">
+								<span class="proj-metric-value">Ring</span>
+								<span class="proj-metric-label">Vortex formulation</span>
+							</div>
+							<div class="proj-metric">
+								<span class="proj-metric-value">2</span>
+								<span class="proj-metric-label">Benchmark cases run</span>
+							</div>
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── CURRENT CHALLENGE ── -->
+					<!-- <section class="proj-section">
+						<p class="proj-section-label">Current Challenge</p>
+						<h2 class="proj-section-title">
+						</h2>
+						<div class="proj-prose">
+							<p>
+							</p>
+						</div>
+					</section>
+
+					<hr class="proj-divider" /> -->
+
+					<!-- ── GALLERY ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">Gallery</p>
+						<h2 class="proj-section-title">Mesh, plots, and verification</h2>
+
+						<div class="proj-gallery">
+							<div class="proj-gallery-item">
+								<img
+									class="placeholder"
+									src="img/plane_mesh.png"
+									loading="lazy"
+									alt="3D VLM mesh render in GLMakie" />
+								<p class="proj-gallery-caption">
+									3D aircraft mesh, rendered in GLMakie.jl
+								</p>
+							</div>
+							<div class="proj-gallery-item">
+								<img
+									class="placeholder"
+									src="img/S1223.png"
+									loading="lazy"
+									alt="2D airfoil camber line verification plot" />
+								<p class="proj-gallery-caption">
+									Airfoil camber-line verification for S1223, Plots.jl
+								</p>
+							</div>
+							<!-- <div class="proj-gallery-item">
+								<img
+									class="placeholder"
+									src="img/gallery_xflr5_comparison.png"
+									loading="lazy"
+									alt="Rectangular wing benchmark against XFLR5" />
+								<p class="proj-gallery-caption">
+									Rectangular wing benchmark vs. XFLR5
+								</p>
+							</div>
+							<div class="proj-gallery-item">
+								<img
+									class="placeholder"
+									src="img/gallery_elliptical_lift.png"
+									loading="lazy"
+									alt="Elliptical wing spanwise lift distribution, current bug" />
+								<p class="proj-gallery-caption">
+									Elliptical wing lift distribution — current debugging target
+								</p>
+							</div> -->
+						</div>
+					</section>
+
+					<hr class="proj-divider" />
+
+					<!-- ── WHAT'S NEXT ── -->
+					<section class="proj-section">
+						<p class="proj-section-label">What's Next</p>
+						<h2 class="proj-section-title">Remaining scope</h2>
+
+						<div class="proj-cards-grid">
+							<div class="proj-card proj-placeholder">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-triangle-exclamation"></i
+								></span>
+								<h3 class="proj-placeholder-title">Stall prediction</h3>
+								<p class="proj-placeholder-text">Coming soon.</p>
+							</div>
+							<div class="proj-card proj-placeholder">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-scale-balanced"></i
+								></span>
+								<h3 class="proj-placeholder-title">Stability analysis</h3>
+								<p class="proj-placeholder-text">Coming soon.</p>
+							</div>
+							<div class="proj-card proj-placeholder">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-cubes"></i
+								></span>
+								<h3 class="proj-placeholder-title">Structural analysis</h3>
+								<p class="proj-placeholder-text">Coming soon.</p>
+							</div>
+							<div class="proj-card proj-placeholder">
+								<span class="proj-card-icon"
+									><i class="fa-solid fa-sliders"></i
+								></span>
+								<h3 class="proj-placeholder-title">Optimization function</h3>
+								<p class="proj-placeholder-text">
+									Wiring the solver into the outer multidisciplinary optimization
+									loop.
+								</p>
+							</div>
+						</div>
+					</section>
+				</main>
+
+				<!-- ===========================================================
+					SIDEBAR
+				============================================================ -->
+
+				<aside class="proj-sidebar">
+					<!-- Tools -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Tools</p>
+						<div class="sidebar-tag-group">
+							<span class="capability-tag">Julia</span>
+							<span class="capability-tag">Plots.jl</span>
+							<span class="capability-tag">GLMakie.jl</span>
+							<span class="capability-tag">XFLR5</span>
+							<span class="capability-tag">Git</span>
+						</div>
+					</div>
+
+					<!-- Theory -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Theoretical Basis</p>
+						<div class="sidebar-tag-group">
+							<span class="capability-tag">Vortex Lattice Method</span>
+							<span class="capability-tag">Lifting-line Theory</span>
+							<span class="capability-tag">Potential Flow</span>
+							<span class="capability-tag">Kutta-Joukowski Theorem</span>
+							<span class="capability-tag">Trefftz-plane Method</span>
+							<span class="capability-tag">Numerical Methods</span>
+							<span class="capability-tag">Linear Algebra</span>
+							<span class="capability-tag"
+								>Multidisciplinary Design Optimization</span
+							>
+						</div>
+					</div>
+
+					<!-- Key stats -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Project Stats</p>
+						<div class="sidebar-stats">
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Status</span>
+								<span class="sidebar-stat-value">Ongoing</span>
+							</div>
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Formulation</span>
+								<span class="sidebar-stat-value">Vortex ring</span>
+							</div>
+							<div class="sidebar-stat">
+								<span class="sidebar-stat-label">Benchmarks passed</span>
+								<span class="sidebar-stat-value">2</span>
+							</div>
+						</div>
+					</div>
+
+					<!-- Links -->
+					<div class="sidebar-card">
+						<p class="sidebar-card-title">Links</p>
+						<div class="sidebar-links">
+							<a
+								href="https://github.com/ArthurJWH/Aircraft_Optimizer"
+								class="sidebar-link"
+								target="_blank"
+								rel="noopener">
+								<i class="fa-brands fa-github sidebar-link-icon"></i>
+								GitHub Repository
+							</a>
+							<a
+								href="https://arthurjwh.github.io/Aircraft_Optimizer/dev/"
+								class="sidebar-link"
+								target="_blank"
+								rel="noopener">
+								<i class="fa-brands fa-readme sidebar-link-icon"></i>
+								Documentation
+							</a>
+						</div>
+					</div>
+				</aside>
+			</div>
+
+			<!-- ===========================================================
+				NEXT PROJECT
+			============================================================ -->
+
+			<section class="proj-next">
+				<div class="proj-next-inner">
+					<p class="proj-next-label">Next Project</p>
+					<!-- ── EDIT: update href, title, and desc ── -->
+					<a class="proj-next-card" href="../utat-uas/index.html">
+						<div class="proj-next-info">
+							<p class="proj-next-title">UTAT UAS</p>
+							<p class="proj-next-desc">
+								Designing Unmanned Aero Systems for SAE Aerodesign competition.
+							</p>
+						</div>
+						<span class="proj-next-arrow">→</span>
+					</a>
+				</div>
+			</section>
+
+			<!-- ===========================================================
+				FOOTER
+			============================================================ -->
+
+			<footer class="footer">
+				<div class="container footer-inner">
+					<span>© 2026 Arthur Hwang</span>
+					<span class="footer-mono">Built with HTML · CSS · JS</span>
+				</div>
+			</footer>
+		</div>
+
+		<script src="../../script.js" defer></script>
+	</body>
+</html>
